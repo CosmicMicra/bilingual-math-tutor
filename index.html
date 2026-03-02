@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilingual Math Tutor ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink:    #ff6eb4;
+      --pink2:   #ffadd6;
+      --green:   #3dd68c;
+      --green2:  #b5f5d8;
+      --blue:    #5b9cf6;
+      --blue2:   #c3d9ff;
+      --purple:  #a78bfa;
+      --purple2: #ddd6fe;
+      --yellow:  #fbbf24;
+      --yellow2: #fef9c3;
+      --bg:      #fdf6ff;
+      --text:    #2d1b5e;
+      --muted:   #8b6fb0;
+      --white:   #ffffff;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .bg-blobs { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .28; animation: blobFloat 8s ease-in-out infinite; }
+    .blob1 { width: 400px; height: 400px; background: var(--pink);   top: -100px; left: -80px;   animation-delay: 0s; }
+    .blob2 { width: 340px; height: 340px; background: var(--purple); top: 200px;  right: -90px;  animation-delay: 2s; }
+    .blob3 { width: 280px; height: 280px; background: var(--green);  bottom: 80px; left: 18%;   animation-delay: 4s; }
+    .blob4 { width: 250px; height: 250px; background: var(--blue);   bottom: -60px; right: 14%; animation-delay: 1s; }
+
+    @keyframes blobFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.04); } }
+
+    .container { position: relative; z-index: 1; max-width: 740px; margin: 0 auto; padding: 36px 20px 80px; }
+
+    /* ── Header ── */
+    header { text-align: center; margin-bottom: 36px; animation: popIn .6s cubic-bezier(.34,1.56,.64,1) both; }
+    .mascot { font-size: 3.6rem; display: block; margin-bottom: 2px; animation: bounce 2.4s ease-in-out infinite; }
+    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .tagline { color: var(--muted); font-weight: 700; font-size: .95rem; margin-top: 4px; }
+    .stars { display: flex; justify-content: center; gap: 4px; margin-top: 8px; font-size: 1rem; }
+
+    /* ── Problem input ── */
+    .input-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 8px 40px rgba(167,139,250,.16);
+      border: 2.5px solid var(--purple2);
+      margin-bottom: 22px;
+      animation: popIn .5s .1s cubic-bezier(.34,1.56,.64,1) both;
+    }
+
+    .input-label { font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
+
+    textarea {
+      width: 100%;
+      background: #faf5ff;
+      border: 2px solid var(--purple2);
+      border-radius: 16px;
+      padding: 14px 16px;
+      color: var(--text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      resize: vertical;
+      min-height: 88px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      line-height: 1.6;
+    }
+    textarea:focus { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(167,139,250,.14); }
+    textarea::placeholder { color: #c4aee8; font-weight: 400; }
+
+    .btn-start {
+      width: 100%;
+      margin-top: 12px;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      border: none; border-radius: 16px;
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.15rem;
+      padding: 15px;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 6px 24px rgba(255,110,180,.34);
+    }
+    .btn-start:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(255,110,180,.44); }
+    .btn-start:active { transform: translateY(-1px); }
+    .btn-start:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+    .examples-label { font-size: .76rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      background: linear-gradient(135deg, var(--blue2), var(--purple2));
+      border: none; border-radius: 20px;
+      padding: 5px 13px;
+      font-size: .8rem; font-weight: 700;
+      color: var(--text);
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+      font-family: 'Nunito', sans-serif;
+    }
+    .chip:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(91,156,246,.28); }
+
+    /* ── Main tutor area ── */
+    .tutor-area { display: none; flex-direction: column; gap: 16px; }
+    .tutor-area.visible { display: flex; }
+
+    /* ── Question card ── */
+    .question-card {
+      background: var(--white);
+      border-radius: 24px;
+      border: 2.5px solid var(--purple2);
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(167,139,250,.14);
+      animation: popIn .45s cubic-bezier(.34,1.56,.64,1) both;
+    }
+
+    .qcard-header {
+      background: linear-gradient(90deg, #f5f0ff, #ede9fe);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qcard-header .icon { font-size: 1.4rem; }
+    .qcard-header .title {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.05rem;
+      color: var(--purple);
+      flex: 1;
+    }
+
+    .qcard-body {
+      padding: 18px 20px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    /* ── Help steps ── */
+    .help-card {
+      background: var(--white);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,.07);
+      animation: popIn .4s cubic-bezier(.34,1.56,.64,1) both;
+    }
+
+    .help-simplify  { border: 2.5px solid var(--green2); }
+    .help-cognate   { border: 2.5px solid #ffe4b2; }
+    .help-translate { border: 2.5px solid var(--pink2); }
+
+    .help-card .hcard-header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 13px 20px;
+    }
+
+    .help-simplify  .hcard-header { background: linear-gradient(90deg, #f0fff8, #dcfce7); }
+    .help-cognate   .hcard-header { background: linear-gradient(90deg, #fffbeb, #fef9c3); }
+    .help-translate .hcard-header { background: linear-gradient(90deg, #fff0f8, #fce7f3); }
+
+    .hcard-icon { font-size: 1.3rem; }
+    .hcard-title {
+      flex: 1;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1rem;
+    }
+
+    .help-simplify  .hcard-title { color: #16a34a; }
+    .help-cognate   .hcard-title { color: #d97706; }
+    .help-translate .hcard-title { color: var(--pink); }
+
+    .hbadge {
+      font-size: .68rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .07em;
+      padding: 3px 10px; border-radius: 20px;
+    }
+
+    .help-simplify  .hbadge { background: var(--green2);  color: #15803d; }
+    .help-cognate   .hbadge { background: var(--yellow2); color: #92400e; }
+    .help-translate .hbadge { background: var(--pink2);   color: #be185d; }
+
+    .hcard-body {
+      padding: 15px 20px 18px;
+      font-size: 1rem; font-weight: 600; line-height: 1.75;
+      color: var(--text);
+    }
+
+    .hcard-body.loading {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--muted); font-weight: 700;
+    }
+
+    .spinner {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 3px solid var(--purple2);
+      border-top-color: var(--purple);
+      animation: spin .7s linear infinite;
+      flex-shrink: 0;
+    }
+    .help-simplify  .spinner { border-color: var(--green2); border-top-color: var(--green); }
+    .help-cognate   .spinner { border-color: var(--yellow2); border-top-color: var(--yellow); }
+    .help-translate .spinner { border-color: var(--pink2);  border-top-color: var(--pink); }
+
+    /* ── Help button ── */
+    .btn-help {
+      width: 100%;
+      border: none; border-radius: 16px;
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      padding: 14px;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn-help-simplify  { background: linear-gradient(135deg, var(--green), #22c55e);  box-shadow: 0 6px 20px rgba(61,214,140,.3); }
+    .btn-help-cognate   { background: linear-gradient(135deg, var(--yellow), #f59e0b); box-shadow: 0 6px 20px rgba(251,191,36,.3); }
+    .btn-help-translate { background: linear-gradient(135deg, var(--pink), #ec4899);   box-shadow: 0 6px 20px rgba(255,110,180,.3); }
+    .btn-help-done      { background: linear-gradient(135deg, #94a3b8, #64748b);       box-shadow: 0 4px 14px rgba(100,116,139,.2); font-size: .95rem; }
+
+    .btn-help:hover  { transform: translateY(-3px); }
+    .btn-help:active { transform: translateY(-1px); }
+    .btn-help:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+    /* ── Answer card ── */
+    .answer-card {
+      background: var(--white);
+      border-radius: 24px;
+      border: 2.5px solid var(--blue2);
+      padding: 22px;
+      box-shadow: 0 4px 24px rgba(91,156,246,.12);
+      animation: popIn .45s cubic-bezier(.34,1.56,.64,1) both;
+    }
+
+    .answer-label { font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+
+    .answer-input {
+      width: 100%;
+      background: #f0f7ff;
+      border: 2px solid var(--blue2);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: var(--text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .answer-input:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(91,156,246,.14); }
+    .answer-input::placeholder { color: #93c5fd; font-weight: 400; }
+
+    .btn-submit {
+      width: 100%;
+      margin-top: 12px;
+      background: linear-gradient(135deg, var(--blue), #3b82f6);
+      border: none; border-radius: 14px;
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      padding: 14px;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 6px 22px rgba(91,156,246,.34);
+    }
+    .btn-submit:hover  { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(91,156,246,.44); }
+    .btn-submit:active { transform: translateY(-1px); }
+
+    /* ── Feedback ── */
+    .feedback-card {
+      border-radius: 20px;
+      padding: 20px 22px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.3rem;
+      text-align: center;
+      animation: popIn .4s cubic-bezier(.34,1.56,.64,1) both;
+      display: none;
+    }
+    .feedback-card.visible { display: block; }
+    .feedback-correct   { background: linear-gradient(135deg, #d1fae5, #a7f3d0); border: 2.5px solid var(--green);  color: #065f46; }
+    .feedback-incorrect { background: linear-gradient(135deg, #fff0f8, var(--pink2)); border: 2.5px solid var(--pink); color: #9d174d; }
+
+    .feedback-emoji { font-size: 2.4rem; display: block; margin-bottom: 6px; }
+
+    .btn-next {
+      margin-top: 14px;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      border: none; border-radius: 14px;
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1rem;
+      padding: 12px 28px;
+      cursor: pointer;
+      transition: transform .2s;
+      box-shadow: 0 4px 16px rgba(167,139,250,.3);
+    }
+    .btn-next:hover { transform: translateY(-2px); }
+
+    /* ── Error ── */
+    .error-banner {
+      display: none;
+      background: #fff0f3; border: 2px solid #ffb3c6;
+      border-radius: 14px; padding: 13px 18px;
+      color: #c94070; font-size: .9rem; font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .error-banner.visible { display: block; }
+
+    /* ── Score ── */
+    .score-bar {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .score-pill {
+      background: white; border-radius: 40px;
+      padding: 7px 16px;
+      font-size: .82rem; font-weight: 800;
+      display: flex; align-items: center; gap: 5px;
+      box-shadow: 0 2px 12px rgba(167,139,250,.14);
+      border: 2px solid var(--purple2);
+    }
+    .score-pill b { color: var(--purple); }
+
+    footer { text-align: center; color: var(--muted); font-size: .8rem; font-weight: 700; margin-top: 52px; padding-top: 20px; }
+
+    @keyframes popIn { from { opacity:0; transform:scale(.88) translateY(16px); } to { opacity:1; transform:scale(1) translateY(0); } }
+    @keyframes spin   { to { transform: rotate(360deg); } }
+
+    @media (max-width: 560px) { h1 { font-size: 2.1rem; } .mascot { font-size: 3rem; } }
+  </style>
+</head>
+<body>
+
+<div class="bg-blobs">
+  <div class="blob blob1"></div><div class="blob blob2"></div>
+  <div class="blob blob3"></div><div class="blob blob4"></div>
+</div>
+
+<div class="container">
+
+  <header>
+    <span class="mascot">🦄</span>
+    <h1>Bilingual Math Tutor</h1>
+    <p class="tagline">✨ Your bilingual math buddy — English &amp; Spanish ✨</p>
+    <div class="stars">⭐🌸⭐🌿⭐💜⭐</div>
+  </header>
+
+  <!-- Score bar -->
+  <div class="score-bar" id="scoreBar" style="display:none">
+    <div class="score-pill">✅ Correct: <b id="scoreCorrect">0</b></div>
+    <div class="score-pill">❌ Wrong: <b id="scoreWrong">0</b></div>
+    <div class="score-pill">🆘 Hints used: <b id="scoreHints">0</b></div>
+  </div>
+
+  <!-- Error -->
+  <div class="error-banner" id="errorBanner"></div>
+
+  <!-- Input -->
+  <div class="input-card" id="inputCard">
+    <div class="input-label">📝 Enter a math problem for your student</div>
+    <textarea id="problemInput" placeholder="e.g. A car travels 60 miles per hour. How many miles will it travel in 3 hours?"></textarea>
+    <button class="btn-start" id="startBtn" onclick="startProblem()">🚀 Start Problem!</button>
+    <div class="examples-label">✨ Try an example</div>
+    <div class="chips">
+      <button class="chip" onclick="useExample(this)">🚗 Car speed</button>
+      <button class="chip" onclick="useExample(this)">🍕 Pizza sharing</button>
+      <button class="chip" onclick="useExample(this)">📐 Rectangle area</button>
+      <button class="chip" onclick="useExample(this)">📊 Test average</button>
+      <button class="chip" onclick="useExample(this)">💰 Savings</button>
+      <button class="chip" onclick="useExample(this)">🔢 Solve for x</button>
+    </div>
+  </div>
+
+  <!-- Tutor area -->
+  <div class="tutor-area" id="tutorArea">
+
+    <!-- Original question -->
+    <div class="question-card">
+      <div class="qcard-header">
+        <span class="icon">🧮</span>
+        <span class="title">Math Problem</span>
+      </div>
+      <div class="qcard-body" id="questionText"></div>
+    </div>
+
+    <!-- Help step 1 (simplify) -->
+    <div class="help-card help-simplify" id="helpSimplify" style="display:none">
+      <div class="hcard-header">
+        <span class="hcard-icon">✂️</span>
+        <span class="hcard-title">Simpler English</span>
+        <span class="hbadge">Hint 1</span>
+      </div>
+      <div class="hcard-body" id="textSimplify"></div>
+    </div>
+
+    <!-- Help step 2 (cognate) -->
+    <div class="help-card help-cognate" id="helpCognate" style="display:none">
+      <div class="hcard-header">
+        <span class="hcard-icon">🔀</span>
+        <span class="hcard-title">English + Spanish Words</span>
+        <span class="hbadge">Hint 2</span>
+      </div>
+      <div class="hcard-body" id="textCognate"></div>
+    </div>
+
+    <!-- Help step 3 (translate) -->
+    <div class="help-card help-translate" id="helpTranslate" style="display:none">
+      <div class="hcard-header">
+        <span class="hcard-icon">🇪🇸</span>
+        <span class="hcard-title">Full Spanish</span>
+        <span class="hbadge">Hint 3</span>
+      </div>
+      <div class="hcard-body" id="textTranslate"></div>
+    </div>
+
+    <!-- Help button -->
+    <button class="btn-help btn-help-simplify" id="helpBtn" onclick="showNextHint()">
+      💡 I need a hint!
+    </button>
+
+    <!-- Answer -->
+    <div class="answer-card">
+      <div class="answer-label">✏️ Your Answer</div>
+      <input class="answer-input" id="answerInput" type="text" placeholder="Type your answer here..." />
+      <button class="btn-submit" onclick="submitAnswer()">✅ Submit Answer!</button>
+    </div>
+
+    <!-- Feedback -->
+    <div class="feedback-card" id="feedbackCard">
+      <span class="feedback-emoji" id="feedbackEmoji"></span>
+      <div id="feedbackText"></div>
+      <button class="btn-next" onclick="newProblem()">🔄 Try Another Problem!</button>
+    </div>
+
+  </div>
+
+  <footer>Made with 💜 for bilingual students &nbsp;·&nbsp;
+  </footer>
+</div>
+
+<script>
+  const API = 'http://localhost:8000';
+  const examples = {
+    '🚗 Car speed':      'A car travels 60 miles per hour. How many miles will it travel in 3 hours?',
+    '🍕 Pizza sharing':  'A pizza has 8 slices. If 4 friends share it equally, how many slices does each person get?',
+    '📐 Rectangle area': 'What is the area of a rectangle with a length of 5cm and a width of 4cm?',
+    '📊 Test average':   'A student scored 80, 90, and 70 on three tests. What is the average score?',
+    '💰 Savings':        'Maria saves $5 every week. How much money will she have after 10 weeks?',
+    '🔢 Solve for x':    'If 3x = 12, what is the value of x?',
+  };
+
+  let hintLevel = 0; // 0=none, 1=simplify, 2=cognate, 3=translate
+  let modelData = null;
+  let correct = 0, wrong = 0, hints = 0;
+
+  function useExample(el) {
+    document.getElementById('problemInput').value = examples[el.textContent.trim()] || '';
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('errorBanner');
+    el.textContent = '😅 ' + msg;
+    el.classList.add('visible');
+  }
+
+  function hideError() { document.getElementById('errorBanner').classList.remove('visible'); }
+
+  async function startProblem() {
+    const input = document.getElementById('problemInput').value.trim();
+    if (!input) return;
+    hideError();
+
+    const btn = document.getElementById('startBtn');
+    btn.disabled = true; btn.textContent = '⏳ Loading...';
+
+    // Pre-fetch all 3 levels from model
+    try {
+      const res = await fetch(API + '/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: input })
+      });
+      if (!res.ok) throw new Error('Server error ' + res.status);
+      modelData = await res.json();
+    } catch(e) {
+      showError("Can't reach the model server! Make sure python model_server.py is running. (" + e.message + ")");
+      btn.disabled = false; btn.innerHTML = '🚀 Start Problem!';
+      return;
+    }
+
+    // Reset state
+    hintLevel = 0;
+    document.getElementById('helpSimplify').style.display  = 'none';
+    document.getElementById('helpCognate').style.display   = 'none';
+    document.getElementById('helpTranslate').style.display = 'none';
+    document.getElementById('feedbackCard').className = 'feedback-card';
+    document.getElementById('answerInput').value = '';
+    document.getElementById('answerInput').disabled = false;
+
+    // Set question
+    document.getElementById('questionText').textContent = input;
+
+    // Reset help button
+    const helpBtn = document.getElementById('helpBtn');
+    helpBtn.className = 'btn-help btn-help-simplify';
+    helpBtn.textContent = '💡 I need a hint!';
+    helpBtn.disabled = false;
+    helpBtn.style.display = 'block';
+
+    // Show tutor, hide input
+    document.getElementById('inputCard').style.display = 'none';
+    document.getElementById('tutorArea').classList.add('visible');
+    document.getElementById('scoreBar').style.display = 'flex';
+
+    btn.disabled = false; btn.innerHTML = '🚀 Start Problem!';
+  }
+
+  function showNextHint() {
+    hintLevel++;
+    hints++;
+    updateScore();
+
+    if (hintLevel === 1) {
+      // Show simplify
+      const el = document.getElementById('helpSimplify');
+      el.style.display = 'block';
+      document.getElementById('textSimplify').textContent = modelData.simplify;
+
+      const helpBtn = document.getElementById('helpBtn');
+      helpBtn.className = 'btn-help btn-help-cognate';
+      helpBtn.textContent = '💡 Still need help!';
+
+    } else if (hintLevel === 2) {
+      // Show cognate
+      const el = document.getElementById('helpCognate');
+      el.style.display = 'block';
+      document.getElementById('textCognate').textContent = modelData.cognate;
+
+      const helpBtn = document.getElementById('helpBtn');
+      helpBtn.className = 'btn-help btn-help-translate';
+      helpBtn.textContent = '🇪🇸 Show me in Spanish!';
+
+    } else if (hintLevel === 3) {
+      // Show translate
+      const el = document.getElementById('helpTranslate');
+      el.style.display = 'block';
+      document.getElementById('textTranslate').textContent = modelData.translate;
+
+      const helpBtn = document.getElementById('helpBtn');
+      helpBtn.className = 'btn-help btn-help-done';
+      helpBtn.textContent = '✓ All hints shown';
+      helpBtn.disabled = true;
+    }
+
+    // Scroll to new hint
+    window.scrollBy({ top: 120, behavior: 'smooth' });
+  }
+
+  function submitAnswer() {
+    const answer = document.getElementById('answerInput').value.trim();
+    if (!answer) return;
+
+    // Simple check — just record, no right/wrong since answer varies
+    // Teachers can verify; we show encouraging feedback
+    document.getElementById('answerInput').disabled = true;
+
+    const feedback = document.getElementById('feedbackCard');
+    const emoji    = document.getElementById('feedbackEmoji');
+    const text     = document.getElementById('feedbackText');
+
+    // Encourage based on hints used
+    if (hintLevel === 0) {
+      feedback.className = 'feedback-card feedback-correct visible';
+      emoji.textContent = '🌟';
+      text.innerHTML = 'Amazing! You solved it without any hints!<br><small style="font-family:Nunito;font-weight:700;font-size:.85rem">Your answer: ' + answer + '</small>';
+      correct++;
+    } else if (hintLevel <= 2) {
+      feedback.className = 'feedback-card feedback-correct visible';
+      emoji.textContent = '🎉';
+      text.innerHTML = 'Great job! You got some help but you did it!<br><small style="font-family:Nunito;font-weight:700;font-size:.85rem">Your answer: ' + answer + '</small>';
+      correct++;
+    } else {
+      feedback.className = 'feedback-card feedback-incorrect visible';
+      emoji.textContent = '💪';
+      text.innerHTML = 'Good try! Keep practicing — you\'re learning!<br><small style="font-family:Nunito;font-weight:700;font-size:.85rem">Your answer: ' + answer + '</small>';
+      wrong++;
+    }
+
+    updateScore();
+    window.scrollBy({ top: 200, behavior: 'smooth' });
+  }
+
+  function updateScore() {
+    document.getElementById('scoreCorrect').textContent = correct;
+    document.getElementById('scoreWrong').textContent   = wrong;
+    document.getElementById('scoreHints').textContent   = hints;
+  }
+
+  function newProblem() {
+    document.getElementById('tutorArea').classList.remove('visible');
+    document.getElementById('inputCard').style.display = 'block';
+    document.getElementById('problemInput').value = '';
+    document.getElementById('problemInput').focus();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+      if (document.getElementById('inputCard').style.display !== 'none') startProblem();
+    }
+  });
+</script>
+</body>
+</html>

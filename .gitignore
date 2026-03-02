@@ -1,0 +1,6 @@
+venv/
+final_model/
+__pycache__/
+*.pyc
+.DS_Store
+*.zip
