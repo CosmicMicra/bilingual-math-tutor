@@ -29,7 +29,13 @@ We frame the problem as **controlled text generation with scaffolding levels**. 
 Each input problem is prefixed with a control token (`simplify:`, `cognate:`, `translate:`) so the model learns to generate the appropriate level on demand. Students only see the next hint when they ask for it — preserving the learning challenge while removing the language barrier.
 
 ---
+## 💜 Demo Images
 
+<img width="1205" height="707" alt="Screenshot 2026-03-02 at 12 58 22 AM" src="https://github.com/user-attachments/assets/efd38b94-e189-4553-8615-6a7d3b73616b" />
+---
+<img width="1107" height="711" alt="Screenshot 2026-03-02 at 12 59 20 AM" src="https://github.com/user-attachments/assets/441fdd7a-5387-4ad0-9d78-a775720f872d" />
+
+---
 ## 📊 Model Performance
 
 **Base model:** `facebook/bart-base` · Fine-tuned on bilingual math scaffolding dataset
