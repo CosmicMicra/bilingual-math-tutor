@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { getAuth, onAuthStateChanged, signInAnonymously } from 'firebase/auth';
-import { Languages, HelpCircle, CheckCircle2, ChevronRight, BookOpen, Clock, BarChart3, AlertCircle, Users, Lock, Trash2 } from 'lucide-react';
-import { translateProblem, BilingualProblem } from './lib/gemini';
+import { Languages, HelpCircle, CheckCircle2, ChevronRight, BookOpen, Clock, BarChart3, AlertCircle, Users, Lock, Trash2, Camera, X, Mic, MicOff } from 'lucide-react';
+import { translateProblem, ocrTranslateProblem, BilingualProblem } from './lib/gemini';
 import { firebaseApp } from './lib/firebase';
 import { authFetch } from './lib/api';
 
@@ -131,6 +131,13 @@ export default function App() {
   const [currentInteractionId, setCurrentInteractionId] = React.useState<string | null>(null);
   const [feedback, setFeedback] = React.useState<{ type: 'success' | 'error', message: string } | null>(null);
   const [confirmReveal, setConfirmReveal] = React.useState(false);
+  const [uploadedImage, setUploadedImage] = React.useState<File | null>(null);
+  const [imagePreview, setImagePreview] = React.useState<string | null>(null);
+  const [ocrStatus, setOcrStatus] = React.useState<string | null>(null);
+  const [ocrProgress, setOcrProgress] = React.useState(0);
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const [isListening, setIsListening] = React.useState(false);
+  const recognitionRef = React.useRef<SpeechRecognition | null>(null);
   const [userId, setUserId] = React.useState<string>('');
   const [authReady, setAuthReady] = React.useState(false);
   const [adaptiveState, setAdaptiveState] = React.useState<AdaptiveState>({
@@ -206,13 +213,107 @@ export default function App() {
     });
   };
 
+  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const allowedTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/gif'];
+    if (!allowedTypes.includes(file.type)) {
+      setFeedback({ type: 'error', message: 'Please upload a PNG, JPEG, WebP, or GIF image.' });
+      return;
+    }
+    if (file.size > 3 * 1024 * 1024) {
+      setFeedback({ type: 'error', message: 'Image too large. Maximum size is 3MB.' });
+      return;
+    }
+    setUploadedImage(file);
+    const url = URL.createObjectURL(file);
+    setImagePreview(url);
+    setFeedback(null);
+  };
+
+  const clearImage = () => {
+    setUploadedImage(null);
+    if (imagePreview) URL.revokeObjectURL(imagePreview);
+    setImagePreview(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const toggleVoiceInput = () => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      setFeedback({ type: 'error', message: 'Voice input is not supported in this browser. Try Chrome or Edge.' });
+      return;
+    }
+
+    if (isListening && recognitionRef.current) {
+      recognitionRef.current.stop();
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
+    recognitionRef.current = recognition;
+
+    let finalTranscript = '';
+
+    recognition.onstart = () => setIsListening(true);
+
+    recognition.onresult = (event: SpeechRecognitionEvent) => {
+      let interim = '';
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          finalTranscript += transcript;
+        } else {
+          interim += transcript;
+        }
+      }
+      setInputText(prev => {
+        const base = finalTranscript || prev;
+        return interim ? base + interim : base;
+      });
+    };
+
+    recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
+      console.error('Speech recognition error:', event.error);
+      if (event.error === 'not-allowed') {
+        setFeedback({ type: 'error', message: 'Microphone access denied. Please allow microphone permission.' });
+      } else if (event.error !== 'aborted') {
+        setFeedback({ type: 'error', message: 'Voice recognition error. Please try again.' });
+      }
+      setIsListening(false);
+    };
+
+    recognition.onend = () => {
+      setIsListening(false);
+      if (finalTranscript) {
+        setInputText(finalTranscript);
+      }
+      recognitionRef.current = null;
+    };
+
+    recognition.start();
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!inputText.trim() || loading || !firebaseApp || !authReady) return;
+    if ((!inputText.trim() && !uploadedImage) || loading || !firebaseApp || !authReady) return;
 
     setLoading(true);
     try {
-      const result = await translateProblem(inputText);
+      let result: BilingualProblem;
+      if (uploadedImage) {
+        result = await ocrTranslateProblem(uploadedImage, (status, progress) => {
+          setOcrStatus(status);
+          setOcrProgress(progress);
+        });
+        setOcrStatus(null);
+        setOcrProgress(0);
+      } else {
+        result = await translateProblem(inputText);
+      }
       setCurrentProblem(result);
       setActiveLevel(0); // Start at level 0 (original)
       setUserAnswer('');
@@ -251,9 +352,12 @@ export default function App() {
 
       // Initial sync
       syncToBackend(newInteraction, false);
+      clearImage();
     } catch (error) {
       console.error(error);
       setFeedback({ type: 'error', message: 'Analysis failed. Please check your input.' });
+      setOcrStatus(null);
+      setOcrProgress(0);
     } finally {
       setLoading(false);
     }
@@ -439,32 +543,97 @@ export default function App() {
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   maxLength={500}
-                  placeholder="Paste a math word problem to begin analysis..."
-                  className={`w-full h-24 bg-[#FDFBF7] border rounded-xl p-4 text-sm font-serif italic outline-none focus:ring-1 transition-all resize-none placeholder-[#C5C1B1] ${
+                  placeholder="Type, speak, or upload an image of a math problem..."
+                  className={`w-full h-24 bg-[#FDFBF7] border rounded-xl p-4 pr-12 text-sm font-serif italic outline-none focus:ring-1 transition-all resize-none placeholder-[#C5C1B1] ${
                     inputText.length >= 500 ? 'border-amber-400 focus:ring-amber-400' : 'border-[#E6E2D3] focus:ring-[#8B9D83]'
                   }`}
                 />
-                <div className={`text-right text-[10px] font-bold mt-1 pr-1 ${inputText.length >= 500 ? 'text-amber-600' : 'text-[#8B9D83] opacity-60'}`}>
-                  {inputText.length} / 500
+                <button
+                  type="button"
+                  onClick={toggleVoiceInput}
+                  className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center transition-all ${
+                    isListening
+                      ? 'bg-red-500 text-white animate-pulse shadow-lg'
+                      : 'bg-[#F3F1E9] text-[#8B9D83] hover:bg-[#E6E2D3] border border-[#E6E2D3]'
+                  }`}
+                  title={isListening ? 'Stop listening' : 'Voice input'}
+                >
+                  {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                </button>
+                <div className={`flex items-center justify-between mt-1 px-1`}>
+                  {isListening && (
+                    <span className="text-[10px] font-bold text-red-500 uppercase tracking-widest animate-pulse">Listening...</span>
+                  )}
+                  <div className={`text-right text-[10px] font-bold pr-1 ml-auto ${inputText.length >= 500 ? 'text-amber-600' : 'text-[#8B9D83] opacity-60'}`}>
+                    {inputText.length} / 500
+                  </div>
                 </div>
               </div>
-              <div className="flex justify-end">
+
+              {/* Image Upload Area */}
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/png,image/jpeg,image/webp,image/gif"
+                onChange={handleImageSelect}
+                className="hidden"
+              />
+              {imagePreview ? (
+                <div className="relative inline-block">
+                  <img
+                    src={imagePreview}
+                    alt="Uploaded math problem"
+                    className="max-h-40 rounded-xl border border-[#E6E2D3] shadow-sm"
+                  />
+                  <button
+                    type="button"
+                    onClick={clearImage}
+                    className="absolute -top-2 -right-2 w-6 h-6 bg-red-400 hover:bg-red-500 text-white rounded-full flex items-center justify-center shadow-md transition-colors"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="flex items-center gap-2 px-4 py-2.5 border-2 border-dashed border-[#E6E2D3] rounded-xl text-xs font-bold uppercase tracking-widest text-[#8B9D83] hover:border-[#8B9D83] hover:bg-[#F3F1E9] transition-all"
+                >
+                  <Camera className="w-4 h-4" />
+                  Upload Image of Problem
+                </button>
+              )}
+
+              <div className="flex items-center gap-3 justify-end">
+                {ocrStatus && (
+                  <div className="flex items-center gap-2 flex-grow">
+                    <div className="flex-grow bg-[#E6E2D3] h-2 rounded-full overflow-hidden">
+                      <div
+                        className="bg-[#8B9D83] h-full transition-all duration-300"
+                        style={{ width: `${ocrProgress}%` }}
+                      />
+                    </div>
+                    <span className="text-[10px] font-bold text-[#8B9D83] uppercase tracking-wider whitespace-nowrap">
+                      {ocrStatus}
+                    </span>
+                  </div>
+                )}
                 <button
                   type="submit"
                   disabled={
                     loading ||
-                    !inputText.trim() ||
+                    (!inputText.trim() && !uploadedImage) ||
                     inputText.length > 500 ||
                     !authReady ||
                     !firebaseApp
                   }
                   className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-md ${
-                    loading || !inputText.trim() || inputText.length > 500 || !authReady || !firebaseApp
+                    loading || (!inputText.trim() && !uploadedImage) || inputText.length > 500 || !authReady || !firebaseApp
                     ? 'bg-[#E6E2D3] text-[#5A534A] opacity-50 cursor-not-allowed' 
                     : 'bg-[#8B9D83] hover:bg-[#7A8C72] text-white active:scale-95'
                   }`}
                 >
-                  {loading ? 'Analyzing...' : 'Process Layers'}
+                  {loading ? (ocrStatus || 'Analyzing...') : uploadedImage ? 'Scan & Process' : 'Process Layers'}
                 </button>
               </div>
             </form>
