@@ -4,6 +4,7 @@ import rateLimit from 'express-rate-limit';
 import { GoogleGenAI } from '@google/genai';
 import { createServer as createViteServer } from 'vite';
 import path from 'path';
+import { readFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import admin from 'firebase-admin';
@@ -56,6 +57,14 @@ const INTERACTION_FIELD_KEYS = new Set<string>([
   'nextLevel',
 ]);
 
+const USER_PROFILE_FIELD_KEYS = new Set<string>([
+  'displayName',
+  'photoURL',
+  'preferredLanguage',
+  'gradeLevel',
+  'learningGoals',
+]);
+
 function pickAllowlisted(
   body: Record<string, unknown> | null | undefined
 ): Record<string, unknown> {
@@ -65,6 +74,21 @@ function pickAllowlisted(
   const out: Record<string, unknown> = {};
   for (const key of Object.keys(body)) {
     if (INTERACTION_FIELD_KEYS.has(key) && body[key] !== undefined) {
+      out[key] = body[key as keyof typeof body];
+    }
+  }
+  return out;
+}
+
+function pickUserProfileAllowlisted(
+  body: Record<string, unknown> | null | undefined
+): Record<string, unknown> {
+  if (!body || typeof body !== 'object') {
+    return {};
+  }
+  const out: Record<string, unknown> = {};
+  for (const key of Object.keys(body)) {
+    if (USER_PROFILE_FIELD_KEYS.has(key) && body[key] !== undefined) {
       out[key] = body[key as keyof typeof body];
     }
   }
@@ -138,9 +162,146 @@ async function requireAuth(req: Request, res: Response, next: NextFunction) {
 }
 
 const MAX_PROBLEM_TEXT_CHARS = 4000;
+const QUESTION_SEED_VERSION = 1;
+
+type QuestionRecord = {
+  id: string;
+  level: string;
+  topic: string;
+  problem_text: string;
+  [key: string]: unknown;
+};
+
+function parseLevel(level: string): [number, number] {
+  const [majorRaw, minorRaw] = level.split('.');
+  const major = Number(majorRaw);
+  const minor = Number(minorRaw);
+  return [Number.isFinite(major) ? major : 99, Number.isFinite(minor) ? minor : 99];
+}
+
+function levelDistance(a: string, b: string): number {
+  const [aMajor, aMinor] = parseLevel(a);
+  const [bMajor, bMinor] = parseLevel(b);
+  return Math.abs(aMajor - bMajor) * 10 + Math.abs(aMinor - bMinor);
+}
+
+async function seedQuestionsOnce(db: FirebaseFirestore.Firestore): Promise<void> {
+  const seedRef = db.collection('meta').doc('seeds');
+  const seedSnap = await seedRef.get();
+  const seedData = seedSnap.data();
+  if (
+    seedSnap.exists &&
+    seedData?.questionsSeeded === true &&
+    seedData?.questionsSeedVersion === QUESTION_SEED_VERSION
+  ) {
+    return;
+  }
+
+  const filePath = path.join(process.cwd(), 'question_database.json');
+  const raw = await readFile(filePath, 'utf8');
+  const questions = JSON.parse(raw) as QuestionRecord[];
+  if (!Array.isArray(questions) || questions.length === 0) {
+    throw new Error('question_database.json is empty or malformed');
+  }
+
+  let batch = db.batch();
+  let writes = 0;
+  const commitPromises: Promise<FirebaseFirestore.WriteResult[]>[] = [];
+
+  for (const question of questions) {
+    if (!question?.id || !question.level || !question.topic || !question.problem_text) {
+      continue;
+    }
+    const qRef = db.collection('questions').doc(question.id);
+    batch.set(qRef, question, { merge: true });
+    writes += 1;
+    if (writes % 400 === 0) {
+      commitPromises.push(batch.commit());
+      batch = db.batch();
+    }
+  }
+
+  if (writes % 400 !== 0) {
+    commitPromises.push(batch.commit());
+  }
+  if (commitPromises.length > 0) {
+    await Promise.all(commitPromises);
+  }
+
+  await seedRef.set(
+    {
+      questionsSeeded: true,
+      questionsSeedVersion: QUESTION_SEED_VERSION,
+      questionCount: writes,
+      seededAt: admin.firestore.FieldValue.serverTimestamp(),
+    },
+    { merge: true }
+  );
+}
+
+async function queryQuestionsByLevel(
+  db: FirebaseFirestore.Firestore,
+  level: string,
+  topic?: string
+): Promise<QuestionRecord[]> {
+  let query: FirebaseFirestore.Query = db.collection('questions').where('level', '==', level);
+  if (topic?.trim()) {
+    query = query.where('topic', '==', topic.trim());
+  }
+  const snap = await query.get();
+  return snap.docs.map((doc) => ({ id: doc.id, ...(doc.data() as Record<string, unknown>) })) as QuestionRecord[];
+}
+
+function pickRandomQuestion(candidates: QuestionRecord[]): QuestionRecord | null {
+  if (candidates.length === 0) return null;
+  const idx = Math.floor(Math.random() * candidates.length);
+  return candidates[idx];
+}
+
+async function select_question(
+  db: FirebaseFirestore.Firestore,
+  currentLevel: string,
+  topic: string | undefined,
+  excludeRecentIds: string[]
+): Promise<QuestionRecord | null> {
+  const excluded = new Set(excludeRecentIds || []);
+  const filterExcluded = (questions: QuestionRecord[]) =>
+    questions.filter((q) => q?.id && !excluded.has(q.id));
+
+  const sameLevelWithTopic = filterExcluded(
+    await queryQuestionsByLevel(db, currentLevel, topic)
+  );
+  const selectedPrimary = pickRandomQuestion(sameLevelWithTopic);
+  if (selectedPrimary) return selectedPrimary;
+
+  const sameLevelAnyTopic = filterExcluded(await queryQuestionsByLevel(db, currentLevel));
+  const selectedSameLevel = pickRandomQuestion(sameLevelAnyTopic);
+  if (selectedSameLevel) return selectedSameLevel;
+
+  const allSnap = await db.collection('questions').get();
+  const allQuestions = allSnap.docs
+    .map((doc) => ({ id: doc.id, ...(doc.data() as Record<string, unknown>) }) as QuestionRecord)
+    .filter((q) => q?.id && q?.level && !excluded.has(q.id));
+
+  if (allQuestions.length === 0) return null;
+
+  const byDistance = [...allQuestions].sort(
+    (a, b) => levelDistance(a.level, currentLevel) - levelDistance(b.level, currentLevel)
+  );
+
+  if (topic?.trim()) {
+    const topicMatch = byDistance.filter((q) => q.topic === topic.trim());
+    const selectedTopicNearest = pickRandomQuestion(topicMatch.slice(0, 25));
+    if (selectedTopicNearest) return selectedTopicNearest;
+  }
+
+  return pickRandomQuestion(byDistance.slice(0, 25));
+}
 
 async function startServer() {
   ensureFirebaseAdmin();
+  const db = getFirestore();
+  await seedQuestionsOnce(db);
 
   const app = express();
   const PORT = 3000;
@@ -188,6 +349,88 @@ async function startServer() {
   });
 
   app.use('/api/', apiBurstLimiter);
+
+  app.get('/api/me', requireAuth, async (req, res) => {
+    try {
+      const uid = req.user!.uid;
+      const db = getFirestore();
+      const docRef = db.collection('users').doc(uid);
+      const snap = await docRef.get();
+      if (!snap.exists) {
+        return res.status(404).json({ error: 'Profile not found' });
+      }
+      return res.json({ uid, ...snap.data() });
+    } catch (error: unknown) {
+      console.error('Error in GET /api/me:', error);
+      return res.status(500).json({ error: publicErrorMessage(error) });
+    }
+  });
+
+  app.put('/api/me', requireAuth, async (req, res) => {
+    try {
+      const uid = req.user!.uid;
+      const db = getFirestore();
+      const docRef = db.collection('users').doc(uid);
+      const allowed = pickUserProfileAllowlisted(req.body);
+      await docRef.set(
+        stripUndefined({
+          ...allowed,
+          uid,
+          email: req.user?.email ?? null,
+          providerIds: req.user?.firebase?.sign_in_provider
+            ? [req.user.firebase.sign_in_provider]
+            : [],
+          createdAt: admin.firestore.FieldValue.serverTimestamp(),
+          lastLoginAt: admin.firestore.FieldValue.serverTimestamp(),
+        }),
+        { merge: true }
+      );
+      const updated = await docRef.get();
+      return res.json({ uid, ...updated.data() });
+    } catch (error: unknown) {
+      console.error('Error in PUT /api/me:', error);
+      return res.status(500).json({ error: publicErrorMessage(error) });
+    }
+  });
+
+  app.post(
+    '/api/questions/select',
+    requireAuth,
+    sessionMutateLimiter,
+    async (req, res) => {
+      try {
+        const {
+          currentLevel,
+          topic,
+          excludeRecentIds,
+        } = req.body as {
+          currentLevel?: string;
+          topic?: string;
+          excludeRecentIds?: string[];
+        };
+
+        if (!currentLevel || typeof currentLevel !== 'string') {
+          return res.status(400).json({ error: 'currentLevel is required' });
+        }
+
+        const selected = await select_question(
+          db,
+          currentLevel,
+          typeof topic === 'string' ? topic : undefined,
+          Array.isArray(excludeRecentIds) ? excludeRecentIds.filter((id) => typeof id === 'string') : []
+        );
+
+        if (!selected) {
+          return res.status(404).json({ error: 'No matching question found' });
+        }
+
+        return res.json(selected);
+      } catch (error: unknown) {
+        console.error('Error in POST /api/questions/select:', error);
+        return res.status(500).json({ error: publicErrorMessage(error) });
+      }
+    }
+  );
 
   app.post(
     '/api/translate',
@@ -363,21 +606,17 @@ Return the data in the following JSON format:
   );
 
   app.get(
-    '/api/sessions/:studentId',
+    '/api/sessions/me',
     requireAuth,
     sessionMutateLimiter,
     async (req, res) => {
       try {
-        const { studentId } = req.params;
         const uid = req.user!.uid;
-        if (studentId !== uid) {
-          return res.status(403).json({ error: 'Forbidden' });
-        }
 
         const db = getFirestore();
         const snapshot = await db
           .collectionGroup('interactions')
-          .where('userId', '==', studentId)
+          .where('userId', '==', uid)
           .orderBy('createdAt', 'desc')
           .get();
 
@@ -388,10 +627,7 @@ Return the data in the following JSON format:
 
         res.json(sessions);
       } catch (error: unknown) {
-        console.error(
-          `Error in GET /api/sessions/${req.params.studentId}:`,
-          error
-        );
+        console.error('Error in GET /api/sessions/me:', error);
         res.status(500).json({ error: publicErrorMessage(error) });
       }
     }

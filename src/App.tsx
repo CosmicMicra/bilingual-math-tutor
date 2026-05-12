@@ -1,12 +1,47 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { getAuth, onAuthStateChanged, signInAnonymously } from 'firebase/auth';
+import {
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  type User,
+} from 'firebase/auth';
 import { Languages, HelpCircle, CheckCircle2, ChevronRight, BookOpen, Clock, BarChart3, AlertCircle, Users, Lock, Trash2 } from 'lucide-react';
 import { translateProblem, BilingualProblem } from './lib/gemini';
 import { firebaseApp } from './lib/firebase';
-import { authFetch } from './lib/api';
+import { authFetch, getMyProfile, selectQuestion, upsertMyProfile, type QuestionRecord, type UserProfile } from './lib/api';
 
 import { calculateLDS, calculateMCS, InteractionFeatures, getDiagnosticQuadrant, adaptiveDecide, AdaptiveState } from './lib/adaptive-engine';
+
+const EMA_PREV_WEIGHT = 0.7;
+const EMA_SAMPLE_WEIGHT = 0.3;
+const ANALYTICS_BLOCK_SIZE = 20;
+
+function stepEma(prev: number | null, sample: number): number {
+  return prev === null ? sample : EMA_PREV_WEIGHT * prev + EMA_SAMPLE_WEIGHT * sample;
+}
+
+interface SessionMetricsState {
+  lifetimeLds: number | null;
+  lifetimeMcs: number | null;
+  blockLds: number | null;
+  blockMcs: number | null;
+  completedProblems: number;
+  analyticsBlockIndex: number;
+}
+
+const INITIAL_SESSION_METRICS: SessionMetricsState = {
+  lifetimeLds: null,
+  lifetimeMcs: null,
+  blockLds: null,
+  blockMcs: null,
+  completedProblems: 0,
+  analyticsBlockIndex: 1,
+};
 
 // --- Types ---
 type ProblemStatus = 'solved' | 'revealed' | 'unsolved';
@@ -47,11 +82,23 @@ interface Interaction {
   diagnosticQuadrant?: string;
   adaptiveDecision?: string;
   nextLevel?: string;
+  questionId?: string;
+  questionTopic?: string;
+  questionLevel?: string;
+  sourceMode?: 'manual' | 'practice';
 }
 
 // --- Components ---
 
-const Header = () => (
+const Header = ({
+  user,
+  profile,
+  onSignOut,
+}: {
+  user: User | null;
+  profile: UserProfile | null;
+  onSignOut: () => void;
+}) => (
   <header className="border-b border-[#E6E2D3] bg-white sticky top-0 z-50">
     <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
       <div className="flex items-center gap-3">
@@ -68,8 +115,18 @@ const Header = () => (
       <div className="flex items-center gap-6">
         <div className="text-right hidden sm:block">
           <p className="text-[10px] uppercase tracking-widest opacity-60 font-bold text-[#433E37]">Student Progress</p>
-          <p className="text-sm font-medium italic text-[#5A534A]">Learning Session Active</p>
+          <p className="text-sm font-medium italic text-[#5A534A]">
+            {profile?.displayName || user?.email || 'Learning Session Active'}
+          </p>
         </div>
+        {user && (
+          <button
+            onClick={onSignOut}
+            className="px-3 py-2 text-[10px] font-bold uppercase tracking-wider border border-[#E6E2D3] rounded-lg text-[#5A534A] hover:bg-[#F3F1E9]"
+          >
+            Sign Out
+          </button>
+        )}
         <div className="h-10 w-10 rounded-full border-2 border-[#8B9D83] bg-[#F3F1E9] flex items-center justify-center">
           <Users className="w-5 h-5 text-[#8B9D83]" />
         </div>
@@ -104,6 +161,95 @@ function BilingualHighlighted({ text }: { text: string }) {
   return <>{nodes}</>;
 }
 
+function AuthPanel({
+  mode,
+  email,
+  password,
+  setMode,
+  setEmail,
+  setPassword,
+  onEmailSubmit,
+  onGoogleSubmit,
+  error,
+  disabled,
+}: {
+  mode: 'signin' | 'signup';
+  email: string;
+  password: string;
+  setMode: (mode: 'signin' | 'signup') => void;
+  setEmail: (v: string) => void;
+  setPassword: (v: string) => void;
+  onEmailSubmit: (e: React.FormEvent) => void;
+  onGoogleSubmit: () => void;
+  error: string | null;
+  disabled: boolean;
+}) {
+  return (
+    <main className="max-w-xl mx-auto px-6 py-16">
+      <div className="bg-white border border-[#E6E2D3] rounded-2xl p-8 shadow-sm">
+        <h2 className="text-xl font-bold text-[#5A534A] mb-2">
+          {mode === 'signin' ? 'Sign in to your profile' : 'Create your profile'}
+        </h2>
+        <p className="text-sm text-[#5A534A] opacity-70 mb-6">
+          Use Email/Password or Google. Your progress is tied to your account.
+        </p>
+        <div className="flex gap-2 mb-6">
+          <button
+            onClick={() => setMode('signin')}
+            className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider ${
+              mode === 'signin' ? 'bg-[#8B9D83] text-white' : 'bg-[#F3F1E9] text-[#5A534A]'
+            }`}
+          >
+            Sign In
+          </button>
+          <button
+            onClick={() => setMode('signup')}
+            className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider ${
+              mode === 'signup' ? 'bg-[#8B9D83] text-white' : 'bg-[#F3F1E9] text-[#5A534A]'
+            }`}
+          >
+            Sign Up
+          </button>
+        </div>
+        <form onSubmit={onEmailSubmit} className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full border border-[#E6E2D3] rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-[#8B9D83]"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full border border-[#E6E2D3] rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-[#8B9D83]"
+            required
+            minLength={6}
+          />
+          <button
+            type="submit"
+            disabled={disabled}
+            className="w-full bg-[#8B9D83] text-white rounded-xl py-3 text-sm font-bold uppercase tracking-wider disabled:opacity-60"
+          >
+            {mode === 'signin' ? 'Sign In' : 'Create Account'}
+          </button>
+        </form>
+        <button
+          onClick={onGoogleSubmit}
+          disabled={disabled}
+          className="w-full mt-4 border border-[#E6E2D3] rounded-xl py-3 text-sm font-bold uppercase tracking-wider text-[#5A534A] disabled:opacity-60"
+        >
+          Continue with Google
+        </button>
+        {error && <p className="mt-4 text-sm text-red-600">{error}</p>}
+      </div>
+    </main>
+  );
+}
+
 const TabButton = ({ active, onClick, icon: Icon, label, level }: { active: boolean, onClick: () => void, icon: any, label: string, level: string }) => (
   <button
     onClick={onClick}
@@ -123,6 +269,9 @@ const TabButton = ({ active, onClick, icon: Icon, label, level }: { active: bool
 
 export default function App() {
   const [inputText, setInputText] = React.useState('');
+  const [isPracticeMode, setIsPracticeMode] = React.useState(false);
+  const [servedQuestionIds, setServedQuestionIds] = React.useState<string[]>([]);
+  const [currentQuestionMeta, setCurrentQuestionMeta] = React.useState<Pick<QuestionRecord, 'id' | 'topic' | 'level'> | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [currentProblem, setCurrentProblem] = React.useState<BilingualProblem | null>(null);
   const [activeLevel, setActiveLevel] = React.useState<number>(1);
@@ -132,6 +281,13 @@ export default function App() {
   const [feedback, setFeedback] = React.useState<{ type: 'success' | 'error', message: string } | null>(null);
   const [confirmReveal, setConfirmReveal] = React.useState(false);
   const [userId, setUserId] = React.useState<string>('');
+  const [currentUser, setCurrentUser] = React.useState<User | null>(null);
+  const [profile, setProfile] = React.useState<UserProfile | null>(null);
+  const [authMode, setAuthMode] = React.useState<'signin' | 'signup'>('signin');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [authError, setAuthError] = React.useState<string | null>(null);
+  const [authLoading, setAuthLoading] = React.useState(false);
   const [authReady, setAuthReady] = React.useState(false);
   const [adaptiveState, setAdaptiveState] = React.useState<AdaptiveState>({
     currentElo: 1000,
@@ -142,23 +298,121 @@ export default function App() {
     streakCount: 0,
     streakWrongCount: 0
   });
+  const [sessionMetrics, setSessionMetrics] = React.useState<SessionMetricsState>(INITIAL_SESSION_METRICS);
+
+  const applyMetricSample = React.useCallback((lds: number, mcs: number) => {
+    setSessionMetrics((s) => ({
+      ...s,
+      lifetimeLds: stepEma(s.lifetimeLds, lds),
+      lifetimeMcs: stepEma(s.lifetimeMcs, mcs),
+      blockLds: stepEma(s.blockLds, lds),
+      blockMcs: stepEma(s.blockMcs, mcs),
+    }));
+  }, []);
+
+  /** Bump completed count; at block boundary clear block EMA bases. Call before applyMetricSample on that completion so the same sample seeds the new block. */
+  const markProblemCompleted = React.useCallback(() => {
+    setSessionMetrics((s) => {
+      const startingNewBlock =
+        s.completedProblems > 0 && s.completedProblems % ANALYTICS_BLOCK_SIZE === 0;
+      const completedProblems = s.completedProblems + 1;
+      const analyticsBlockIndex = Math.floor((completedProblems - 1) / ANALYTICS_BLOCK_SIZE) + 1;
+      return {
+        ...s,
+        completedProblems,
+        analyticsBlockIndex,
+        blockLds: startingNewBlock ? null : s.blockLds,
+        blockMcs: startingNewBlock ? null : s.blockMcs,
+      };
+    });
+  }, []);
 
   React.useEffect(() => {
     if (!firebaseApp) {
       setAuthReady(false);
+      setCurrentUser(null);
+      setProfile(null);
       return;
     }
     const auth = getAuth(firebaseApp);
-    signInAnonymously(auth).catch((err) => {
-      console.error('Anonymous sign-in failed:', err);
-      setAuthReady(false);
-    });
-    const unsub = onAuthStateChanged(auth, (user) => {
+    const unsub = onAuthStateChanged(auth, async (user) => {
+      setCurrentUser(user);
       setUserId(user?.uid ?? '');
-      setAuthReady(!!user);
+      if (!user) {
+        setAuthReady(false);
+        setProfile(null);
+        return;
+      }
+      try {
+        let nextProfile = await getMyProfile();
+        if (!nextProfile) {
+          nextProfile = await upsertMyProfile({
+            displayName: user.displayName ?? undefined,
+            photoURL: user.photoURL ?? undefined,
+            preferredLanguage: 'en',
+          });
+        }
+        setProfile(nextProfile);
+        setAuthReady(true);
+      } catch (err) {
+        console.error('Profile bootstrap failed:', err);
+        setAuthReady(false);
+      }
     });
     return () => unsub();
   }, []);
+
+  const handleEmailAuth = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!firebaseApp) return;
+    setAuthLoading(true);
+    setAuthError(null);
+    try {
+      const auth = getAuth(firebaseApp);
+      if (authMode === 'signup') {
+        await createUserWithEmailAndPassword(auth, email.trim(), password);
+      } else {
+        await signInWithEmailAndPassword(auth, email.trim(), password);
+      }
+      setEmail('');
+      setPassword('');
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Authentication failed';
+      setAuthError(message);
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  const handleGoogleAuth = async () => {
+    if (!firebaseApp) return;
+    setAuthLoading(true);
+    setAuthError(null);
+    try {
+      const auth = getAuth(firebaseApp);
+      await signInWithPopup(auth, new GoogleAuthProvider());
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Google sign-in failed';
+      setAuthError(message);
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  const handleSignOut = async () => {
+    if (!firebaseApp) return;
+    try {
+      const auth = getAuth(firebaseApp);
+      await signOut(auth);
+      setCurrentProblem(null);
+      setCurrentInteractionId(null);
+      setFeedback(null);
+      setInteractions([]);
+      setSessionMetrics(INITIAL_SESSION_METRICS);
+    } catch (err) {
+      console.error('Sign-out failed:', err);
+    }
+  };
 
   const syncToBackend = async (inter: Interaction, isUpdate = true) => {
     if (!firebaseApp || !authReady) return;
@@ -180,13 +434,28 @@ export default function App() {
     }
   };
 
-  // Load history from localStorage
+  // Load history from backend for the signed-in user
   React.useEffect(() => {
-    const saved = localStorage.getItem('bilingual-math-interactions');
-    if (saved) {
-      setInteractions(JSON.parse(saved));
-    }
-  }, []);
+    const loadSessions = async () => {
+      if (!authReady || !currentUser) return;
+      try {
+        const res = await authFetch('/api/sessions/me');
+        if (res.ok) {
+          const data = (await res.json()) as Interaction[];
+          setInteractions(data);
+          localStorage.setItem('bilingual-math-interactions', JSON.stringify(data));
+          return;
+        }
+      } catch (e) {
+        console.warn('Failed to load remote sessions, using local cache:', e);
+      }
+      const saved = localStorage.getItem('bilingual-math-interactions');
+      if (saved) {
+        setInteractions(JSON.parse(saved));
+      }
+    };
+    loadSessions();
+  }, [authReady, currentUser]);
 
   // Save changes to the active interaction
   const updateActiveInteraction = (updater: (inter: Interaction) => Interaction) => {
@@ -206,18 +475,20 @@ export default function App() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!inputText.trim() || loading || !firebaseApp || !authReady) return;
-
+  const processProblemText = async (
+    problemText: string,
+    questionMeta: Pick<QuestionRecord, 'id' | 'topic' | 'level'> | null = null
+  ) => {
+    if (!problemText.trim() || loading || !firebaseApp || !authReady) return;
     setLoading(true);
     try {
-      const result = await translateProblem(inputText);
+      const result = await translateProblem(problemText);
       setCurrentProblem(result);
       setActiveLevel(0); // Start at level 0 (original)
       setUserAnswer('');
       setFeedback(null);
       setConfirmReveal(false);
+      setCurrentQuestionMeta(questionMeta);
       
       const id = Date.now().toString();
       setCurrentInteractionId(id);
@@ -225,7 +496,7 @@ export default function App() {
       const now = Date.now();
       const newInteraction: Interaction = {
         id,
-        problemId: 'math_problem_' + btoa(result.original.slice(0, 20)).replace(/=/g, ''),
+        problemId: questionMeta?.id || ('math_problem_' + btoa(result.original.slice(0, 20)).replace(/=/g, '')),
         userId: userId,
         problem: result,
         attempts: [],
@@ -240,7 +511,11 @@ export default function App() {
         createdAt: now,
         lds: 0,
         mcs: 0,
-        maxHintLevel: 0
+        maxHintLevel: 0,
+        questionId: questionMeta?.id,
+        questionTopic: questionMeta?.topic,
+        questionLevel: questionMeta?.level,
+        sourceMode: questionMeta ? 'practice' : 'manual'
       };
       
       setInteractions(prev => {
@@ -256,6 +531,40 @@ export default function App() {
       setFeedback({ type: 'error', message: 'Analysis failed. Please check your input.' });
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await processProblemText(inputText, null);
+  };
+
+  const handlePracticeNextQuestion = async () => {
+    if (loading || !firebaseApp || !authReady) return;
+    try {
+      setFeedback(null);
+      const preferredTopic =
+        currentQuestionMeta?.topic ||
+        Object.entries(adaptiveState.topicMastery).sort((a, b) => (b[1] as number) - (a[1] as number))[0]?.[0] ||
+        'arithmetic';
+      const selected = await selectQuestion(
+        adaptiveState.currentLevel,
+        preferredTopic,
+        servedQuestionIds
+      );
+      setServedQuestionIds((prev) => (prev.includes(selected.id) ? prev : [...prev, selected.id]));
+      setInputText(selected.problem_text);
+      await processProblemText(selected.problem_text, {
+        id: selected.id,
+        topic: selected.topic,
+        level: selected.level,
+      });
+    } catch (error) {
+      console.error(error);
+      setFeedback({
+        type: 'error',
+        message: 'Practice question unavailable at this level right now.',
+      });
     }
   };
 
@@ -291,6 +600,7 @@ export default function App() {
 
       const lds = calculateLDS(features);
       const mcs = calculateMCS(features, lds);
+      applyMetricSample(lds, mcs);
 
       return {
         ...inter,
@@ -352,8 +662,14 @@ export default function App() {
 
       const lds = calculateLDS(features);
       const mcs = calculateMCS(features, lds);
-      
-      const { newState, decision } = adaptiveDecide(adaptiveState, features, lds, mcs, 'arithmetic');
+
+      if (isFirstCorrect) {
+        markProblemCompleted();
+      }
+      applyMetricSample(lds, mcs);
+
+      const adaptiveTopic = inter.questionTopic || currentQuestionMeta?.topic || 'arithmetic';
+      const { newState, decision } = adaptiveDecide(adaptiveState, features, lds, mcs, adaptiveTopic);
       setAdaptiveState(newState);
 
       return {
@@ -387,12 +703,50 @@ export default function App() {
     }
 
     const now = Date.now();
-    updateActiveInteraction(inter => ({
-      ...inter,
-      isSolved: 'revealed',
-      answerRevealedBySystem: true,
-      timeAnswerRevealed: new Date(now).toISOString()
-    }));
+    const inter = interactions.find(i => i.id === currentInteractionId);
+    if (inter) {
+      const timeSpent = now - (inter.lastLevelChangeTimestamp || now);
+      const updatedSpent = {
+        ...inter.timeSpentPerLevel,
+        [activeLevel]: (inter.timeSpentPerLevel[activeLevel] || 0) + timeSpent,
+      };
+      const timeSpentTotal = (Object.values(updatedSpent) as number[]).reduce((a, b) => a + b, 0);
+      const firstHintTs = inter.levelViews[1] || inter.levelViews[2] || inter.levelViews[3] || inter.levelViews[4];
+      const timeBeforeFirstHintMs = firstHintTs ? (firstHintTs - inter.sessionStartTime) : 0;
+      const maxHintLevel = Math.max(inter.maxHintLevel || 0, 4);
+      const features: InteractionFeatures = {
+        isCorrect: false,
+        maxHintLevel,
+        attempts: inter.attemptsCount,
+        timeSpentMs: timeSpentTotal,
+        timePerLevel: updatedSpent,
+        timeBeforeFirstHintMs,
+        level: adaptiveState.currentLevel,
+      };
+      const lds = calculateLDS(features);
+      const mcs = calculateMCS(features, lds);
+      markProblemCompleted();
+      applyMetricSample(lds, mcs);
+      updateActiveInteraction((i) => ({
+        ...i,
+        isSolved: 'revealed',
+        answerRevealedBySystem: true,
+        timeAnswerRevealed: new Date(now).toISOString(),
+        timeSpentPerLevel: updatedSpent,
+        lastLevelChangeTimestamp: now,
+        maxHintLevel,
+        lds,
+        mcs,
+        diagnosticQuadrant: getDiagnosticQuadrant(lds, mcs),
+      }));
+    } else {
+      updateActiveInteraction((i) => ({
+        ...i,
+        isSolved: 'revealed',
+        answerRevealedBySystem: true,
+        timeAnswerRevealed: new Date(now).toISOString(),
+      }));
+    }
     setConfirmReveal(false);
   };
 
@@ -410,19 +764,47 @@ export default function App() {
 
   const activeInteraction = interactions.find(i => i.id === currentInteractionId);
   const inputDisabled = activeInteraction?.isSolved === 'revealed' || activeInteraction?.isSolved === 'solved';
+  const ordinalInBlock =
+    sessionMetrics.completedProblems === 0
+      ? 0
+      : sessionMetrics.completedProblems % ANALYTICS_BLOCK_SIZE === 0
+        ? ANALYTICS_BLOCK_SIZE
+        : sessionMetrics.completedProblems % ANALYTICS_BLOCK_SIZE;
+  const displayLifetimeLds = sessionMetrics.lifetimeLds ?? 0;
+  const displayLifetimeMcs = sessionMetrics.lifetimeMcs ?? 0;
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-[#433E37] font-sans selection:bg-[#8B9D83]/20">
-      <Header />
+      <Header user={currentUser} profile={profile} onSignOut={handleSignOut} />
       {!firebaseApp && (
         <div
           className="bg-amber-50 border-b border-amber-200 text-amber-900 text-center text-sm py-3 px-4"
           role="alert"
         >
           Firebase client env is missing. Set VITE_FIREBASE_API_KEY, VITE_FIREBASE_AUTH_DOMAIN,
-          VITE_FIREBASE_PROJECT_ID, and VITE_FIREBASE_APP_ID. Enable Anonymous sign-in in the Firebase console.
+          VITE_FIREBASE_PROJECT_ID, and VITE_FIREBASE_APP_ID. Enable Email/Password and Google providers in Firebase Auth.
         </div>
       )}
+      {firebaseApp && !currentUser && (
+        <AuthPanel
+          mode={authMode}
+          email={email}
+          password={password}
+          setMode={setAuthMode}
+          setEmail={setEmail}
+          setPassword={setPassword}
+          onEmailSubmit={handleEmailAuth}
+          onGoogleSubmit={handleGoogleAuth}
+          error={authError}
+          disabled={authLoading}
+        />
+      )}
+      {firebaseApp && currentUser && !authReady && (
+        <main className="max-w-2xl mx-auto py-16 px-8 text-center text-[#5A534A]">
+          Preparing your profile...
+        </main>
+      )}
+      {firebaseApp && currentUser && authReady && (
       <main className="max-w-7xl mx-auto px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 h-auto lg:h-[calc(100vh-104px)] overflow-y-auto lg:overflow-hidden">
         
         {/* Left Column: Interactive Workspace */}
@@ -430,8 +812,19 @@ export default function App() {
           
           {/* Input Area */}
           <section className="bg-white border border-[#E6E2D3] rounded-2xl p-6 shadow-sm">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center justify-between gap-2 mb-4">
               <span className="px-2 py-0.5 bg-[#F3F1E9] text-[10px] font-bold uppercase rounded border border-[#E6E2D3] text-[#8B9D83]">Input Problem</span>
+              <button
+                type="button"
+                onClick={() => setIsPracticeMode((prev) => !prev)}
+                className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border ${
+                  isPracticeMode
+                    ? 'bg-[#8B9D83] text-white border-[#8B9D83]'
+                    : 'bg-[#F3F1E9] text-[#5A534A] border-[#E6E2D3]'
+                }`}
+              >
+                {isPracticeMode ? 'Practice Mode On' : 'Manual Mode'}
+              </button>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
@@ -439,33 +832,49 @@ export default function App() {
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   maxLength={500}
-                  placeholder="Paste a math word problem to begin analysis..."
+                  placeholder={isPracticeMode ? 'Practice Mode pulls a question automatically...' : 'Paste a math word problem to begin analysis...'}
                   className={`w-full h-24 bg-[#FDFBF7] border rounded-xl p-4 text-sm font-serif italic outline-none focus:ring-1 transition-all resize-none placeholder-[#C5C1B1] ${
                     inputText.length >= 500 ? 'border-amber-400 focus:ring-amber-400' : 'border-[#E6E2D3] focus:ring-[#8B9D83]'
                   }`}
+                  disabled={isPracticeMode}
                 />
                 <div className={`text-right text-[10px] font-bold mt-1 pr-1 ${inputText.length >= 500 ? 'text-amber-600' : 'text-[#8B9D83] opacity-60'}`}>
                   {inputText.length} / 500
                 </div>
               </div>
               <div className="flex justify-end">
-                <button
-                  type="submit"
-                  disabled={
-                    loading ||
-                    !inputText.trim() ||
-                    inputText.length > 500 ||
-                    !authReady ||
-                    !firebaseApp
-                  }
-                  className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-md ${
-                    loading || !inputText.trim() || inputText.length > 500 || !authReady || !firebaseApp
-                    ? 'bg-[#E6E2D3] text-[#5A534A] opacity-50 cursor-not-allowed' 
-                    : 'bg-[#8B9D83] hover:bg-[#7A8C72] text-white active:scale-95'
-                  }`}
-                >
-                  {loading ? 'Analyzing...' : 'Process Layers'}
-                </button>
+                {isPracticeMode ? (
+                  <button
+                    type="button"
+                    onClick={handlePracticeNextQuestion}
+                    disabled={loading || !authReady || !firebaseApp}
+                    className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-md ${
+                      loading || !authReady || !firebaseApp
+                        ? 'bg-[#E6E2D3] text-[#5A534A] opacity-50 cursor-not-allowed'
+                        : 'bg-[#8B9D83] hover:bg-[#7A8C72] text-white active:scale-95'
+                    }`}
+                  >
+                    {loading ? 'Loading...' : 'Next Practice Question'}
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    disabled={
+                      loading ||
+                      !inputText.trim() ||
+                      inputText.length > 500 ||
+                      !authReady ||
+                      !firebaseApp
+                    }
+                    className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-md ${
+                      loading || !inputText.trim() || inputText.length > 500 || !authReady || !firebaseApp
+                      ? 'bg-[#E6E2D3] text-[#5A534A] opacity-50 cursor-not-allowed' 
+                      : 'bg-[#8B9D83] hover:bg-[#7A8C72] text-white active:scale-95'
+                    }`}
+                  >
+                    {loading ? 'Analyzing...' : 'Process Layers'}
+                  </button>
+                )}
               </div>
             </form>
           </section>
@@ -676,34 +1085,40 @@ export default function App() {
               </div>
             </div>
 
-            {/* LDS & MCS Progress Bars */}
-            <div className="mt-6 space-y-4">
+            {/* LDS & MCS Progress Bars (session EMA; block EMA still computed for analytics) */}
+            <div className="mt-4 mb-2 text-[9px] uppercase font-bold text-[#5A534A] opacity-60">
+              Analytics block {sessionMetrics.analyticsBlockIndex}
+              <span className="font-mono normal-case ml-2">
+                ({ordinalInBlock}/{ANALYTICS_BLOCK_SIZE} completed in block)
+              </span>
+            </div>
+            <div className="mt-2 space-y-4">
               <div className="space-y-1.5">
                 <div className="flex justify-between items-end">
-                  <p className="text-[10px] uppercase font-bold text-[#8B9D83]">Language Dependency</p>
+                  <p className="text-[10px] uppercase font-bold text-[#8B9D83]">Language Dependency (session)</p>
                   <span className="text-[10px] font-mono font-bold text-amber-600">
-                    {Math.round((activeInteraction?.lds || 0) * 100)}%
+                    {Math.round(displayLifetimeLds * 100)}%
                   </span>
                 </div>
                 <div className="h-2 w-full bg-[#E6E2D3] rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-amber-500 transition-all duration-500"
-                    style={{ width: `${(activeInteraction?.lds || 0) * 100}%` }}
+                    style={{ width: `${displayLifetimeLds * 100}%` }}
                   />
                 </div>
               </div>
 
               <div className="space-y-1.5">
                 <div className="flex justify-between items-end">
-                  <p className="text-[10px] uppercase font-bold text-[#8B9D83]">Math Confidence</p>
+                  <p className="text-[10px] uppercase font-bold text-[#8B9D83]">Math Confidence (session)</p>
                   <span className="text-[10px] font-mono font-bold text-emerald-600">
-                    {Math.round((activeInteraction?.mcs || 0) * 100)}%
+                    {Math.round(displayLifetimeMcs * 100)}%
                   </span>
                 </div>
                 <div className="h-2 w-full bg-[#E6E2D3] rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-emerald-500 transition-all duration-500"
-                    style={{ width: `${(activeInteraction?.mcs || 0) * 100}%` }}
+                    style={{ width: `${displayLifetimeMcs * 100}%` }}
                   />
                 </div>
               </div>
@@ -796,7 +1211,9 @@ export default function App() {
           </section>
         </aside>
       </main>
+      )}
 
+      {currentUser && (
       <footer className="h-10 bg-white border-t border-[#E6E2D3] px-8 flex items-center justify-between text-[10px] uppercase tracking-widest font-bold text-[#AFA99E]">
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-2 italic"><div className="w-1.5 h-1.5 rounded-full bg-green-500" /> Adaptive Engine Active</span>
@@ -804,6 +1221,7 @@ export default function App() {
         <span>Session ID: {currentInteractionId?.slice(-6) || 'AX-000'}</span>
         <span>{new Date().toISOString().split('T')[0]} | {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</span>
       </footer>
+      )}
     </div>
   );
 }
