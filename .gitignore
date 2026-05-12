@@ -8,3 +8,4 @@ coverage/
 !.env.example
 metadata.json
 firebase-blueprint.json
+*.traineddata

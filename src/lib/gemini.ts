@@ -1,5 +1,4 @@
 import { authFetch } from './api';
-import Tesseract from 'tesseract.js';
 
 export interface BilingualProblem {
   original: string;
@@ -31,27 +30,29 @@ export async function ocrTranslateProblem(
   file: File,
   onProgress?: (status: string, progress: number) => void
 ): Promise<BilingualProblem> {
-  onProgress?.('Loading OCR engine...', 0);
+  onProgress?.('Uploading image...', 10);
 
-  const { data } = await Tesseract.recognize(file, 'eng', {
-    logger: (m) => {
-      if (m.status === 'loading tesseract core') {
-        onProgress?.('Loading OCR engine...', Math.round((m.progress || 0) * 100));
-      } else if (m.status === 'initializing tesseract') {
-        onProgress?.('Initializing...', Math.round((m.progress || 0) * 100));
-      } else if (m.status === 'loading language traineddata') {
-        onProgress?.('Loading language data...', Math.round((m.progress || 0) * 100));
-      } else if (m.status === 'recognizing text') {
-        onProgress?.('Scanning image...', Math.round((m.progress || 0) * 100));
-      }
-    },
+  const formData = new FormData();
+  formData.append('image', file);
+
+  const ocrResponse = await authFetch('/api/ocr', {
+    method: 'POST',
+    body: formData,
   });
 
-  const extractedText = data.text.trim();
+  if (!ocrResponse.ok) {
+    const error = await ocrResponse.json().catch(() => ({}));
+    throw new Error((error as { error?: string }).error || 'Failed to extract text from image');
+  }
+
+  onProgress?.('Scanning image...', 50);
+
+  const { extractedText } = await ocrResponse.json();
+
   if (!extractedText) {
     throw new Error('Could not extract any text from the image. Please upload a clearer image.');
   }
 
-  onProgress?.('Processing math problem...', 100);
+  onProgress?.('Processing math problem...', 80);
   return translateProblem(extractedText);
 }

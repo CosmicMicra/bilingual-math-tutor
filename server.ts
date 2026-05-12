@@ -10,6 +10,8 @@ import dotenv from 'dotenv';
 import admin from 'firebase-admin';
 import type { DecodedIdToken } from 'firebase-admin/auth';
 import type { Request, Response, NextFunction } from 'express';
+import multer from 'multer';
+import Tesseract from 'tesseract.js';
 
 /// <reference path="./express-augment.d.ts" />
 
@@ -428,6 +430,50 @@ async function startServer() {
       } catch (error: unknown) {
         console.error('Error in POST /api/questions/select:', error);
         return res.status(500).json({ error: publicErrorMessage(error) });
+      }
+    }
+  );
+
+  // --- File upload config for OCR ---
+  const upload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 3 * 1024 * 1024 }, // 3MB max
+    fileFilter: (_req, file, cb) => {
+      const allowed = ['image/png', 'image/jpeg', 'image/webp', 'image/gif'];
+      if (allowed.includes(file.mimetype)) {
+        cb(null, true);
+      } else {
+        cb(new Error('Only PNG, JPEG, WebP, and GIF images are allowed.'));
+      }
+    },
+  });
+
+  async function extractTextFromImage(imageBuffer: Buffer): Promise<string> {
+    const { data } = await Tesseract.recognize(imageBuffer, 'eng');
+    return data.text.trim();
+  }
+
+  app.post(
+    '/api/ocr',
+    requireAuth,
+    translateLimiter,
+    upload.single('image'),
+    async (req, res) => {
+      try {
+        if (!req.file) {
+          return res.status(400).json({ error: 'No image provided' });
+        }
+
+        const extractedText = await extractTextFromImage(req.file.buffer);
+
+        if (!extractedText) {
+          return res.status(400).json({ error: 'Could not extract text from image. Please upload a clearer image.' });
+        }
+
+        res.json({ extractedText });
+      } catch (error: unknown) {
+        console.error('Error in /api/ocr:', error);
+        res.status(500).json({ error: publicErrorMessage(error) });
       }
     }
   );
