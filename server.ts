@@ -57,6 +57,10 @@ const INTERACTION_FIELD_KEYS = new Set<string>([
   'diagnosticQuadrant',
   'adaptiveDecision',
   'nextLevel',
+  'questionId',
+  'questionTopic',
+  'questionLevel',
+  'sourceMode',
 ]);
 
 const USER_PROFILE_FIELD_KEYS = new Set<string>([
