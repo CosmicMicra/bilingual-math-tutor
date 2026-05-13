@@ -954,6 +954,7 @@ export default function App() {
                   }`}
                   disabled={isPracticeMode}
                 />
+                {!isPracticeMode && (
                 <button
                   type="button"
                   onClick={toggleVoiceInput}
@@ -966,6 +967,7 @@ export default function App() {
                 >
                   {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                 </button>
+                )}
                 <div className={`flex items-center justify-between mt-1 px-1`}>
                   {isListening && (
                     <span className="text-[10px] font-bold text-red-500 uppercase tracking-widest animate-pulse">Listening...</span>
