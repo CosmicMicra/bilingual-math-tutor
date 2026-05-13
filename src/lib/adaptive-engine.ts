@@ -270,8 +270,10 @@ function sampleGamma(k: number): number {
   if (k < 1) return sampleGamma(k + 1) * Math.pow(Math.random(), 1 / k);
   let d = k - 1 / 3;
   let c = 1 / Math.sqrt(9 * d);
-  while (true) {
-    let x, v, u;
+  let v = 1;
+  const maxIterations = 1000;
+  for (let iter = 0; iter < maxIterations; iter++) {
+    let x, u;
     do {
       x = normalRandom();
       v = 1 + c * x;
@@ -281,6 +283,7 @@ function sampleGamma(k: number): number {
     if (u < 1 - 0.0331 * x * x * x * x) return d * v;
     if (Math.log(u) < 0.5 * x * x + d * (1 - v + Math.log(v))) return d * v;
   }
+  return d * v;
 }
 
 function normalRandom(): number {
