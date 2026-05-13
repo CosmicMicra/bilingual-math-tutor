@@ -467,19 +467,21 @@ export default function App() {
   // Save changes to the active interaction
   const updateActiveInteraction = (updater: (inter: Interaction) => Interaction) => {
     if (!currentInteractionId) return;
+    let updated: Interaction | undefined;
     setInteractions(prev => {
-      const next = prev.map(inter => {
-        if (inter.id === currentInteractionId) {
-          const updated = updater(inter);
-          // Async sync to backend
-          syncToBackend(updated, true);
-          return updated;
-        }
-        return inter;
-      });
+      const active = prev.find(inter => inter.id === currentInteractionId);
+      if (!active) {
+        return prev;
+      }
+      const nextInter = updater(active);
+      updated = nextInter;
+      const next = prev.map(inter => (inter.id === currentInteractionId ? nextInter : inter));
       localStorage.setItem('bilingual-math-interactions', JSON.stringify(next));
       return next;
     });
+    if (updated !== undefined) {
+      void syncToBackend(updated, true);
+    }
   };
 
   const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
