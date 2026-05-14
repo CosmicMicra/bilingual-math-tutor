@@ -43,6 +43,40 @@ const INITIAL_SESSION_METRICS: SessionMetricsState = {
   analyticsBlockIndex: 1,
 };
 
+const ADAPTIVE_STATE_STORAGE_PREFIX = 'bilingual-math-adaptive-state';
+
+const INITIAL_ADAPTIVE_STATE: AdaptiveState = {
+  currentElo: 1000,
+  currentLevel: '2.1',
+  totalInteractions: 0,
+  topicMastery: {},
+  thompsonPriors: {},
+  streakCount: 0,
+  streakWrongCount: 0,
+};
+
+function adaptiveStateStorageKey(uid: string): string {
+  return `${ADAPTIVE_STATE_STORAGE_PREFIX}:${uid}`;
+}
+
+function isAdaptiveStateRecord(v: unknown): v is AdaptiveState {
+  if (!v || typeof v !== 'object') return false;
+  const o = v as Record<string, unknown>;
+  return (
+    typeof o.currentElo === 'number' &&
+    typeof o.currentLevel === 'string' &&
+    typeof o.totalInteractions === 'number' &&
+    typeof o.topicMastery === 'object' &&
+    o.topicMastery !== null &&
+    !Array.isArray(o.topicMastery) &&
+    typeof o.thompsonPriors === 'object' &&
+    o.thompsonPriors !== null &&
+    !Array.isArray(o.thompsonPriors) &&
+    typeof o.streakCount === 'number' &&
+    typeof o.streakWrongCount === 'number'
+  );
+}
+
 // --- Types ---
 type ProblemStatus = 'solved' | 'revealed' | 'unsolved';
 
@@ -296,16 +330,39 @@ export default function App() {
   const [authError, setAuthError] = React.useState<string | null>(null);
   const [authLoading, setAuthLoading] = React.useState(false);
   const [authReady, setAuthReady] = React.useState(false);
-  const [adaptiveState, setAdaptiveState] = React.useState<AdaptiveState>({
-    currentElo: 1000,
-    currentLevel: '2.1',
-    totalInteractions: 0,
-    topicMastery: {},
-    thompsonPriors: {},
-    streakCount: 0,
-    streakWrongCount: 0
-  });
+  const [adaptiveState, setAdaptiveState] = React.useState<AdaptiveState>(INITIAL_ADAPTIVE_STATE);
   const [sessionMetrics, setSessionMetrics] = React.useState<SessionMetricsState>(INITIAL_SESSION_METRICS);
+
+  React.useLayoutEffect(() => {
+    const uid = currentUser?.uid;
+    if (!uid) {
+      setAdaptiveState(INITIAL_ADAPTIVE_STATE);
+      return;
+    }
+    try {
+      const raw = localStorage.getItem(adaptiveStateStorageKey(uid));
+      if (raw) {
+        const parsed = JSON.parse(raw) as unknown;
+        if (isAdaptiveStateRecord(parsed)) {
+          setAdaptiveState(parsed);
+          return;
+        }
+      }
+    } catch {
+      // fall through to initial
+    }
+    setAdaptiveState(INITIAL_ADAPTIVE_STATE);
+  }, [currentUser?.uid]);
+
+  React.useEffect(() => {
+    const uid = currentUser?.uid;
+    if (!uid) return;
+    try {
+      localStorage.setItem(adaptiveStateStorageKey(uid), JSON.stringify(adaptiveState));
+    } catch (e) {
+      console.warn('Failed to persist adaptive state:', e);
+    }
+  }, [adaptiveState, currentUser?.uid]);
 
   const applyMetricSample = React.useCallback((lds: number, mcs: number) => {
     setSessionMetrics((s) => ({
