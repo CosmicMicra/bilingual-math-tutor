@@ -1,0 +1,442 @@
+{
+  "_meta": {
+    "description": "CEFR-graded synonym map for grade 6-7 math word problems. Synonyms grouped by CEFR level so consumers can request a specific level.",
+    "sources": {
+      "synonyms": "Princeton WordNet 3.x (via wordpos npm package)",
+      "textbook_corpus": "Tokenized vocabulary of question_database.json (problem_text + scaffolds + solution_steps)",
+      "cefr_levels": "cefr_vocabulary.json (Cambridge English Vocabulary Profile + math grade-level mapping)",
+      "protected_terms": "Common Core State Standards for Mathematics, Grades 6-7; NCTM"
+    },
+    "rules": [
+      "Synonyms come from a single WordNet POS — the dominant one for the source word",
+      "Only the first synset (most common sense) of that POS is used",
+      "Synonyms must appear in the grade 6-7 textbook corpus",
+      "Synonyms must have a CEFR level recorded in cefr_vocabulary.json",
+      "Protected math terms are never substituted",
+      "Synonyms are bucketed under their CEFR level (A1..C2)"
+    ],
+    "target_grades": [
+      6,
+      7
+    ],
+    "created_at": "2026-05-14T04:06:51.776Z",
+    "stats": {
+      "source_words": 550,
+      "textbook_corpus_size": 1303,
+      "protected_terms": 30,
+      "words_with_synonyms": 25,
+      "words_without_textbook_synonyms": 495
+    }
+  },
+  "add": {
+    "cefr": "A1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "amount": {
+    "cefr": "A2",
+    "type": "math",
+    "by_level": {
+      "A2": [
+        "sum"
+      ]
+    }
+  },
+  "angle": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "area": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "away": {
+    "cefr": "A1",
+    "type": "general",
+    "by_level": {
+      "A1": [
+        "off"
+      ]
+    }
+  },
+  "become": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "A1": [
+        "get"
+      ]
+    }
+  },
+  "build": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "B1": [
+        "construct"
+      ]
+    }
+  },
+  "car": {
+    "cefr": "A1",
+    "type": "general",
+    "by_level": {
+      "A2": [
+        "machine"
+      ]
+    }
+  },
+  "class": {
+    "cefr": "A1",
+    "type": "general",
+    "by_level": {
+      "A1": [
+        "family"
+      ]
+    }
+  },
+  "cone": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "construct": {
+    "cefr": "B1",
+    "type": "general",
+    "by_level": {
+      "A2": [
+        "build"
+      ]
+    }
+  },
+  "days": {
+    "cefr": "A1",
+    "type": "general",
+    "by_level": {
+      "A1": [
+        "years"
+      ]
+    }
+  },
+  "diameter": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "equation": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "fraction": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "function": {
+    "cefr": "B2",
+    "type": "math",
+    "by_level": {
+      "A2": [
+        "map"
+      ]
+    }
+  },
+  "grocery": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "A2": [
+        "market"
+      ]
+    }
+  },
+  "height": {
+    "cefr": "A2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "item": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "A2": [
+        "point"
+      ]
+    }
+  },
+  "kilometer": {
+    "cefr": "A2",
+    "type": "math",
+    "by_level": {
+      "A2": [
+        "km"
+      ]
+    }
+  },
+  "km": {
+    "cefr": "A2",
+    "type": "math",
+    "by_level": {
+      "A2": [
+        "kilometer"
+      ]
+    }
+  },
+  "length": {
+    "cefr": "A2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "mean": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "median": {
+    "cefr": "B2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "mixing": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "B1": [
+        "mixture"
+      ]
+    }
+  },
+  "mode": {
+    "cefr": "B2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "opposite": {
+    "cefr": "A2",
+    "type": "general",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "percentage": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "perimeter": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "population": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "positive": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "price": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "A2": [
+        "cost"
+      ]
+    }
+  },
+  "probability": {
+    "cefr": "B2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "proportion": {
+    "cefr": "B2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "radius": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "range": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "rate": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "ratio": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "recipe": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "B1": [
+        "formula"
+      ]
+    }
+  },
+  "rectangle": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "ride": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "A1": [
+        "sit"
+      ]
+    }
+  },
+  "salary": {
+    "cefr": "B1",
+    "type": "general",
+    "by_level": {
+      "A2": [
+        "pay"
+      ]
+    }
+  },
+  "sample": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "scale": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "serve": {
+    "cefr": "A2",
+    "type": "general",
+    "by_level": {
+      "B2": [
+        "function"
+      ]
+    }
+  },
+  "share": {
+    "cefr": "A2",
+    "type": "math",
+    "by_level": {
+      "A2": [
+        "part"
+      ],
+      "B1": [
+        "percentage"
+      ]
+    }
+  },
+  "speed": {
+    "cefr": "A2",
+    "type": "math",
+    "by_level": {
+      "B2": [
+        "velocity"
+      ]
+    }
+  },
+  "square": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "store": {
+    "cefr": "A1",
+    "type": "general",
+    "by_level": {
+      "A1": [
+        "shop"
+      ]
+    }
+  },
+  "sum": {
+    "cefr": "A2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "total": {
+    "cefr": "A2",
+    "type": "math",
+    "by_level": {
+      "A1": [
+        "number"
+      ],
+      "A2": [
+        "amount"
+      ]
+    }
+  },
+  "velocity": {
+    "cefr": "B2",
+    "type": "math",
+    "by_level": {
+      "A2": [
+        "speed"
+      ]
+    }
+  },
+  "volume": {
+    "cefr": "B1",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "width": {
+    "cefr": "A2",
+    "type": "math",
+    "protected": true,
+    "reason": "Common Core / NCTM Grade 6-7 essential math vocabulary"
+  },
+  "write": {
+    "cefr": "A1",
+    "type": "general",
+    "by_level": {
+      "A1": [
+        "pen"
+      ]
+    }
+  }
+}
