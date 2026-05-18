@@ -4,6 +4,7 @@ import rateLimit from 'express-rate-limit';
 import { GoogleGenAI } from '@google/genai';
 import { createServer as createViteServer } from 'vite';
 import path from 'path';
+import fs from 'fs';
 import { readFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
@@ -678,6 +679,7 @@ Return the data in the following JSON format:
       }
     }
   );
+
 
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({

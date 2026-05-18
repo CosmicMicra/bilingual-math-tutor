@@ -15,9 +15,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "Sam has 5 apples. He gets 3 more. How many does he have?",
-      "L2_bilingual": "Sam has 5 apples (manzanas). He gets 3 more (más). How many apples (manzanas) now (ahora)?",
-      "L3_spanish": "Sam tiene 5 manzanas. Recibe 3 más. ¿Cuántas manzanas tiene ahora?",
-      "L4_solution": "Step 1: Add — 5 + 3\nStep 2: = 8\nAnswer: 8 apples."
+      "L2_bilingual": "Sam has 5 apples (manzanas). He gets 3 more (m\u00e1s). How many apples (manzanas) now (ahora)?",
+      "L3_spanish": "Sam tiene 5 manzanas. Recibe 3 m\u00e1s. \u00bfCu\u00e1ntas manzanas tiene ahora?",
+      "L4_solution": "Step 1: Add \u2014 5 + 3\nStep 2: = 8\nAnswer: 8 apples."
     },
     "readability": {
       "flesch_kincaid": 1.2,
@@ -29,6 +29,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3
+      }
     }
   },
   {
@@ -47,9 +55,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A box has 10 crayons. A boy takes 4. How many are left?",
-      "L2_bilingual": "A box (caja) has 10 crayons (crayones). A boy takes (toma) 4. How many (cuántos) left (quedan)?",
-      "L3_spanish": "Una caja tiene 10 crayones. Un niño toma 4. ¿Cuántos quedan?",
-      "L4_solution": "Step 1: Subtract — 10 - 4\nStep 2: = 6\nAnswer: 6 crayons."
+      "L2_bilingual": "A box (caja) has 10 crayons (crayones). A boy takes (toma) 4. How many (cu\u00e1ntos) left (quedan)?",
+      "L3_spanish": "Una caja tiene 10 crayones. Un ni\u00f1o toma 4. \u00bfCu\u00e1ntos quedan?",
+      "L4_solution": "Step 1: Subtract \u2014 10 - 4\nStep 2: = 6\nAnswer: 6 crayons."
     },
     "readability": {
       "flesch_kincaid": 1.1,
@@ -61,6 +69,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 2
+      }
     }
   },
   {
@@ -79,9 +96,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A girl has 7 red balls and 2 blue balls. How many total?",
-      "L2_bilingual": "A girl (niña) has 7 red (rojas) balls (pelotas) and 2 blue (azules). How many (cuántas) in all (en total)?",
-      "L3_spanish": "Una niña tiene 7 pelotas rojas y 2 azules. ¿Cuántas tiene en total?",
-      "L4_solution": "Step 1: Add — 7 + 2\nStep 2: = 9\nAnswer: 9 balls."
+      "L2_bilingual": "A girl (ni\u00f1a) has 7 red (rojas) balls (pelotas) and 2 blue (azules). How many (cu\u00e1ntas) in all (en total)?",
+      "L3_spanish": "Una ni\u00f1a tiene 7 pelotas rojas y 2 azules. \u00bfCu\u00e1ntas tiene en total?",
+      "L4_solution": "Step 1: Add \u2014 7 + 2\nStep 2: = 9\nAnswer: 9 balls."
     },
     "readability": {
       "flesch_kincaid": 1.3,
@@ -93,6 +110,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 5
+      }
     }
   },
   {
@@ -111,9 +136,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "12 birds are on a tree. 5 fly away. How many are left?",
-      "L2_bilingual": "12 birds (pájaros) are on a tree (árbol). 5 fly away (vuelan). How many (cuántos) left (quedan)?",
-      "L3_spanish": "Hay 12 pájaros en un árbol. 5 vuelan. ¿Cuántos quedan?",
-      "L4_solution": "Step 1: Subtract — 12 - 5\nStep 2: = 7\nAnswer: 7 birds."
+      "L2_bilingual": "12 birds (p\u00e1jaros) are on a tree (\u00e1rbol). 5 fly away (vuelan). How many (cu\u00e1ntos) left (quedan)?",
+      "L3_spanish": "Hay 12 p\u00e1jaros en un \u00e1rbol. 5 vuelan. \u00bfCu\u00e1ntos quedan?",
+      "L4_solution": "Step 1: Subtract \u2014 12 - 5\nStep 2: = 7\nAnswer: 7 birds."
     },
     "readability": {
       "flesch_kincaid": 1.2,
@@ -125,6 +150,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 1
+      }
     }
   },
   {
@@ -143,9 +177,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "Tom has 6 toy cars. His dad gives him 4 more. How many does he have?",
-      "L2_bilingual": "Tom has 6 toy cars (carros de juguete). His dad (papá) gives 4 more (más). How many (cuántos)?",
-      "L3_spanish": "Tom tiene 6 carros de juguete. Su papá le da 4 más. ¿Cuántos tiene?",
-      "L4_solution": "Step 1: Add — 6 + 4\nStep 2: = 10\nAnswer: 10 toy cars."
+      "L2_bilingual": "Tom has 6 toy cars (carros de juguete). His dad (pap\u00e1) gives 4 more (m\u00e1s). How many (cu\u00e1ntos)?",
+      "L3_spanish": "Tom tiene 6 carros de juguete. Su pap\u00e1 le da 4 m\u00e1s. \u00bfCu\u00e1ntos tiene?",
+      "L4_solution": "Step 1: Add \u2014 6 + 4\nStep 2: = 10\nAnswer: 10 toy cars."
     },
     "readability": {
       "flesch_kincaid": 1.4,
@@ -157,6 +191,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 6
+      }
     }
   },
   {
@@ -175,9 +217,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A bag has 15 marbles. A girl takes out 6. How many are left?",
-      "L2_bilingual": "A bag (bolsa) has 15 marbles (canicas). A girl takes out (saca) 6. How many (cuántas) left (quedan)?",
-      "L3_spanish": "Una bolsa tiene 15 canicas. Una niña saca 6. ¿Cuántas quedan?",
-      "L4_solution": "Step 1: Subtract — 15 - 6\nStep 2: = 9\nAnswer: 9 marbles."
+      "L2_bilingual": "A bag (bolsa) has 15 marbles (canicas). A girl takes out (saca) 6. How many (cu\u00e1ntas) left (quedan)?",
+      "L3_spanish": "Una bolsa tiene 15 canicas. Una ni\u00f1a saca 6. \u00bfCu\u00e1ntas quedan?",
+      "L4_solution": "Step 1: Subtract \u2014 15 - 6\nStep 2: = 9\nAnswer: 9 marbles."
     },
     "readability": {
       "flesch_kincaid": 1.2,
@@ -189,6 +231,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 1
+      }
     }
   },
   {
@@ -207,9 +258,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "Ana has 8 books. Her friend gives her 5 more. How many does she have?",
-      "L2_bilingual": "Ana has 8 books (libros). Her friend (amiga) gives 5 more (más). How many books (libros) now (ahora)?",
-      "L3_spanish": "Ana tiene 8 libros. Su amiga le da 5 más. ¿Cuántos libros tiene ahora?",
-      "L4_solution": "Step 1: Add — 8 + 5\nStep 2: = 13\nAnswer: 13 books."
+      "L2_bilingual": "Ana has 8 books (libros). Her friend (amiga) gives 5 more (m\u00e1s). How many books (libros) now (ahora)?",
+      "L3_spanish": "Ana tiene 8 libros. Su amiga le da 5 m\u00e1s. \u00bfCu\u00e1ntos libros tiene ahora?",
+      "L4_solution": "Step 1: Add \u2014 8 + 5\nStep 2: = 13\nAnswer: 13 books."
     },
     "readability": {
       "flesch_kincaid": 1.3,
@@ -221,6 +272,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4
+      }
     }
   },
   {
@@ -239,9 +298,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "There are 20 cookies. Kids eat 9. How many are left?",
-      "L2_bilingual": "There are 20 cookies (galletas). Kids (niños) eat (comen) 9. How many (cuántas) left (quedan)?",
-      "L3_spanish": "Hay 20 galletas. Los niños comen 9. ¿Cuántas quedan?",
-      "L4_solution": "Step 1: Subtract — 20 - 9\nStep 2: = 11\nAnswer: 11 cookies."
+      "L2_bilingual": "There are 20 cookies (galletas). Kids (ni\u00f1os) eat (comen) 9. How many (cu\u00e1ntas) left (quedan)?",
+      "L3_spanish": "Hay 20 galletas. Los ni\u00f1os comen 9. \u00bfCu\u00e1ntas quedan?",
+      "L4_solution": "Step 1: Subtract \u2014 20 - 9\nStep 2: = 11\nAnswer: 11 cookies."
     },
     "readability": {
       "flesch_kincaid": 1.1,
@@ -253,6 +312,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3
+      }
     }
   },
   {
@@ -272,8 +340,8 @@
     "scaffolds": {
       "L1_simplified": "A store has 11 cats and 7 dogs. How many animals total?",
       "L2_bilingual": "A store (tienda) has 11 cats (gatos) and 7 dogs (perros). How many animals (animales) total (en total)?",
-      "L3_spanish": "Una tienda tiene 11 gatos y 7 perros. ¿Cuántos animales hay?",
-      "L4_solution": "Step 1: Add — 11 + 7\nStep 2: = 18\nAnswer: 18 animals."
+      "L3_spanish": "Una tienda tiene 11 gatos y 7 perros. \u00bfCu\u00e1ntos animales hay?",
+      "L4_solution": "Step 1: Add \u2014 11 + 7\nStep 2: = 18\nAnswer: 18 animals."
     },
     "readability": {
       "flesch_kincaid": 1.2,
@@ -285,6 +353,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 6
+      }
     }
   },
   {
@@ -303,9 +379,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A boy has 14 stickers. He gives 5 to his sister. How many does he have left?",
-      "L2_bilingual": "A boy (niño) has 14 stickers (calcomanías). He gives (da) 5 to his sister (hermana). How many (cuántas) left (quedan)?",
-      "L3_spanish": "Un niño tiene 14 calcomanías. Le da 5 a su hermana. ¿Cuántas le quedan?",
-      "L4_solution": "Step 1: Subtract — 14 - 5\nStep 2: = 9\nAnswer: 9 stickers."
+      "L2_bilingual": "A boy (ni\u00f1o) has 14 stickers (calcoman\u00edas). He gives (da) 5 to his sister (hermana). How many (cu\u00e1ntas) left (quedan)?",
+      "L3_spanish": "Un ni\u00f1o tiene 14 calcoman\u00edas. Le da 5 a su hermana. \u00bfCu\u00e1ntas le quedan?",
+      "L4_solution": "Step 1: Subtract \u2014 14 - 5\nStep 2: = 9\nAnswer: 9 stickers."
     },
     "readability": {
       "flesch_kincaid": 1.3,
@@ -317,6 +393,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 2
+      }
     }
   },
   {
@@ -329,15 +414,15 @@
     "answer": "12",
     "answer_numeric": 12.0,
     "solution_steps": [
-      "Multiply: 4 × 3",
+      "Multiply: 4 \u00d7 3",
       "= 12",
       "12 apples in all."
     ],
     "scaffolds": {
       "L1_simplified": "Each bag has 4 apples. There are 3 bags. How many apples total?",
       "L2_bilingual": "Each bag (bolsa) has 4 apples (manzanas). There are 3 bags. How many apples (manzanas) in all (en total)?",
-      "L3_spanish": "Cada bolsa tiene 4 manzanas. Hay 3 bolsas. ¿Cuántas manzanas hay en total?",
-      "L4_solution": "Step 1: Multiply — 4 × 3\nStep 2: = 12\nAnswer: 12 apples."
+      "L3_spanish": "Cada bolsa tiene 4 manzanas. Hay 3 bolsas. \u00bfCu\u00e1ntas manzanas hay en total?",
+      "L4_solution": "Step 1: Multiply \u2014 4 \u00d7 3\nStep 2: = 12\nAnswer: 12 apples."
     },
     "readability": {
       "flesch_kincaid": 2.1,
@@ -349,6 +434,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4
+      }
     }
   },
   {
@@ -361,15 +454,15 @@
     "answer": "3",
     "answer_numeric": 3.0,
     "solution_steps": [
-      "Divide: 12 ÷ 4",
+      "Divide: 12 \u00f7 4",
       "= 3",
       "Each child gets 3."
     ],
     "scaffolds": {
       "L1_simplified": "12 cookies are shared equally among 4 children. How many does each child get?",
-      "L2_bilingual": "12 cookies (galletas) are shared equally (igualmente) among 4 children (niños). How many (cuántas) does each (cada uno) get?",
-      "L3_spanish": "Hay 12 galletas. Se reparten entre 4 niños por igual. ¿Cuántas recibe cada niño?",
-      "L4_solution": "Step 1: Divide — 12 ÷ 4\nStep 2: = 3\nAnswer: 3 cookies each."
+      "L2_bilingual": "12 cookies (galletas) are shared equally (igualmente) among 4 children (ni\u00f1os). How many (cu\u00e1ntas) does each (cada uno) get?",
+      "L3_spanish": "Hay 12 galletas. Se reparten entre 4 ni\u00f1os por igual. \u00bfCu\u00e1ntas recibe cada ni\u00f1o?",
+      "L4_solution": "Step 1: Divide \u2014 12 \u00f7 4\nStep 2: = 3\nAnswer: 3 cookies each."
     },
     "readability": {
       "flesch_kincaid": 2.3,
@@ -381,6 +474,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "among"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3,
+        "B1": 1
+      }
     }
   },
   {
@@ -393,15 +498,15 @@
     "answer": "30",
     "answer_numeric": 30.0,
     "solution_steps": [
-      "Multiply: 6 × 5",
+      "Multiply: 6 \u00d7 5",
       "= 30",
       "30 cans total."
     ],
     "scaffolds": {
       "L1_simplified": "Each box holds 6 cans. There are 5 boxes. How many cans total?",
       "L2_bilingual": "Each box (caja) holds (tiene) 6 cans (latas). There are 5 boxes. How many cans (latas) total?",
-      "L3_spanish": "Cada caja tiene 6 latas. Hay 5 cajas. ¿Cuántas latas hay en total?",
-      "L4_solution": "Step 1: Multiply — 6 × 5\nStep 2: = 30\nAnswer: 30 cans."
+      "L3_spanish": "Cada caja tiene 6 latas. Hay 5 cajas. \u00bfCu\u00e1ntas latas hay en total?",
+      "L4_solution": "Step 1: Multiply \u2014 6 \u00d7 5\nStep 2: = 30\nAnswer: 30 cans."
     },
     "readability": {
       "flesch_kincaid": 2.0,
@@ -413,6 +518,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3
+      }
     }
   },
   {
@@ -425,15 +539,15 @@
     "answer": "5",
     "answer_numeric": 5.0,
     "solution_steps": [
-      "Divide: 20 ÷ 4",
+      "Divide: 20 \u00f7 4",
       "= 5",
       "Each student gets 5."
     ],
     "scaffolds": {
       "L1_simplified": "A teacher has 20 pencils. She gives equal amounts to 4 students. How many does each get?",
-      "L2_bilingual": "A teacher (maestra) has 20 pencils (lápices). She gives equal (iguales) amounts to 4 students (estudiantes). How many (cuántos) each?",
-      "L3_spanish": "Una maestra tiene 20 lápices. Los reparte entre 4 estudiantes por igual. ¿Cuántos recibe cada uno?",
-      "L4_solution": "Step 1: Divide — 20 ÷ 4\nStep 2: = 5\nAnswer: 5 pencils each."
+      "L2_bilingual": "A teacher (maestra) has 20 pencils (l\u00e1pices). She gives equal (iguales) amounts to 4 students (estudiantes). How many (cu\u00e1ntos) each?",
+      "L3_spanish": "Una maestra tiene 20 l\u00e1pices. Los reparte entre 4 estudiantes por igual. \u00bfCu\u00e1ntos recibe cada uno?",
+      "L4_solution": "Step 1: Divide \u2014 20 \u00f7 4\nStep 2: = 5\nAnswer: 5 pencils each."
     },
     "readability": {
       "flesch_kincaid": 2.4,
@@ -445,6 +559,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 8
+      }
     }
   },
   {
@@ -457,15 +579,15 @@
     "answer": "24",
     "answer_numeric": 24.0,
     "solution_steps": [
-      "Multiply: 8 × 3",
+      "Multiply: 8 \u00d7 3",
       "= 24",
       "24 eggs altogether."
     ],
     "scaffolds": {
       "L1_simplified": "Each carton has 8 eggs. There are 3 cartons. How many eggs altogether?",
-      "L2_bilingual": "Each carton (cartón) has 8 eggs (huevos). There are 3 cartons. How many eggs (huevos) altogether (en total)?",
-      "L3_spanish": "Cada cartón tiene 8 huevos. Hay 3 cartones. ¿Cuántos huevos hay en total?",
-      "L4_solution": "Step 1: Multiply — 8 × 3\nStep 2: = 24\nAnswer: 24 eggs."
+      "L2_bilingual": "Each carton (cart\u00f3n) has 8 eggs (huevos). There are 3 cartons. How many eggs (huevos) altogether (en total)?",
+      "L3_spanish": "Cada cart\u00f3n tiene 8 huevos. Hay 3 cartones. \u00bfCu\u00e1ntos huevos hay en total?",
+      "L4_solution": "Step 1: Multiply \u2014 8 \u00d7 3\nStep 2: = 24\nAnswer: 24 eggs."
     },
     "readability": {
       "flesch_kincaid": 2.1,
@@ -477,6 +599,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "carton",
+        "cartons"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 1,
+        "B1": 2
+      }
     }
   },
   {
@@ -489,15 +624,15 @@
     "answer": "3",
     "answer_numeric": 3.0,
     "solution_steps": [
-      "Divide: 18 ÷ 6",
+      "Divide: 18 \u00f7 6",
       "= 3",
       "3 balloons per group."
     ],
     "scaffolds": {
       "L1_simplified": "18 balloons are divided into 6 equal groups. How many in each group?",
-      "L2_bilingual": "18 balloons (globos) are divided (divididos) into 6 equal (iguales) groups (grupos). How many (cuántos) in each group (cada grupo)?",
-      "L3_spanish": "Hay 18 globos divididos en 6 grupos iguales. ¿Cuántos hay en cada grupo?",
-      "L4_solution": "Step 1: Divide — 18 ÷ 6\nStep 2: = 3\nAnswer: 3 balloons each."
+      "L2_bilingual": "18 balloons (globos) are divided (divididos) into 6 equal (iguales) groups (grupos). How many (cu\u00e1ntos) in each group (cada grupo)?",
+      "L3_spanish": "Hay 18 globos divididos en 6 grupos iguales. \u00bfCu\u00e1ntos hay en cada grupo?",
+      "L4_solution": "Step 1: Divide \u2014 18 \u00f7 6\nStep 2: = 3\nAnswer: 3 balloons each."
     },
     "readability": {
       "flesch_kincaid": 2.2,
@@ -509,6 +644,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 5
+      }
     }
   },
   {
@@ -521,15 +665,15 @@
     "answer": "28",
     "answer_numeric": 28.0,
     "solution_steps": [
-      "Multiply: 7 × 4",
+      "Multiply: 7 \u00d7 4",
       "= 28",
       "28 books in all."
     ],
     "scaffolds": {
       "L1_simplified": "Each shelf has 7 books. There are 4 shelves. How many books total?",
       "L2_bilingual": "Each shelf (estante) has 7 books (libros). There are 4 shelves. How many books (libros) in all (en total)?",
-      "L3_spanish": "Cada estante tiene 7 libros. Hay 4 estantes. ¿Cuántos libros hay en total?",
-      "L4_solution": "Step 1: Multiply — 7 × 4\nStep 2: = 28\nAnswer: 28 books."
+      "L3_spanish": "Cada estante tiene 7 libros. Hay 4 estantes. \u00bfCu\u00e1ntos libros hay en total?",
+      "L4_solution": "Step 1: Multiply \u2014 7 \u00d7 4\nStep 2: = 28\nAnswer: 28 books."
     },
     "readability": {
       "flesch_kincaid": 2.0,
@@ -541,6 +685,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 2
+      }
     }
   },
   {
@@ -553,15 +706,15 @@
     "answer": "3",
     "answer_numeric": 3.0,
     "solution_steps": [
-      "Divide: 24 ÷ 8",
+      "Divide: 24 \u00f7 8",
       "= 3",
       "He fills 3 bags."
     ],
     "scaffolds": {
       "L1_simplified": "A farmer has 24 carrots. He puts 8 in each bag. How many bags?",
       "L2_bilingual": "A farmer (granjero) has 24 carrots (zanahorias). He puts 8 in each bag (bolsa). How many bags (bolsas)?",
-      "L3_spanish": "Un granjero tiene 24 zanahorias. Pone 8 en cada bolsa. ¿Cuántas bolsas llena?",
-      "L4_solution": "Step 1: Divide — 24 ÷ 8\nStep 2: = 3\nAnswer: 3 bags."
+      "L3_spanish": "Un granjero tiene 24 zanahorias. Pone 8 en cada bolsa. \u00bfCu\u00e1ntas bolsas llena?",
+      "L4_solution": "Step 1: Divide \u2014 24 \u00f7 8\nStep 2: = 3\nAnswer: 3 bags."
     },
     "readability": {
       "flesch_kincaid": 2.2,
@@ -573,6 +726,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3
+      }
     }
   },
   {
@@ -585,15 +747,15 @@
     "answer": "30",
     "answer_numeric": 30.0,
     "solution_steps": [
-      "Multiply: 5 × 6",
+      "Multiply: 5 \u00d7 6",
       "= 30",
       "30 candies in all."
     ],
     "scaffolds": {
       "L1_simplified": "Each child gets 5 candies. There are 6 children. How many candies total?",
-      "L2_bilingual": "Each child (niño) gets 5 candies (dulces). There are 6 children at the party (fiesta). How many candies (dulces) total?",
-      "L3_spanish": "Cada niño recibe 5 dulces. Hay 6 niños en la fiesta. ¿Cuántos dulces se dan en total?",
-      "L4_solution": "Step 1: Multiply — 5 × 6\nStep 2: = 30\nAnswer: 30 candies."
+      "L2_bilingual": "Each child (ni\u00f1o) gets 5 candies (dulces). There are 6 children at the party (fiesta). How many candies (dulces) total?",
+      "L3_spanish": "Cada ni\u00f1o recibe 5 dulces. Hay 6 ni\u00f1os en la fiesta. \u00bfCu\u00e1ntos dulces se dan en total?",
+      "L4_solution": "Step 1: Multiply \u2014 5 \u00d7 6\nStep 2: = 30\nAnswer: 30 candies."
     },
     "readability": {
       "flesch_kincaid": 2.3,
@@ -605,6 +767,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 2
+      }
     }
   },
   {
@@ -617,15 +788,15 @@
     "answer": "6",
     "answer_numeric": 6.0,
     "solution_steps": [
-      "Divide: 30 ÷ 5",
+      "Divide: 30 \u00f7 5",
       "= 6",
       "There are 6 rows."
     ],
     "scaffolds": {
       "L1_simplified": "30 students sit in rows of 5. How many rows are there?",
       "L2_bilingual": "30 students (estudiantes) sit in rows (filas) of 5. How many rows (filas)?",
-      "L3_spanish": "Hay 30 estudiantes sentados en filas de 5. ¿Cuántas filas hay?",
-      "L4_solution": "Step 1: Divide — 30 ÷ 5\nStep 2: = 6\nAnswer: 6 rows."
+      "L3_spanish": "Hay 30 estudiantes sentados en filas de 5. \u00bfCu\u00e1ntas filas hay?",
+      "L4_solution": "Step 1: Divide \u2014 30 \u00f7 5\nStep 2: = 6\nAnswer: 6 rows."
     },
     "readability": {
       "flesch_kincaid": 2.1,
@@ -637,6 +808,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 1
+      }
     }
   },
   {
@@ -655,9 +835,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "Maria has 10 dollars. She spends 4 dollars on a book. How much is left?",
-      "L2_bilingual": "Maria has 10 dollars (dólares). She buys (compra) a book (libro) for 4 dollars. How much money (dinero) is left (le queda)?",
-      "L3_spanish": "María tiene 10 dólares. Compra un libro por 4 dólares. ¿Cuánto dinero le queda?",
-      "L4_solution": "Step 1: Subtract — 10 - 4\nStep 2: = 6\nAnswer: 6 dollars."
+      "L2_bilingual": "Maria has 10 dollars (d\u00f3lares). She buys (compra) a book (libro) for 4 dollars. How much money (dinero) is left (le queda)?",
+      "L3_spanish": "Mar\u00eda tiene 10 d\u00f3lares. Compra un libro por 4 d\u00f3lares. \u00bfCu\u00e1nto dinero le queda?",
+      "L4_solution": "Step 1: Subtract \u2014 10 - 4\nStep 2: = 6\nAnswer: 6 dollars."
     },
     "readability": {
       "flesch_kincaid": 3.2,
@@ -669,6 +849,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 2
+      }
     }
   },
   {
@@ -687,9 +876,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A shop sells 15 sandwiches in the morning and 12 in the afternoon. How many in all?",
-      "L2_bilingual": "A shop (tienda) sells (vende) 15 sandwiches in the morning (mañana) and 12 in the afternoon (tarde). How many (cuántos) in all (en total)?",
-      "L3_spanish": "Una tienda vende 15 sándwiches en la mañana y 12 en la tarde. ¿Cuántos vende en total?",
-      "L4_solution": "Step 1: Add — 15 + 12\nStep 2: = 27\nAnswer: 27 sandwiches."
+      "L2_bilingual": "A shop (tienda) sells (vende) 15 sandwiches in the morning (ma\u00f1ana) and 12 in the afternoon (tarde). How many (cu\u00e1ntos) in all (en total)?",
+      "L3_spanish": "Una tienda vende 15 s\u00e1ndwiches en la ma\u00f1ana y 12 en la tarde. \u00bfCu\u00e1ntos vende en total?",
+      "L4_solution": "Step 1: Add \u2014 15 + 12\nStep 2: = 27\nAnswer: 27 sandwiches."
     },
     "readability": {
       "flesch_kincaid": 3.5,
@@ -701,6 +890,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3
+      }
     }
   },
   {
@@ -720,7 +918,7 @@
     "scaffolds": {
       "L1_simplified": "Jake buys a drink for 2 dollars and a snack for 3 dollars. He pays 10 dollars. How much change?",
       "L2_bilingual": "Jake buys (compra) a drink (bebida) for 2 dollars and a snack (merienda) for 3 dollars. He pays (paga) 10 dollars. How much change (cambio)?",
-      "L3_spanish": "Jake compra una bebida por 2 dólares y una merienda por 3 dólares. Paga con un billete de 10. ¿Cuánto cambio recibe?",
+      "L3_spanish": "Jake compra una bebida por 2 d\u00f3lares y una merienda por 3 d\u00f3lares. Paga con un billete de 10. \u00bfCu\u00e1nto cambio recibe?",
       "L4_solution": "Step 1: Total cost = 2 + 3 = 5\nStep 2: Change = 10 - 5 = 5\nAnswer: 5 dollars change."
     },
     "readability": {
@@ -733,6 +931,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 6
+      }
     }
   },
   {
@@ -751,9 +958,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A movie starts at 3 o'clock. It lasts 2 hours. What time does it end?",
-      "L2_bilingual": "A movie (película) starts (empieza) at 3 o'clock and lasts (dura) 2 hours (horas). What time (a qué hora) does it end (termina)?",
-      "L3_spanish": "Una película empieza a las 3 en punto y dura 2 horas. ¿A qué hora termina?",
-      "L4_solution": "Step 1: Add — 3 + 2\nStep 2: = 5\nAnswer: 5 o'clock."
+      "L2_bilingual": "A movie (pel\u00edcula) starts (empieza) at 3 o'clock and lasts (dura) 2 hours (horas). What time (a qu\u00e9 hora) does it end (termina)?",
+      "L3_spanish": "Una pel\u00edcula empieza a las 3 en punto y dura 2 horas. \u00bfA qu\u00e9 hora termina?",
+      "L4_solution": "Step 1: Add \u2014 3 + 2\nStep 2: = 5\nAnswer: 5 o'clock."
     },
     "readability": {
       "flesch_kincaid": 3.4,
@@ -765,6 +972,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 2
+      }
     }
   },
   {
@@ -783,9 +999,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A pencil costs 25 cents. An eraser costs 15 cents. How much together?",
-      "L2_bilingual": "A pencil (lápiz) costs (cuesta) 25 cents (centavos) and an eraser (borrador) costs 15 cents. How much (cuánto) together (juntos)?",
-      "L3_spanish": "Un lápiz cuesta 25 centavos y un borrador 15 centavos. ¿Cuánto cuestan juntos?",
-      "L4_solution": "Step 1: Add — 25 + 15\nStep 2: = 40\nAnswer: 40 cents."
+      "L2_bilingual": "A pencil (l\u00e1piz) costs (cuesta) 25 cents (centavos) and an eraser (borrador) costs 15 cents. How much (cu\u00e1nto) together (juntos)?",
+      "L3_spanish": "Un l\u00e1piz cuesta 25 centavos y un borrador 15 centavos. \u00bfCu\u00e1nto cuestan juntos?",
+      "L4_solution": "Step 1: Add \u2014 25 + 15\nStep 2: = 40\nAnswer: 40 cents."
     },
     "readability": {
       "flesch_kincaid": 3.3,
@@ -797,6 +1013,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 4
+      }
     }
   },
   {
@@ -815,9 +1040,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A class has 30 students. 12 are girls. How many are boys?",
-      "L2_bilingual": "A class (clase) has 30 students (estudiantes). 12 are girls (niñas). How many are boys (niños)?",
-      "L3_spanish": "Hay 30 estudiantes en una clase. 12 son niñas. ¿Cuántos son niños?",
-      "L4_solution": "Step 1: Subtract — 30 - 12\nStep 2: = 18\nAnswer: 18 boys."
+      "L2_bilingual": "A class (clase) has 30 students (estudiantes). 12 are girls (ni\u00f1as). How many are boys (ni\u00f1os)?",
+      "L3_spanish": "Hay 30 estudiantes en una clase. 12 son ni\u00f1as. \u00bfCu\u00e1ntos son ni\u00f1os?",
+      "L4_solution": "Step 1: Subtract \u2014 30 - 12\nStep 2: = 18\nAnswer: 18 boys."
     },
     "readability": {
       "flesch_kincaid": 3.1,
@@ -829,6 +1054,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 5
+      }
     }
   },
   {
@@ -847,8 +1080,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "School starts at 8 AM and ends at 3 PM. How many hours is the school day?",
-      "L2_bilingual": "School (escuela) starts (empieza) at 8 AM and ends (termina) at 3 PM. How many hours (horas) is the school day (día escolar)?",
-      "L3_spanish": "La escuela empieza a las 8 AM y termina a las 3 PM. ¿Cuántas horas dura el día escolar?",
+      "L2_bilingual": "School (escuela) starts (empieza) at 8 AM and ends (termina) at 3 PM. How many hours (horas) is the school day (d\u00eda escolar)?",
+      "L3_spanish": "La escuela empieza a las 8 AM y termina a las 3 PM. \u00bfCu\u00e1ntas horas dura el d\u00eda escolar?",
       "L4_solution": "Step 1: Count from 8 AM to 3 PM\nStep 2: = 7 hours\nAnswer: 7 hours."
     },
     "readability": {
@@ -861,6 +1094,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 8
+      }
     }
   },
   {
@@ -879,9 +1120,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A rope is 20 feet long. A girl cuts 7 feet off. How long is it now?",
-      "L2_bilingual": "A rope (cuerda) is 20 feet (pies) long. A girl cuts off (corta) 7 feet. How long (cuánto mide) now?",
-      "L3_spanish": "Una cuerda mide 20 pies. Una niña corta 7 pies. ¿Cuánto mide ahora?",
-      "L4_solution": "Step 1: Subtract — 20 - 7\nStep 2: = 13\nAnswer: 13 feet."
+      "L2_bilingual": "A rope (cuerda) is 20 feet (pies) long. A girl cuts off (corta) 7 feet. How long (cu\u00e1nto mide) now?",
+      "L3_spanish": "Una cuerda mide 20 pies. Una ni\u00f1a corta 7 pies. \u00bfCu\u00e1nto mide ahora?",
+      "L4_solution": "Step 1: Subtract \u2014 20 - 7\nStep 2: = 13\nAnswer: 13 feet."
     },
     "readability": {
       "flesch_kincaid": 3.2,
@@ -893,6 +1134,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 2
+      }
     }
   },
   {
@@ -905,15 +1155,15 @@
     "answer": "20 dollars",
     "answer_numeric": 20.0,
     "solution_steps": [
-      "Multiply: 5 × 4",
+      "Multiply: 5 \u00d7 4",
       "= 20",
       "Luis will save 20 dollars."
     ],
     "scaffolds": {
       "L1_simplified": "Luis saves 5 dollars each week for 4 weeks. How much does he save in all?",
-      "L2_bilingual": "Luis saves (ahorra) 5 dollars (dólares) each week (semana). How much (cuánto) in 4 weeks (semanas)?",
-      "L3_spanish": "Luis ahorra 5 dólares cada semana. ¿Cuánto ahorrará en 4 semanas?",
-      "L4_solution": "Step 1: Multiply — 5 × 4\nStep 2: = 20\nAnswer: 20 dollars."
+      "L2_bilingual": "Luis saves (ahorra) 5 dollars (d\u00f3lares) each week (semana). How much (cu\u00e1nto) in 4 weeks (semanas)?",
+      "L3_spanish": "Luis ahorra 5 d\u00f3lares cada semana. \u00bfCu\u00e1nto ahorrar\u00e1 en 4 semanas?",
+      "L4_solution": "Step 1: Multiply \u2014 5 \u00d7 4\nStep 2: = 20\nAnswer: 20 dollars."
     },
     "readability": {
       "flesch_kincaid": 3.4,
@@ -925,6 +1175,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3
+      }
     }
   },
   {
@@ -937,15 +1196,15 @@
     "answer": "24 square meters",
     "answer_numeric": 24.0,
     "solution_steps": [
-      "Multiply: 8 × 3",
+      "Multiply: 8 \u00d7 3",
       "= 24",
       "Area = 24 square meters."
     ],
     "scaffolds": {
       "L1_simplified": "A garden is 8 meters long and 3 meters wide. What is the area?",
-      "L2_bilingual": "A garden (jardín) is 8 meters (metros) long (de largo) and 3 meters wide (de ancho). What is the area (área)?",
-      "L3_spanish": "Un jardín mide 8 metros de largo y 3 de ancho. ¿Cuál es el área?",
-      "L4_solution": "Step 1: Multiply — 8 × 3\nStep 2: = 24\nAnswer: 24 square meters."
+      "L2_bilingual": "A garden (jard\u00edn) is 8 meters (metros) long (de largo) and 3 meters wide (de ancho). What is the area (\u00e1rea)?",
+      "L3_spanish": "Un jard\u00edn mide 8 metros de largo y 3 de ancho. \u00bfCu\u00e1l es el \u00e1rea?",
+      "L4_solution": "Step 1: Multiply \u2014 8 \u00d7 3\nStep 2: = 24\nAnswer: 24 square meters."
     },
     "readability": {
       "flesch_kincaid": 3.8,
@@ -957,6 +1216,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "area"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 2,
+        "B1": 1
+      }
     }
   },
   {
@@ -975,9 +1246,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "John has 24 cards. His brother has 16. How many more does John have?",
-      "L2_bilingual": "John has 24 trading cards (tarjetas). His brother (hermano) has 16. How many more (cuántas más)?",
-      "L3_spanish": "John tiene 24 tarjetas. Su hermano tiene 16. ¿Cuántas más tiene John?",
-      "L4_solution": "Step 1: Subtract — 24 - 16\nStep 2: = 8\nAnswer: 8 more cards."
+      "L2_bilingual": "John has 24 trading cards (tarjetas). His brother (hermano) has 16. How many more (cu\u00e1ntas m\u00e1s)?",
+      "L3_spanish": "John tiene 24 tarjetas. Su hermano tiene 16. \u00bfCu\u00e1ntas m\u00e1s tiene John?",
+      "L4_solution": "Step 1: Subtract \u2014 24 - 16\nStep 2: = 8\nAnswer: 8 more cards."
     },
     "readability": {
       "flesch_kincaid": 4.2,
@@ -989,6 +1260,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "trading"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 1,
+        "B1": 1
+      }
     }
   },
   {
@@ -1007,9 +1290,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A blue car went 180 miles. A red car went 145 miles. How much farther did the blue car go?",
-      "L2_bilingual": "A blue car (carro azul) traveled (viajó) 180 miles (millas). A red car (carro rojo) traveled 145. How much farther (cuánto más lejos)?",
-      "L3_spanish": "Un carro azul viajó 180 millas. Un carro rojo viajó 145 millas. ¿Cuánto más lejos viajó el azul?",
-      "L4_solution": "Step 1: Subtract — 180 - 145\nStep 2: = 35\nAnswer: 35 miles farther."
+      "L2_bilingual": "A blue car (carro azul) traveled (viaj\u00f3) 180 miles (millas). A red car (carro rojo) traveled 145. How much farther (cu\u00e1nto m\u00e1s lejos)?",
+      "L3_spanish": "Un carro azul viaj\u00f3 180 millas. Un carro rojo viaj\u00f3 145 millas. \u00bfCu\u00e1nto m\u00e1s lejos viaj\u00f3 el azul?",
+      "L4_solution": "Step 1: Subtract \u2014 180 - 145\nStep 2: = 35\nAnswer: 35 miles farther."
     },
     "readability": {
       "flesch_kincaid": 4.5,
@@ -1021,6 +1304,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4
+      }
     }
   },
   {
@@ -1040,7 +1332,7 @@
     "scaffolds": {
       "L1_simplified": "A store had 50 shirts. They sold 28 on Monday and 13 on Tuesday. How many are left?",
       "L2_bilingual": "A store (tienda) had 50 shirts (camisas). They sold (vendieron) 28 on Monday (lunes) and 13 on Tuesday (martes). How many left (quedan)?",
-      "L3_spanish": "Una tienda tenía 50 camisas. Vendieron 28 el lunes y 13 el martes. ¿Cuántas quedan?",
+      "L3_spanish": "Una tienda ten\u00eda 50 camisas. Vendieron 28 el lunes y 13 el martes. \u00bfCu\u00e1ntas quedan?",
       "L4_solution": "Step 1: Sold = 28 + 13 = 41\nStep 2: Left = 50 - 41 = 9\nAnswer: 9 shirts."
     },
     "readability": {
@@ -1053,6 +1345,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 2
+      }
     }
   },
   {
@@ -1066,14 +1367,14 @@
     "answer_numeric": 6.0,
     "solution_steps": [
       "Convert: 3 m = 300 cm",
-      "Divide: 300 ÷ 50 = 6",
+      "Divide: 300 \u00f7 50 = 6",
       "Rosa can cut 6 pieces."
     ],
     "scaffolds": {
       "L1_simplified": "A ribbon is 3 meters long. Rosa cuts it into 50-centimeter pieces. How many pieces?",
-      "L2_bilingual": "A ribbon (cinta) is 3 meters (metros) long. Rosa cuts (corta) it into pieces (piezas) of 50 centimeters (centímetros). How many pieces (piezas)?",
-      "L3_spanish": "Una cinta mide 3 metros. Rosa la corta en piezas de 50 centímetros. ¿Cuántas piezas obtiene?",
-      "L4_solution": "Step 1: Convert — 3 m = 300 cm\nStep 2: Divide — 300 ÷ 50 = 6\nAnswer: 6 pieces."
+      "L2_bilingual": "A ribbon (cinta) is 3 meters (metros) long. Rosa cuts (corta) it into pieces (piezas) of 50 centimeters (cent\u00edmetros). How many pieces (piezas)?",
+      "L3_spanish": "Una cinta mide 3 metros. Rosa la corta en piezas de 50 cent\u00edmetros. \u00bfCu\u00e1ntas piezas obtiene?",
+      "L4_solution": "Step 1: Convert \u2014 3 m = 300 cm\nStep 2: Divide \u2014 300 \u00f7 50 = 6\nAnswer: 6 pieces."
     },
     "readability": {
       "flesch_kincaid": 4.6,
@@ -1085,6 +1386,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4
+      }
     }
   },
   {
@@ -1103,9 +1413,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "Elena scored 85 on the first test and 92 on the second. How many more points on the second?",
-      "L2_bilingual": "Elena scored (obtuvo) 85 points (puntos) on her first test (primer examen) and 92 on the second (segundo). How many more (cuántos más)?",
-      "L3_spanish": "Elena obtuvo 85 puntos en el primer examen y 92 en el segundo. ¿Cuántos puntos más en el segundo?",
-      "L4_solution": "Step 1: Subtract — 92 - 85\nStep 2: = 7\nAnswer: 7 more points."
+      "L2_bilingual": "Elena scored (obtuvo) 85 points (puntos) on her first test (primer examen) and 92 on the second (segundo). How many more (cu\u00e1ntos m\u00e1s)?",
+      "L3_spanish": "Elena obtuvo 85 puntos en el primer examen y 92 en el segundo. \u00bfCu\u00e1ntos puntos m\u00e1s en el segundo?",
+      "L4_solution": "Step 1: Subtract \u2014 92 - 85\nStep 2: = 7\nAnswer: 7 more points."
     },
     "readability": {
       "flesch_kincaid": 4.4,
@@ -1117,6 +1427,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 4
+      }
     }
   },
   {
@@ -1135,8 +1454,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "A train leaves at 9:15 AM. It arrives at 11:45 AM. How long is the ride?",
-      "L2_bilingual": "A train (tren) leaves (sale) at 9:15 AM and arrives (llega) at 11:45 AM. How long (cuánto tiempo) is the ride (viaje)?",
-      "L3_spanish": "Un tren sale a las 9:15 AM y llega a las 11:45 AM. ¿Cuánto dura el viaje?",
+      "L2_bilingual": "A train (tren) leaves (sale) at 9:15 AM and arrives (llega) at 11:45 AM. How long (cu\u00e1nto tiempo) is the ride (viaje)?",
+      "L3_spanish": "Un tren sale a las 9:15 AM y llega a las 11:45 AM. \u00bfCu\u00e1nto dura el viaje?",
       "L4_solution": "Step 1: 11:45 - 9:15\nStep 2: = 2 hours 30 minutes\nAnswer: 2 hours 30 minutes."
     },
     "readability": {
@@ -1149,6 +1468,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 2
+      }
     }
   },
   {
@@ -1162,14 +1490,14 @@
     "answer_numeric": 0.25,
     "solution_steps": [
       "Convert: 6 dollars = 600 cents",
-      "Divide: 600 ÷ 24 = 25",
+      "Divide: 600 \u00f7 24 = 25",
       "Each chocolate costs 25 cents."
     ],
     "scaffolds": {
       "L1_simplified": "24 chocolates cost 6 dollars. How much does each chocolate cost?",
-      "L2_bilingual": "A box (caja) of 24 chocolates (chocolates) costs (cuesta) 6 dollars (dólares). How much (cuánto) does each (cada uno) cost?",
-      "L3_spanish": "Una caja de 24 chocolates cuesta 6 dólares. ¿Cuánto cuesta cada chocolate?",
-      "L4_solution": "Step 1: 6 dollars = 600 cents\nStep 2: 600 ÷ 24 = 25\nAnswer: 25 cents each."
+      "L2_bilingual": "A box (caja) of 24 chocolates (chocolates) costs (cuesta) 6 dollars (d\u00f3lares). How much (cu\u00e1nto) does each (cada uno) cost?",
+      "L3_spanish": "Una caja de 24 chocolates cuesta 6 d\u00f3lares. \u00bfCu\u00e1nto cuesta cada chocolate?",
+      "L4_solution": "Step 1: 6 dollars = 600 cents\nStep 2: 600 \u00f7 24 = 25\nAnswer: 25 cents each."
     },
     "readability": {
       "flesch_kincaid": 4.1,
@@ -1181,6 +1509,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3
+      }
     }
   },
   {
@@ -1199,9 +1536,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "Team A scored 47 points. Team B scored 39. How many more did Team A score?",
-      "L2_bilingual": "Team A scored (anotó) 47 points (puntos). Team B scored 39. How many more (cuántos más) did Team A score?",
-      "L3_spanish": "El Equipo A anotó 47 puntos y el Equipo B 39. ¿Cuántos puntos más anotó el Equipo A?",
-      "L4_solution": "Step 1: Subtract — 47 - 39\nStep 2: = 8\nAnswer: 8 more points."
+      "L2_bilingual": "Team A scored (anot\u00f3) 47 points (puntos). Team B scored 39. How many more (cu\u00e1ntos m\u00e1s) did Team A score?",
+      "L3_spanish": "El Equipo A anot\u00f3 47 puntos y el Equipo B 39. \u00bfCu\u00e1ntos puntos m\u00e1s anot\u00f3 el Equipo A?",
+      "L4_solution": "Step 1: Subtract \u2014 47 - 39\nStep 2: = 8\nAnswer: 8 more points."
     },
     "readability": {
       "flesch_kincaid": 4.4,
@@ -1213,6 +1550,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 3
+      }
     }
   },
   {
@@ -1225,15 +1571,15 @@
     "answer": "100 meters",
     "answer_numeric": 100.0,
     "solution_steps": [
-      "Multiply: 25 × 4",
+      "Multiply: 25 \u00d7 4",
       "= 100",
       "Carlos swam 100 meters."
     ],
     "scaffolds": {
       "L1_simplified": "A pool is 25 meters long. Carlos swam 4 lengths. How many meters total?",
-      "L2_bilingual": "A pool (piscina) is 25 meters (metros) long. Carlos swam (nadó) 4 lengths (largos). How many meters (metros) total?",
-      "L3_spanish": "Una piscina mide 25 metros. Carlos nadó 4 largos. ¿Cuántos metros nadó en total?",
-      "L4_solution": "Step 1: Multiply — 25 × 4\nStep 2: = 100\nAnswer: 100 meters."
+      "L2_bilingual": "A pool (piscina) is 25 meters (metros) long. Carlos swam (nad\u00f3) 4 lengths (largos). How many meters (metros) total?",
+      "L3_spanish": "Una piscina mide 25 metros. Carlos nad\u00f3 4 largos. \u00bfCu\u00e1ntos metros nad\u00f3 en total?",
+      "L4_solution": "Step 1: Multiply \u2014 25 \u00d7 4\nStep 2: = 100\nAnswer: 100 meters."
     },
     "readability": {
       "flesch_kincaid": 4.3,
@@ -1245,6 +1591,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 6
+      }
     }
   },
   {
@@ -1257,15 +1612,15 @@
     "answer": "24 dollars",
     "answer_numeric": 24.0,
     "solution_steps": [
-      "Multiply: 3 × 8",
+      "Multiply: 3 \u00d7 8",
       "= 24",
       "They pay 24 dollars."
     ],
     "scaffolds": {
       "L1_simplified": "A family buys 3 movie tickets. Each costs 8 dollars. How much total?",
       "L2_bilingual": "A family (familia) buys (compra) 3 movie tickets (boletos de cine). Each (cada uno) costs 8 dollars. Total (total)?",
-      "L3_spanish": "Una familia compra 3 boletos de cine a 8 dólares cada uno. ¿Cuánto pagan en total?",
-      "L4_solution": "Step 1: Multiply — 3 × 8\nStep 2: = 24\nAnswer: 24 dollars."
+      "L3_spanish": "Una familia compra 3 boletos de cine a 8 d\u00f3lares cada uno. \u00bfCu\u00e1nto pagan en total?",
+      "L4_solution": "Step 1: Multiply \u2014 3 \u00d7 8\nStep 2: = 24\nAnswer: 24 dollars."
     },
     "readability": {
       "flesch_kincaid": 4.2,
@@ -1277,6 +1632,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4
+      }
     }
   },
   {
@@ -1295,8 +1659,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "A pizza has 8 slices. Maya eats 3. What fraction did she eat?",
-      "L2_bilingual": "A pizza has 8 equal slices (rebanadas). Maya eats (come) 3. What fraction (fracción) did she eat?",
-      "L3_spanish": "Una pizza está cortada en 8 rebanadas iguales. Maya come 3. ¿Qué fracción de la pizza comió?",
+      "L2_bilingual": "A pizza has 8 equal slices (rebanadas). Maya eats (come) 3. What fraction (fracci\u00f3n) did she eat?",
+      "L3_spanish": "Una pizza est\u00e1 cortada en 8 rebanadas iguales. Maya come 3. \u00bfQu\u00e9 fracci\u00f3n de la pizza comi\u00f3?",
       "L4_solution": "Step 1: Eaten = 3\nStep 2: Total = 8\nStep 3: Fraction = 3/8\nAnswer: 3/8"
     },
     "readability": {
@@ -1309,6 +1673,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "fraction"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 2,
+        "B1": 1
+      }
     }
   },
   {
@@ -1321,15 +1697,15 @@
     "answer": "4 students",
     "answer_numeric": 4.0,
     "solution_steps": [
-      "Divide: 12 ÷ 3",
+      "Divide: 12 \u00f7 3",
       "= 4",
       "4 students wear glasses."
     ],
     "scaffolds": {
       "L1_simplified": "There are 12 students. One-third wear glasses. How many wear glasses?",
-      "L2_bilingual": "There are 12 students (estudiantes). One-third (un tercio) wear glasses (usan lentes). How many (cuántos)?",
-      "L3_spanish": "Hay 12 estudiantes. Un tercio usa lentes. ¿Cuántos estudiantes usan lentes?",
-      "L4_solution": "Step 1: Divide by 3 — 12 ÷ 3\nStep 2: = 4\nAnswer: 4 students."
+      "L2_bilingual": "There are 12 students (estudiantes). One-third (un tercio) wear glasses (usan lentes). How many (cu\u00e1ntos)?",
+      "L3_spanish": "Hay 12 estudiantes. Un tercio usa lentes. \u00bfCu\u00e1ntos estudiantes usan lentes?",
+      "L4_solution": "Step 1: Divide by 3 \u2014 12 \u00f7 3\nStep 2: = 4\nAnswer: 4 students."
     },
     "readability": {
       "flesch_kincaid": 5.3,
@@ -1341,6 +1717,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 5
+      }
     }
   },
   {
@@ -1359,8 +1744,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "A baker makes 5 dozen (60) cookies. He sells 36. How many are left?",
-      "L2_bilingual": "A baker (panadero) makes 5 dozen (docenas) cookies (galletas). He sells (vende) 36. How many (cuántas) left (quedan)?",
-      "L3_spanish": "Un panadero hace 5 docenas de galletas. Vende 36. ¿Cuántas le quedan?",
+      "L2_bilingual": "A baker (panadero) makes 5 dozen (docenas) cookies (galletas). He sells (vende) 36. How many (cu\u00e1ntas) left (quedan)?",
+      "L3_spanish": "Un panadero hace 5 docenas de galletas. Vende 36. \u00bfCu\u00e1ntas le quedan?",
       "L4_solution": "Step 1: 5 dozen = 60\nStep 2: 60 - 36 = 24\nAnswer: 24 cookies."
     },
     "readability": {
@@ -1373,6 +1758,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 5
+      }
     }
   },
   {
@@ -1391,9 +1785,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "David reads 1/4 of his book on Monday and 1/4 on Tuesday. What fraction total?",
-      "L2_bilingual": "David reads (lee) 1/4 of his book (libro) on Monday (lunes) and 1/4 on Tuesday (martes). What fraction (fracción) total?",
-      "L3_spanish": "David lee 1/4 de su libro el lunes y 1/4 el martes. ¿Qué fracción ha leído en total?",
-      "L4_solution": "Step 1: Add — 1/4 + 1/4\nStep 2: = 2/4 = 1/2\nAnswer: 1/2"
+      "L2_bilingual": "David reads (lee) 1/4 of his book (libro) on Monday (lunes) and 1/4 on Tuesday (martes). What fraction (fracci\u00f3n) total?",
+      "L3_spanish": "David lee 1/4 de su libro el lunes y 1/4 el martes. \u00bfQu\u00e9 fracci\u00f3n ha le\u00eddo en total?",
+      "L4_solution": "Step 1: Add \u2014 1/4 + 1/4\nStep 2: = 2/4 = 1/2\nAnswer: 1/2"
     },
     "readability": {
       "flesch_kincaid": 5.2,
@@ -1405,6 +1799,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "fraction"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 1,
+        "B1": 1
+      }
     }
   },
   {
@@ -1417,15 +1823,15 @@
     "answer": "5 dollars",
     "answer_numeric": 5.0,
     "solution_steps": [
-      "Groups: 15 ÷ 3 = 5",
-      "Cost: 5 × 1 = 5 dollars",
+      "Groups: 15 \u00f7 3 = 5",
+      "Cost: 5 \u00d7 1 = 5 dollars",
       "15 apples cost 5 dollars."
     ],
     "scaffolds": {
       "L1_simplified": "3 apples cost 1 dollar. How much do 15 apples cost?",
-      "L2_bilingual": "Apples (manzanas) cost 3 for a dollar (dólar). How much (cuánto) do 15 apples cost?",
-      "L3_spanish": "Las manzanas cuestan 3 por un dólar. ¿Cuánto cuestan 15 manzanas?",
-      "L4_solution": "Step 1: 15 ÷ 3 = 5 groups\nStep 2: 5 × $1 = $5\nAnswer: 5 dollars."
+      "L2_bilingual": "Apples (manzanas) cost 3 for a dollar (d\u00f3lar). How much (cu\u00e1nto) do 15 apples cost?",
+      "L3_spanish": "Las manzanas cuestan 3 por un d\u00f3lar. \u00bfCu\u00e1nto cuestan 15 manzanas?",
+      "L4_solution": "Step 1: 15 \u00f7 3 = 5 groups\nStep 2: 5 \u00d7 $1 = $5\nAnswer: 5 dollars."
     },
     "readability": {
       "flesch_kincaid": 5.0,
@@ -1437,6 +1843,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3
+      }
     }
   },
   {
@@ -1449,14 +1864,14 @@
     "answer": "5 marbles",
     "answer_numeric": 5.0,
     "solution_steps": [
-      "Red: 20 ÷ 2 = 10",
-      "Blue: 20 ÷ 4 = 5",
+      "Red: 20 \u00f7 2 = 10",
+      "Blue: 20 \u00f7 4 = 5",
       "Neither: 20 - 10 - 5 = 5"
     ],
     "scaffolds": {
       "L1_simplified": "A jar has 20 marbles. Half are red. One-quarter are blue. How many are neither?",
       "L2_bilingual": "A jar (frasco) has 20 marbles (canicas). Half (la mitad) are red (rojas). One-quarter (un cuarto) are blue (azules). How many are neither (ni uno ni otro)?",
-      "L3_spanish": "Un frasco tiene 20 canicas. La mitad son rojas y un cuarto son azules. ¿Cuántas no son ni rojas ni azules?",
+      "L3_spanish": "Un frasco tiene 20 canicas. La mitad son rojas y un cuarto son azules. \u00bfCu\u00e1ntas no son ni rojas ni azules?",
       "L4_solution": "Step 1: Red = 10, Blue = 5\nStep 2: 20 - 10 - 5 = 5\nAnswer: 5 marbles."
     },
     "readability": {
@@ -1469,6 +1884,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "neither",
+        "nor"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 3,
+        "B1": 2
+      }
     }
   },
   {
@@ -1481,15 +1909,15 @@
     "answer": "17 centimeters",
     "answer_numeric": 17.0,
     "solution_steps": [
-      "Growth: 2 × 6 = 12 cm",
+      "Growth: 2 \u00d7 6 = 12 cm",
       "Total: 5 + 12 = 17 cm",
       "17 cm tall."
     ],
     "scaffolds": {
       "L1_simplified": "A plant starts at 5 cm tall. It grows 2 cm each week. How tall after 6 weeks?",
-      "L2_bilingual": "A plant (planta) grows (crece) 2 centimeters (centímetros) each week (semana). It starts at 5 cm. How tall (cuánto mide) after 6 weeks?",
-      "L3_spanish": "Una planta crece 2 centímetros cada semana y empieza midiendo 5 cm. ¿Cuánto medirá después de 6 semanas?",
-      "L4_solution": "Step 1: Growth = 2 × 6 = 12 cm\nStep 2: Total = 5 + 12 = 17\nAnswer: 17 cm."
+      "L2_bilingual": "A plant (planta) grows (crece) 2 centimeters (cent\u00edmetros) each week (semana). It starts at 5 cm. How tall (cu\u00e1nto mide) after 6 weeks?",
+      "L3_spanish": "Una planta crece 2 cent\u00edmetros cada semana y empieza midiendo 5 cm. \u00bfCu\u00e1nto medir\u00e1 despu\u00e9s de 6 semanas?",
+      "L4_solution": "Step 1: Growth = 2 \u00d7 6 = 12 cm\nStep 2: Total = 5 + 12 = 17\nAnswer: 17 cm."
     },
     "readability": {
       "flesch_kincaid": 5.2,
@@ -1501,6 +1929,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3
+      }
     }
   },
   {
@@ -1513,15 +1950,15 @@
     "answer": "9 students",
     "answer_numeric": 9.0,
     "solution_steps": [
-      "Multiply: 24 × 3/8",
-      "= 72 ÷ 8 = 9",
+      "Multiply: 24 \u00d7 3/8",
+      "= 72 \u00f7 8 = 9",
       "9 students brought lunch."
     ],
     "scaffolds": {
       "L1_simplified": "24 students went on a trip. Three-eighths brought lunch. How many brought lunch?",
-      "L2_bilingual": "24 students (estudiantes) went on a field trip (excursión). Three-eighths (tres octavos) brought their lunch (almuerzo). How many (cuántos)?",
-      "L3_spanish": "24 estudiantes fueron de excursión. Tres octavos llevaron su almuerzo. ¿Cuántos lo llevaron?",
-      "L4_solution": "Step 1: 24 × 3/8\nStep 2: 72 ÷ 8 = 9\nAnswer: 9 students."
+      "L2_bilingual": "24 students (estudiantes) went on a field trip (excursi\u00f3n). Three-eighths (tres octavos) brought their lunch (almuerzo). How many (cu\u00e1ntos)?",
+      "L3_spanish": "24 estudiantes fueron de excursi\u00f3n. Tres octavos llevaron su almuerzo. \u00bfCu\u00e1ntos lo llevaron?",
+      "L4_solution": "Step 1: 24 \u00d7 3/8\nStep 2: 72 \u00f7 8 = 9\nAnswer: 9 students."
     },
     "readability": {
       "flesch_kincaid": 5.5,
@@ -1533,6 +1970,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "eighths"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 6,
+        "A2": 3,
+        "B1": 1
+      }
     }
   },
   {
@@ -1545,15 +1994,15 @@
     "answer": "6 gallons",
     "answer_numeric": 6.0,
     "solution_steps": [
-      "120 ÷ 40 = 3 sets",
-      "3 × 2 = 6 gallons",
+      "120 \u00f7 40 = 3 sets",
+      "3 \u00d7 2 = 6 gallons",
       "6 gallons needed."
     ],
     "scaffolds": {
       "L1_simplified": "A car uses 2 gallons for every 40 miles. How many gallons for 120 miles?",
       "L2_bilingual": "A car (carro) uses (usa) 2 gallons (galones) for every 40 miles (millas). How many gallons (galones) for 120 miles?",
-      "L3_spanish": "Un carro usa 2 galones por cada 40 millas. ¿Cuántos galones necesita para 120 millas?",
-      "L4_solution": "Step 1: 120 ÷ 40 = 3\nStep 2: 3 × 2 = 6\nAnswer: 6 gallons."
+      "L3_spanish": "Un carro usa 2 galones por cada 40 millas. \u00bfCu\u00e1ntos galones necesita para 120 millas?",
+      "L4_solution": "Step 1: 120 \u00f7 40 = 3\nStep 2: 3 \u00d7 2 = 6\nAnswer: 6 gallons."
     },
     "readability": {
       "flesch_kincaid": 5.3,
@@ -1565,6 +2014,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4
+      }
     }
   },
   {
@@ -1577,15 +2035,15 @@
     "answer": "32 cm",
     "answer_numeric": 32.0,
     "solution_steps": [
-      "Perimeter = 2 × (l + w)",
-      "= 2 × (10 + 6) = 2 × 16",
+      "Perimeter = 2 \u00d7 (l + w)",
+      "= 2 \u00d7 (10 + 6) = 2 \u00d7 16",
       "= 32 cm"
     ],
     "scaffolds": {
       "L1_simplified": "A rectangle is 10 cm long and 6 cm wide. What is the perimeter?",
-      "L2_bilingual": "A rectangle (rectángulo) has length (largo) 10 cm and width (ancho) 6 cm. What is the perimeter (perímetro)?",
-      "L3_spanish": "Un rectángulo tiene 10 cm de largo y 6 cm de ancho. ¿Cuál es el perímetro?",
-      "L4_solution": "Step 1: P = 2 × (l + w)\nStep 2: = 2 × 16 = 32\nAnswer: 32 cm."
+      "L2_bilingual": "A rectangle (rect\u00e1ngulo) has length (largo) 10 cm and width (ancho) 6 cm. What is the perimeter (per\u00edmetro)?",
+      "L3_spanish": "Un rect\u00e1ngulo tiene 10 cm de largo y 6 cm de ancho. \u00bfCu\u00e1l es el per\u00edmetro?",
+      "L4_solution": "Step 1: P = 2 \u00d7 (l + w)\nStep 2: = 2 \u00d7 16 = 32\nAnswer: 32 cm."
     },
     "readability": {
       "flesch_kincaid": 5.1,
@@ -1597,6 +2055,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "perimeter",
+        "rectangle"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A2": 3,
+        "B1": 2
+      }
     }
   },
   {
@@ -1615,8 +2085,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "A recipe needs 2/3 cup of sugar and 1/4 cup of butter. How much more sugar than butter?",
-      "L2_bilingual": "A recipe (receta) calls for (necesita) 2/3 cup (taza) of sugar (azúcar) and 1/4 cup of butter (mantequilla). How much more (cuánto más)?",
-      "L3_spanish": "Una receta necesita 2/3 de taza de azúcar y 1/4 de taza de mantequilla. ¿Cuánto más azúcar que mantequilla?",
+      "L2_bilingual": "A recipe (receta) calls for (necesita) 2/3 cup (taza) of sugar (az\u00facar) and 1/4 cup of butter (mantequilla). How much more (cu\u00e1nto m\u00e1s)?",
+      "L3_spanish": "Una receta necesita 2/3 de taza de az\u00facar y 1/4 de taza de mantequilla. \u00bfCu\u00e1nto m\u00e1s az\u00facar que mantequilla?",
       "L4_solution": "Step 1: LCD = 12\nStep 2: 8/12 - 3/12 = 5/12\nAnswer: 5/12 cup."
     },
     "readability": {
@@ -1629,6 +2099,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 2
+      }
     }
   },
   {
@@ -1641,15 +2120,15 @@
     "answer": "$5.45",
     "answer_numeric": 5.45,
     "solution_steps": [
-      "Apples: 3 × 1.25 = 3.75",
-      "Oranges: 2 × 0.85 = 1.70",
+      "Apples: 3 \u00d7 1.25 = 3.75",
+      "Oranges: 2 \u00d7 0.85 = 1.70",
       "Total: 3.75 + 1.70 = 5.45"
     ],
     "scaffolds": {
       "L1_simplified": "Apples cost $1.25 each. Oranges cost $0.85 each. What is the total for 3 apples and 2 oranges?",
       "L2_bilingual": "Apples (manzanas) cost $1.25 each and oranges (naranjas) cost $0.85 each. Total cost (costo total) of 3 apples and 2 oranges?",
-      "L3_spanish": "Las manzanas cuestan $1.25 y las naranjas $0.85. ¿Cuánto cuestan 3 manzanas y 2 naranjas?",
-      "L4_solution": "Step 1: Apples = 3 × $1.25 = $3.75\nStep 2: Oranges = 2 × $0.85 = $1.70\nStep 3: Total = $5.45\nAnswer: $5.45"
+      "L3_spanish": "Las manzanas cuestan $1.25 y las naranjas $0.85. \u00bfCu\u00e1nto cuestan 3 manzanas y 2 naranjas?",
+      "L4_solution": "Step 1: Apples = 3 \u00d7 $1.25 = $3.75\nStep 2: Oranges = 2 \u00d7 $0.85 = $1.70\nStep 3: Total = $5.45\nAnswer: $5.45"
     },
     "readability": {
       "flesch_kincaid": 6.1,
@@ -1661,6 +2140,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3
+      }
     }
   },
   {
@@ -1679,8 +2167,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "Marco spent 3/5 of his money on lunch and 1/5 on a pen. How much in total?",
-      "L2_bilingual": "Marco spent (gastó) 3/5 of his allowance (mesada) on lunch (almuerzo) and 1/5 on a pen (pluma). Total fraction (fracción total)?",
-      "L3_spanish": "Marco gastó 3/5 de su mesada en el almuerzo y 1/5 en un bolígrafo. ¿Qué fracción gastó en total?",
+      "L2_bilingual": "Marco spent (gast\u00f3) 3/5 of his allowance (mesada) on lunch (almuerzo) and 1/5 on a pen (pluma). Total fraction (fracci\u00f3n total)?",
+      "L3_spanish": "Marco gast\u00f3 3/5 de su mesada en el almuerzo y 1/5 en un bol\u00edgrafo. \u00bfQu\u00e9 fracci\u00f3n gast\u00f3 en total?",
       "L4_solution": "Step 1: 3/5 + 1/5 = 4/5\nAnswer: 4/5"
     },
     "readability": {
@@ -1693,6 +2181,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "allowance",
+        "fraction"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 3,
+        "B1": 2
+      }
     }
   },
   {
@@ -1712,7 +2213,7 @@
     "scaffolds": {
       "L1_simplified": "A jacket costs $48.75. There is a $12.50 discount. What is the new price?",
       "L2_bilingual": "A jacket (chaqueta) costs $48.75. It is on sale (en oferta) for $12.50 off (de descuento). What is the sale price (precio de oferta)?",
-      "L3_spanish": "Una chaqueta cuesta $48.75 y tiene un descuento de $12.50. ¿Cuál es el precio de oferta?",
+      "L3_spanish": "Una chaqueta cuesta $48.75 y tiene un descuento de $12.50. \u00bfCu\u00e1l es el precio de oferta?",
       "L4_solution": "Step 1: 48.75 - 12.50\nStep 2: = 36.25\nAnswer: $36.25"
     },
     "readability": {
@@ -1725,6 +2226,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 4
+      }
     }
   },
   {
@@ -1743,9 +2253,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A board is 4 and 1/2 feet long. A carpenter cuts off 1 and 3/4 feet. How long is it now?",
-      "L2_bilingual": "A board (tabla) is 4 and 1/2 feet (pies) long. A carpenter (carpintero) cuts off (corta) 1 and 3/4 feet. How long (cuánto mide) now?",
-      "L3_spanish": "Una tabla mide 4 y 1/2 pies. Un carpintero corta 1 y 3/4 pies. ¿Cuánto mide ahora?",
-      "L4_solution": "Step 1: 4½ - 1¾\nStep 2: 4.5 - 1.75 = 2.75\nAnswer: 2 and 3/4 feet."
+      "L2_bilingual": "A board (tabla) is 4 and 1/2 feet (pies) long. A carpenter (carpintero) cuts off (corta) 1 and 3/4 feet. How long (cu\u00e1nto mide) now?",
+      "L3_spanish": "Una tabla mide 4 y 1/2 pies. Un carpintero corta 1 y 3/4 pies. \u00bfCu\u00e1nto mide ahora?",
+      "L4_solution": "Step 1: 4\u00bd - 1\u00be\nStep 2: 4.5 - 1.75 = 2.75\nAnswer: 2 and 3/4 feet."
     },
     "readability": {
       "flesch_kincaid": 5.8,
@@ -1757,6 +2267,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "carpenter"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 2,
+        "B1": 1
+      }
     }
   },
   {
@@ -1769,15 +2291,15 @@
     "answer": "$6.20",
     "answer_numeric": 6.2,
     "solution_steps": [
-      "Divide: 18.60 ÷ 3",
+      "Divide: 18.60 \u00f7 3",
       "= 6.20",
       "Each pays $6.20."
     ],
     "scaffolds": {
       "L1_simplified": "Three friends share a $18.60 pizza equally. How much does each pay?",
       "L2_bilingual": "Three friends (amigos) share (comparten) the cost (costo) equally. The pizza costs $18.60. How much does each person (persona) pay?",
-      "L3_spanish": "Tres amigos comparten el costo de una pizza de $18.60 por igual. ¿Cuánto paga cada uno?",
-      "L4_solution": "Step 1: 18.60 ÷ 3\nStep 2: = 6.20\nAnswer: $6.20 each."
+      "L3_spanish": "Tres amigos comparten el costo de una pizza de $18.60 por igual. \u00bfCu\u00e1nto paga cada uno?",
+      "L4_solution": "Step 1: 18.60 \u00f7 3\nStep 2: = 6.20\nAnswer: $6.20 each."
     },
     "readability": {
       "flesch_kincaid": 6.0,
@@ -1789,6 +2311,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 5
+      }
     }
   },
   {
@@ -1801,15 +2332,15 @@
     "answer": "96 students",
     "answer_numeric": 96.0,
     "solution_steps": [
-      "240 × 2/5",
-      "= 480 ÷ 5 = 96",
+      "240 \u00d7 2/5",
+      "= 480 \u00f7 5 = 96",
       "96 students play sports."
     ],
     "scaffolds": {
       "L1_simplified": "A school has 240 students. Two-fifths play after-school sports. How many play sports?",
-      "L2_bilingual": "A school (escuela) has 240 students (estudiantes). Two-fifths (dos quintos) play after-school sports (deportes). How many students (cuántos)?",
-      "L3_spanish": "Una escuela tiene 240 estudiantes. Dos quintos participan en deportes extraescolares. ¿Cuántos estudiantes practican deportes?",
-      "L4_solution": "Step 1: 240 × 2/5\nStep 2: = 96\nAnswer: 96 students."
+      "L2_bilingual": "A school (escuela) has 240 students (estudiantes). Two-fifths (dos quintos) play after-school sports (deportes). How many students (cu\u00e1ntos)?",
+      "L3_spanish": "Una escuela tiene 240 estudiantes. Dos quintos participan en deportes extraescolares. \u00bfCu\u00e1ntos estudiantes practican deportes?",
+      "L4_solution": "Step 1: 240 \u00d7 2/5\nStep 2: = 96\nAnswer: 96 students."
     },
     "readability": {
       "flesch_kincaid": 6.2,
@@ -1821,6 +2352,17 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "fifths"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 6,
+        "B1": 1
+      }
     }
   },
   {
@@ -1833,15 +2375,15 @@
     "answer": "6.5 minutes",
     "answer_numeric": 6.5,
     "solution_steps": [
-      "Divide: 32.5 ÷ 5",
+      "Divide: 32.5 \u00f7 5",
       "= 6.5",
       "Average = 6.5 min/km."
     ],
     "scaffolds": {
       "L1_simplified": "A runner ran 5 km in 32.5 minutes. What was her average time per kilometer?",
-      "L2_bilingual": "A runner (corredora) completed (completó) a 5-kilometer race (carrera) in 32.5 minutes. What was the average time (tiempo promedio) per kilometer?",
-      "L3_spanish": "Una corredora terminó una carrera de 5 km en 32.5 minutos. ¿Cuál fue su tiempo promedio por kilómetro?",
-      "L4_solution": "Step 1: 32.5 ÷ 5\nStep 2: = 6.5\nAnswer: 6.5 min/km."
+      "L2_bilingual": "A runner (corredora) completed (complet\u00f3) a 5-kilometer race (carrera) in 32.5 minutes. What was the average time (tiempo promedio) per kilometer?",
+      "L3_spanish": "Una corredora termin\u00f3 una carrera de 5 km en 32.5 minutos. \u00bfCu\u00e1l fue su tiempo promedio por kil\u00f3metro?",
+      "L4_solution": "Step 1: 32.5 \u00f7 5\nStep 2: = 6.5\nAnswer: 6.5 min/km."
     },
     "readability": {
       "flesch_kincaid": 6.1,
@@ -1853,6 +2395,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "average"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 5,
+        "B1": 1
+      }
     }
   },
   {
@@ -1871,9 +2425,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "A bag of flour weighs 3 and 1/2 pounds. A baker uses 2 and 3/4 pounds. How much is left?",
-      "L2_bilingual": "A bag (bolsa) of flour (harina) weighs (pesa) 3 and 1/2 pounds (libras). A baker (panadero) uses 2 and 3/4 pounds. How much left (cuánta queda)?",
-      "L3_spanish": "Una bolsa de harina pesa 3 y 1/2 libras. Un panadero usa 2 y 3/4 libras. ¿Cuánta harina queda?",
-      "L4_solution": "Step 1: 3½ - 2¾\nStep 2: 3.5 - 2.75 = 0.75\nAnswer: 3/4 pound."
+      "L2_bilingual": "A bag (bolsa) of flour (harina) weighs (pesa) 3 and 1/2 pounds (libras). A baker (panadero) uses 2 and 3/4 pounds. How much left (cu\u00e1nta queda)?",
+      "L3_spanish": "Una bolsa de harina pesa 3 y 1/2 libras. Un panadero usa 2 y 3/4 libras. \u00bfCu\u00e1nta harina queda?",
+      "L4_solution": "Step 1: 3\u00bd - 2\u00be\nStep 2: 3.5 - 2.75 = 0.75\nAnswer: 3/4 pound."
     },
     "readability": {
       "flesch_kincaid": 5.9,
@@ -1885,6 +2439,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 5
+      }
     }
   },
   {
@@ -1903,8 +2466,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "A tank holds 150.5 liters. After watering, 87.25 liters remain. How much water was used?",
-      "L2_bilingual": "A tank (tanque) holds (contiene) 150.5 liters (litros). After watering (regar), 87.25 liters are left. How much water (agua) was used (se usó)?",
-      "L3_spanish": "Un tanque tiene 150.5 litros. Después de regar el jardín, quedan 87.25 litros. ¿Cuánta agua se usó?",
+      "L2_bilingual": "A tank (tanque) holds (contiene) 150.5 liters (litros). After watering (regar), 87.25 liters are left. How much water (agua) was used (se us\u00f3)?",
+      "L3_spanish": "Un tanque tiene 150.5 litros. Despu\u00e9s de regar el jard\u00edn, quedan 87.25 litros. \u00bfCu\u00e1nta agua se us\u00f3?",
       "L4_solution": "Step 1: 150.5 - 87.25\nStep 2: = 63.25\nAnswer: 63.25 liters."
     },
     "readability": {
@@ -1917,6 +2480,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 5
+      }
     }
   },
   {
@@ -1929,15 +2501,15 @@
     "answer": "$30",
     "answer_numeric": 30.0,
     "solution_steps": [
-      "Discount: 25% × 40 = 10",
+      "Discount: 25% \u00d7 40 = 10",
       "Sale price: 40 - 10 = 30",
       "Sale price is $30."
     ],
     "scaffolds": {
       "L1_simplified": "A shirt costs $40. It has a 25% discount. What is the sale price?",
       "L2_bilingual": "A shirt (camisa) costs $40. It is on sale (en oferta) for 25% off (de descuento). What is the sale price (precio de oferta)?",
-      "L3_spanish": "Una camisa cuesta $40 y tiene un descuento del 25%. ¿Cuál es el precio de oferta?",
-      "L4_solution": "Step 1: Discount = 25% × $40 = $10\nStep 2: Sale = $40 - $10 = $30\nAnswer: $30"
+      "L3_spanish": "Una camisa cuesta $40 y tiene un descuento del 25%. \u00bfCu\u00e1l es el precio de oferta?",
+      "L4_solution": "Step 1: Discount = 25% \u00d7 $40 = $10\nStep 2: Sale = $40 - $10 = $30\nAnswer: $30"
     },
     "readability": {
       "flesch_kincaid": 6.5,
@@ -1949,6 +2521,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "originally"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 3,
+        "B1": 1
+      }
     }
   },
   {
@@ -1961,15 +2545,15 @@
     "answer": "9,200",
     "answer_numeric": 9200.0,
     "solution_steps": [
-      "Increase: 15% × 8000 = 1200",
+      "Increase: 15% \u00d7 8000 = 1200",
       "New total: 8000 + 1200 = 9200",
       "Population is 9,200."
     ],
     "scaffolds": {
       "L1_simplified": "A town had 8,000 people. The population grew by 15%. How many people now?",
-      "L2_bilingual": "A town (pueblo) had a population (población) of 8,000 last year. It increased (aumentó) by 15%. What is the new population (población nueva)?",
-      "L3_spanish": "Un pueblo tenía 8,000 habitantes. Este año aumentó un 15%. ¿Cuál es la nueva población?",
-      "L4_solution": "Step 1: Increase = 15% × 8000 = 1200\nStep 2: New = 8000 + 1200 = 9200\nAnswer: 9,200"
+      "L2_bilingual": "A town (pueblo) had a population (poblaci\u00f3n) of 8,000 last year. It increased (aument\u00f3) by 15%. What is the new population (poblaci\u00f3n nueva)?",
+      "L3_spanish": "Un pueblo ten\u00eda 8,000 habitantes. Este a\u00f1o aument\u00f3 un 15%. \u00bfCu\u00e1l es la nueva poblaci\u00f3n?",
+      "L4_solution": "Step 1: Increase = 15% \u00d7 8000 = 1200\nStep 2: New = 8000 + 1200 = 9200\nAnswer: 9,200"
     },
     "readability": {
       "flesch_kincaid": 6.8,
@@ -1981,6 +2565,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "increased",
+        "population"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 1,
+        "B1": 2
+      }
     }
   },
   {
@@ -1993,15 +2590,15 @@
     "answer": "80%",
     "answer_numeric": 80.0,
     "solution_steps": [
-      "Divide: 36 ÷ 45 = 0.8",
-      "Multiply: 0.8 × 100 = 80%",
+      "Divide: 36 \u00f7 45 = 0.8",
+      "Multiply: 0.8 \u00d7 100 = 80%",
       "The student got 80%."
     ],
     "scaffolds": {
       "L1_simplified": "A student got 36 out of 45 questions right. What percentage is correct?",
       "L2_bilingual": "A student (estudiante) answered 36 out of 45 questions (preguntas) correctly (correctamente). What percentage (porcentaje)?",
-      "L3_spanish": "Un estudiante respondió correctamente 36 de 45 preguntas. ¿Qué porcentaje respondió bien?",
-      "L4_solution": "Step 1: 36 ÷ 45 = 0.8\nStep 2: × 100 = 80%\nAnswer: 80%"
+      "L3_spanish": "Un estudiante respondi\u00f3 correctamente 36 de 45 preguntas. \u00bfQu\u00e9 porcentaje respondi\u00f3 bien?",
+      "L4_solution": "Step 1: 36 \u00f7 45 = 0.8\nStep 2: \u00d7 100 = 80%\nAnswer: 80%"
     },
     "readability": {
       "flesch_kincaid": 6.7,
@@ -2013,6 +2610,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "percentage"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3,
+        "B1": 1
+      }
     }
   },
   {
@@ -2025,15 +2634,15 @@
     "answer": "$256",
     "answer_numeric": 256.0,
     "solution_steps": [
-      "Reduction: 20% × 320 = 64",
+      "Reduction: 20% \u00d7 320 = 64",
       "New price: 320 - 64 = 256",
       "New price is $256."
     ],
     "scaffolds": {
       "L1_simplified": "A bicycle costs $320. The price goes down by 20%. What is the new price?",
       "L2_bilingual": "A bicycle (bicicleta) costs $320. The price is reduced (reducido) by 20%. What is the new price (precio nuevo)?",
-      "L3_spanish": "Una bicicleta cuesta $320. El precio baja un 20%. ¿Cuál es el nuevo precio?",
-      "L4_solution": "Step 1: Reduction = 20% × $320 = $64\nStep 2: New = $320 - $64 = $256\nAnswer: $256"
+      "L3_spanish": "Una bicicleta cuesta $320. El precio baja un 20%. \u00bfCu\u00e1l es el nuevo precio?",
+      "L4_solution": "Step 1: Reduction = 20% \u00d7 $320 = $64\nStep 2: New = $320 - $64 = $256\nAnswer: $256"
     },
     "readability": {
       "flesch_kincaid": 6.6,
@@ -2045,6 +2654,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "originally",
+        "reduced"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 3,
+        "B1": 2
+      }
     }
   },
   {
@@ -2057,15 +2679,15 @@
     "answer": "$20.00",
     "answer_numeric": 20.0,
     "solution_steps": [
-      "Per notebook: 12.50 ÷ 5 = 2.50",
-      "8 notebooks: 2.50 × 8 = 20.00",
+      "Per notebook: 12.50 \u00f7 5 = 2.50",
+      "8 notebooks: 2.50 \u00d7 8 = 20.00",
       "8 notebooks cost $20.00."
     ],
     "scaffolds": {
       "L1_simplified": "5 notebooks cost $12.50. How much do 8 notebooks cost at the same price?",
-      "L2_bilingual": "If 5 notebooks (cuadernos) cost $12.50, how much (cuánto) would 8 notebooks cost at the same price (mismo precio)?",
-      "L3_spanish": "Si 5 cuadernos cuestan $12.50, ¿cuánto costarían 8 cuadernos al mismo precio?",
-      "L4_solution": "Step 1: Per notebook = $12.50 ÷ 5 = $2.50\nStep 2: 8 × $2.50 = $20.00\nAnswer: $20.00"
+      "L2_bilingual": "If 5 notebooks (cuadernos) cost $12.50, how much (cu\u00e1nto) would 8 notebooks cost at the same price (mismo precio)?",
+      "L3_spanish": "Si 5 cuadernos cuestan $12.50, \u00bfcu\u00e1nto costar\u00edan 8 cuadernos al mismo precio?",
+      "L4_solution": "Step 1: Per notebook = $12.50 \u00f7 5 = $2.50\nStep 2: 8 \u00d7 $2.50 = $20.00\nAnswer: $20.00"
     },
     "readability": {
       "flesch_kincaid": 6.8,
@@ -2077,6 +2699,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 5
+      }
     }
   },
   {
@@ -2089,15 +2720,15 @@
     "answer": "$66.00",
     "answer_numeric": 66.0,
     "solution_steps": [
-      "Tip: 20% × 55 = 11",
+      "Tip: 20% \u00d7 55 = 11",
       "Total: 55 + 11 = 66",
       "Total is $66.00."
     ],
     "scaffolds": {
       "L1_simplified": "A restaurant bill is $55. The customer leaves a 20% tip. What is the tip and the total?",
       "L2_bilingual": "A restaurant bill (cuenta) is $55. A customer (cliente) leaves a 20% tip (propina). How much is the tip and the total (total)?",
-      "L3_spanish": "La cuenta del restaurante es $55. El cliente deja una propina del 20%. ¿Cuánto es la propina y el total?",
-      "L4_solution": "Step 1: Tip = 20% × $55 = $11\nStep 2: Total = $55 + $11 = $66\nAnswer: $66.00"
+      "L3_spanish": "La cuenta del restaurante es $55. El cliente deja una propina del 20%. \u00bfCu\u00e1nto es la propina y el total?",
+      "L4_solution": "Step 1: Tip = 20% \u00d7 $55 = $11\nStep 2: Total = $55 + $11 = $66\nAnswer: $66.00"
     },
     "readability": {
       "flesch_kincaid": 6.9,
@@ -2109,6 +2740,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 6
+      }
     }
   },
   {
@@ -2121,15 +2761,15 @@
     "answer": "250 miles",
     "answer_numeric": 250.0,
     "solution_steps": [
-      "Speed: 150 ÷ 3 = 50 mph",
-      "Distance: 50 × 5 = 250",
+      "Speed: 150 \u00f7 3 = 50 mph",
+      "Distance: 50 \u00d7 5 = 250",
       "250 miles in 5 hours."
     ],
     "scaffolds": {
       "L1_simplified": "A car goes 150 miles in 3 hours. How far does it go in 5 hours at the same speed?",
-      "L2_bilingual": "A car (carro) travels (viaja) 150 miles (millas) in 3 hours (horas). At the same speed (velocidad), how far (cuánto) in 5 hours?",
-      "L3_spanish": "Un carro recorre 150 millas en 3 horas. A la misma velocidad, ¿cuántas millas recorrerá en 5 horas?",
-      "L4_solution": "Step 1: Speed = 150 ÷ 3 = 50 mph\nStep 2: Distance = 50 × 5 = 250\nAnswer: 250 miles."
+      "L2_bilingual": "A car (carro) travels (viaja) 150 miles (millas) in 3 hours (horas). At the same speed (velocidad), how far (cu\u00e1nto) in 5 hours?",
+      "L3_spanish": "Un carro recorre 150 millas en 3 horas. A la misma velocidad, \u00bfcu\u00e1ntas millas recorrer\u00e1 en 5 horas?",
+      "L4_solution": "Step 1: Speed = 150 \u00f7 3 = 50 mph\nStep 2: Distance = 50 \u00d7 5 = 250\nAnswer: 250 miles."
     },
     "readability": {
       "flesch_kincaid": 6.7,
@@ -2141,6 +2781,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 4
+      }
     }
   },
   {
@@ -2153,15 +2802,15 @@
     "answer": "12 students",
     "answer_numeric": 12.0,
     "solution_steps": [
-      "40% × 30",
-      "= 0.40 × 30 = 12",
+      "40% \u00d7 30",
+      "= 0.40 \u00d7 30 = 12",
       "12 students prefer reading."
     ],
     "scaffolds": {
       "L1_simplified": "A class has 30 students. 40% prefer reading over watching TV. How many prefer reading?",
-      "L2_bilingual": "In a class (clase) of 30 students (estudiantes), 40% prefer (prefieren) reading (leer) over watching TV (ver TV). How many (cuántos)?",
-      "L3_spanish": "En una clase de 30 estudiantes, el 40% prefiere leer sobre ver televisión. ¿Cuántos prefieren leer?",
-      "L4_solution": "Step 1: 40% × 30\nStep 2: = 12\nAnswer: 12 students."
+      "L2_bilingual": "In a class (clase) of 30 students (estudiantes), 40% prefer (prefieren) reading (leer) over watching TV (ver TV). How many (cu\u00e1ntos)?",
+      "L3_spanish": "En una clase de 30 estudiantes, el 40% prefiere leer sobre ver televisi\u00f3n. \u00bfCu\u00e1ntos prefieren leer?",
+      "L4_solution": "Step 1: 40% \u00d7 30\nStep 2: = 12\nAnswer: 12 students."
     },
     "readability": {
       "flesch_kincaid": 6.5,
@@ -2173,6 +2822,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 6,
+        "A2": 1
+      }
     }
   },
   {
@@ -2186,14 +2844,14 @@
     "answer_numeric": 70.0,
     "solution_steps": [
       "Scale: 1 inch = 20 miles",
-      "Actual: 3.5 × 20 = 70",
+      "Actual: 3.5 \u00d7 20 = 70",
       "Actual distance is 70 miles."
     ],
     "scaffolds": {
       "L1_simplified": "A map uses 1 inch = 20 miles. Two cities are 3.5 inches apart. How far are they really?",
       "L2_bilingual": "A map (mapa) has a scale (escala) of 1 inch (pulgada) = 20 miles (millas). Two cities (ciudades) are 3.5 inches apart. Actual distance (distancia real)?",
-      "L3_spanish": "Un mapa tiene escala 1 pulgada = 20 millas. Dos ciudades están a 3.5 pulgadas en el mapa. ¿Cuál es la distancia real?",
-      "L4_solution": "Step 1: 1 inch = 20 miles\nStep 2: 3.5 × 20 = 70\nAnswer: 70 miles."
+      "L3_spanish": "Un mapa tiene escala 1 pulgada = 20 millas. Dos ciudades est\u00e1n a 3.5 pulgadas en el mapa. \u00bfCu\u00e1l es la distancia real?",
+      "L4_solution": "Step 1: 1 inch = 20 miles\nStep 2: 3.5 \u00d7 20 = 70\nAnswer: 70 miles."
     },
     "readability": {
       "flesch_kincaid": 6.9,
@@ -2205,6 +2863,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "actual",
+        "scale"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 7,
+        "B1": 2
+      }
     }
   },
   {
@@ -2217,15 +2888,15 @@
     "answer": "$2,520",
     "answer_numeric": 2520.0,
     "solution_steps": [
-      "Raise: 5% × 2400 = 120",
+      "Raise: 5% \u00d7 2400 = 120",
       "New salary: 2400 + 120 = 2520",
       "New salary is $2,520."
     ],
     "scaffolds": {
       "L1_simplified": "A worker earns $2,400 per month. She gets a 5% raise. What is her new salary?",
       "L2_bilingual": "A worker (trabajadora) earns (gana) $2,400 per month (por mes). She gets a 5% raise (aumento). New salary (salario nuevo)?",
-      "L3_spanish": "Una trabajadora gana $2,400 por mes. Recibe un aumento del 5%. ¿Cuál será su nuevo salario?",
-      "L4_solution": "Step 1: Raise = 5% × $2400 = $120\nStep 2: New = $2400 + $120 = $2520\nAnswer: $2,520"
+      "L3_spanish": "Una trabajadora gana $2,400 por mes. Recibe un aumento del 5%. \u00bfCu\u00e1l ser\u00e1 su nuevo salario?",
+      "L4_solution": "Step 1: Raise = 5% \u00d7 $2400 = $120\nStep 2: New = $2400 + $120 = $2520\nAnswer: $2,520"
     },
     "readability": {
       "flesch_kincaid": 6.8,
@@ -2237,6 +2908,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "raise",
+        "salary"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 4,
+        "B1": 2
+      }
     }
   },
   {
@@ -2249,15 +2933,15 @@
     "answer": "30 mpg",
     "answer_numeric": 30.0,
     "solution_steps": [
-      "Divide: 240 ÷ 8",
+      "Divide: 240 \u00f7 8",
       "= 30",
       "Fuel efficiency = 30 mpg."
     ],
     "scaffolds": {
       "L1_simplified": "A car travels 240 miles and uses 8 gallons of gas. How many miles per gallon?",
       "L2_bilingual": "A car (carro) travels (viaja) 240 miles (millas) using 8 gallons (galones) of gas (gasolina). What is the fuel efficiency (eficiencia de combustible)?",
-      "L3_spanish": "Un carro recorre 240 millas usando 8 galones. ¿Cuántas millas por galón rinde?",
-      "L4_solution": "Step 1: 240 ÷ 8\nStep 2: = 30\nAnswer: 30 mpg."
+      "L3_spanish": "Un carro recorre 240 millas usando 8 galones. \u00bfCu\u00e1ntas millas por gal\u00f3n rinde?",
+      "L4_solution": "Step 1: 240 \u00f7 8\nStep 2: = 30\nAnswer: 30 mpg."
     },
     "readability": {
       "flesch_kincaid": 7.1,
@@ -2269,6 +2953,20 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "efficiency",
+        "fuel"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 6,
+        "B1": 1,
+        "B2": 1
+      }
     }
   },
   {
@@ -2281,15 +2979,15 @@
     "answer": "$7.50",
     "answer_numeric": 7.5,
     "solution_steps": [
-      "Per can: 4.50 ÷ 6 = 0.75",
-      "10 cans: 0.75 × 10 = 7.50",
+      "Per can: 4.50 \u00f7 6 = 0.75",
+      "10 cans: 0.75 \u00d7 10 = 7.50",
       "10 cans cost $7.50."
     ],
     "scaffolds": {
       "L1_simplified": "6 cans of soup cost $4.50. What is the price per can? How much do 10 cans cost?",
-      "L2_bilingual": "A store sells 6 cans (latas) of soup (sopa) for $4.50. What is the price per can (precio por lata)? How much (cuánto) for 10 cans?",
-      "L3_spanish": "Una tienda vende 6 latas de sopa por $4.50. ¿Cuál es el precio por lata? ¿Cuánto costarían 10 latas?",
-      "L4_solution": "Step 1: Per can = $4.50 ÷ 6 = $0.75\nStep 2: 10 × $0.75 = $7.50\nAnswer: $7.50"
+      "L2_bilingual": "A store sells 6 cans (latas) of soup (sopa) for $4.50. What is the price per can (precio por lata)? How much (cu\u00e1nto) for 10 cans?",
+      "L3_spanish": "Una tienda vende 6 latas de sopa por $4.50. \u00bfCu\u00e1l es el precio por lata? \u00bfCu\u00e1nto costar\u00edan 10 latas?",
+      "L4_solution": "Step 1: Per can = $4.50 \u00f7 6 = $0.75\nStep 2: 10 \u00d7 $0.75 = $7.50\nAnswer: $7.50"
     },
     "readability": {
       "flesch_kincaid": 7.3,
@@ -2301,6 +2999,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 7
+      }
     }
   },
   {
@@ -2313,15 +3020,15 @@
     "answer": "24 hours",
     "answer_numeric": 24.0,
     "solution_steps": [
-      "Divide: 12,000 ÷ 500",
+      "Divide: 12,000 \u00f7 500",
       "= 24",
       "Takes 24 hours."
     ],
     "scaffolds": {
       "L1_simplified": "A pool has 12,000 liters. It drains at 500 liters per hour. How many hours to empty it?",
-      "L2_bilingual": "A pool (piscina) has 12,000 liters (litros). It drains (se vacía) at 500 liters per hour (por hora). How long (cuánto tiempo) to empty (vaciarse)?",
-      "L3_spanish": "Una piscina tiene 12,000 litros. Se vacía a 500 litros por hora. ¿Cuánto tiempo tarda en vaciarse?",
-      "L4_solution": "Step 1: 12,000 ÷ 500\nStep 2: = 24\nAnswer: 24 hours."
+      "L2_bilingual": "A pool (piscina) has 12,000 liters (litros). It drains (se vac\u00eda) at 500 liters per hour (por hora). How long (cu\u00e1nto tiempo) to empty (vaciarse)?",
+      "L3_spanish": "Una piscina tiene 12,000 litros. Se vac\u00eda a 500 litros por hora. \u00bfCu\u00e1nto tiempo tarda en vaciarse?",
+      "L4_solution": "Step 1: 12,000 \u00f7 500\nStep 2: = 24\nAnswer: 24 hours."
     },
     "readability": {
       "flesch_kincaid": 7.2,
@@ -2333,6 +3040,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "drains",
+        "rate"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 6,
+        "B1": 2
+      }
     }
   },
   {
@@ -2347,12 +3067,12 @@
     "solution_steps": [
       "Set up: 3/5 = x/24",
       "5x = 72",
-      "x = 14.4 ≈ 14 or 15 boys"
+      "x = 14.4 \u2248 14 or 15 boys"
     ],
     "scaffolds": {
       "L1_simplified": "The ratio of boys to girls is 3:5. There are 24 girls. How many boys?",
-      "L2_bilingual": "The ratio (razón) of boys (niños) to girls (niñas) in a club is 3:5. There are 24 girls. How many boys (cuántos niños)?",
-      "L3_spanish": "La razón de niños a niñas en un club es 3:5. Si hay 24 niñas, ¿cuántos niños hay?",
+      "L2_bilingual": "The ratio (raz\u00f3n) of boys (ni\u00f1os) to girls (ni\u00f1as) in a club is 3:5. There are 24 girls. How many boys (cu\u00e1ntos ni\u00f1os)?",
+      "L3_spanish": "La raz\u00f3n de ni\u00f1os a ni\u00f1as en un club es 3:5. Si hay 24 ni\u00f1as, \u00bfcu\u00e1ntos ni\u00f1os hay?",
       "L4_solution": "Step 1: 3/5 = x/24\nStep 2: 5x = 72\nStep 3: x = 14.4\nAnswer: approximately 14 boys."
     },
     "readability": {
@@ -2365,6 +3085,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "ratio"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 1,
+        "B1": 1
+      }
     }
   },
   {
@@ -2377,15 +3109,15 @@
     "answer": "1,800 pages",
     "answer_numeric": 1800.0,
     "solution_steps": [
-      "Rate: 240 ÷ 6 = 40 pages/min",
-      "Total: 40 × 45 = 1800",
+      "Rate: 240 \u00f7 6 = 40 pages/min",
+      "Total: 40 \u00d7 45 = 1800",
       "1,800 pages in 45 minutes."
     ],
     "scaffolds": {
       "L1_simplified": "A printer prints 240 pages in 6 minutes. How many pages in 45 minutes?",
-      "L2_bilingual": "A printer (impresora) prints (imprime) 240 pages (páginas) in 6 minutes (minutos). How many pages in 45 minutes?",
-      "L3_spanish": "Una impresora imprime 240 páginas en 6 minutos. ¿Cuántas páginas puede imprimir en 45 minutos?",
-      "L4_solution": "Step 1: Rate = 40 pages/min\nStep 2: 40 × 45 = 1800\nAnswer: 1,800 pages."
+      "L2_bilingual": "A printer (impresora) prints (imprime) 240 pages (p\u00e1ginas) in 6 minutes (minutos). How many pages in 45 minutes?",
+      "L3_spanish": "Una impresora imprime 240 p\u00e1ginas en 6 minutos. \u00bfCu\u00e1ntas p\u00e1ginas puede imprimir en 45 minutos?",
+      "L4_solution": "Step 1: Rate = 40 pages/min\nStep 2: 40 \u00d7 45 = 1800\nAnswer: 1,800 pages."
     },
     "readability": {
       "flesch_kincaid": 7.1,
@@ -2397,6 +3129,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 2
+      }
     }
   },
   {
@@ -2410,14 +3151,14 @@
     "answer_numeric": 5.0,
     "solution_steps": [
       "Rate: 2/4 = 0.5 cups/person",
-      "Total: 0.5 × 10 = 5 cups",
+      "Total: 0.5 \u00d7 10 = 5 cups",
       "5 cups needed."
     ],
     "scaffolds": {
       "L1_simplified": "A recipe for 4 people needs 2 cups of flour. How much flour for 10 people?",
-      "L2_bilingual": "A recipe (receta) for 4 people (personas) needs 2 cups (tazas) of flour (harina). For 10 people, how many cups (cuántas tazas)?",
-      "L3_spanish": "Una receta para 4 personas necesita 2 tazas de harina. ¿Cuántas tazas se necesitan para 10 personas?",
-      "L4_solution": "Step 1: 2/4 = 0.5 cups/person\nStep 2: 0.5 × 10 = 5\nAnswer: 5 cups."
+      "L2_bilingual": "A recipe (receta) for 4 people (personas) needs 2 cups (tazas) of flour (harina). For 10 people, how many cups (cu\u00e1ntas tazas)?",
+      "L3_spanish": "Una receta para 4 personas necesita 2 tazas de harina. \u00bfCu\u00e1ntas tazas se necesitan para 10 personas?",
+      "L4_solution": "Step 1: 2/4 = 0.5 cups/person\nStep 2: 0.5 \u00d7 10 = 5\nAnswer: 5 cups."
     },
     "readability": {
       "flesch_kincaid": 7.0,
@@ -2429,6 +3170,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "requires"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4,
+        "B1": 1
+      }
     }
   },
   {
@@ -2441,15 +3194,15 @@
     "answer": "87.5 units per hour",
     "answer_numeric": 87.5,
     "solution_steps": [
-      "Hours/week: 5 × 8 = 40",
-      "Rate: 3500 ÷ 40 = 87.5",
+      "Hours/week: 5 \u00d7 8 = 40",
+      "Rate: 3500 \u00f7 40 = 87.5",
       "87.5 units per hour."
     ],
     "scaffolds": {
       "L1_simplified": "A factory makes 3,500 units per week. It works 5 days a week, 8 hours each day. How many units per hour?",
-      "L2_bilingual": "A factory (fábrica) produces (produce) 3,500 units (unidades) per week (semana), 5 days (días) a week, 8 hours (horas) per day. What is the rate per hour (por hora)?",
-      "L3_spanish": "Una fábrica produce 3,500 unidades por semana, trabajando 5 días a la semana y 8 horas al día. ¿Cuál es la tasa por hora?",
-      "L4_solution": "Step 1: Hours/week = 5 × 8 = 40\nStep 2: 3500 ÷ 40 = 87.5\nAnswer: 87.5 units/hour."
+      "L2_bilingual": "A factory (f\u00e1brica) produces (produce) 3,500 units (unidades) per week (semana), 5 days (d\u00edas) a week, 8 hours (horas) per day. What is the rate per hour (por hora)?",
+      "L3_spanish": "Una f\u00e1brica produce 3,500 unidades por semana, trabajando 5 d\u00edas a la semana y 8 horas al d\u00eda. \u00bfCu\u00e1l es la tasa por hora?",
+      "L4_solution": "Step 1: Hours/week = 5 \u00d7 8 = 40\nStep 2: 3500 \u00f7 40 = 87.5\nAnswer: 87.5 units/hour."
     },
     "readability": {
       "flesch_kincaid": 7.4,
@@ -2461,6 +3214,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "produces",
+        "production",
+        "rate",
+        "units"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 3,
+        "B1": 4
+      }
     }
   },
   {
@@ -2474,14 +3242,14 @@
     "answer_numeric": 28.0,
     "solution_steps": [
       "Total parts: 4 + 7 = 11",
-      "1 part: 77 ÷ 11 = 7",
-      "Red: 4 × 7 = 28"
+      "1 part: 77 \u00f7 11 = 7",
+      "Red: 4 \u00d7 7 = 28"
     ],
     "scaffolds": {
       "L1_simplified": "Red and blue marbles are in a 4:7 ratio. There are 77 total. How many are red?",
-      "L2_bilingual": "The ratio (razón) of red (rojas) to blue (azules) marbles (canicas) is 4:7. There are 77 total. How many red (cuántas rojas)?",
-      "L3_spanish": "La razón de canicas rojas a azules es 4:7. Hay 77 en total. ¿Cuántas canicas rojas hay?",
-      "L4_solution": "Step 1: Total parts = 11\nStep 2: 1 part = 77 ÷ 11 = 7\nStep 3: Red = 4 × 7 = 28\nAnswer: 28 red marbles."
+      "L2_bilingual": "The ratio (raz\u00f3n) of red (rojas) to blue (azules) marbles (canicas) is 4:7. There are 77 total. How many red (cu\u00e1ntas rojas)?",
+      "L3_spanish": "La raz\u00f3n de canicas rojas a azules es 4:7. Hay 77 en total. \u00bfCu\u00e1ntas canicas rojas hay?",
+      "L4_solution": "Step 1: Total parts = 11\nStep 2: 1 part = 77 \u00f7 11 = 7\nStep 3: Red = 4 \u00d7 7 = 28\nAnswer: 28 red marbles."
     },
     "readability": {
       "flesch_kincaid": 7.1,
@@ -2493,6 +3261,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "ratio"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3,
+        "B1": 1
+      }
     }
   },
   {
@@ -2505,15 +3285,15 @@
     "answer": "3.5 hours",
     "answer_numeric": 3.5,
     "solution_steps": [
-      "Time = distance ÷ speed",
-      "63 ÷ 18 = 3.5",
+      "Time = distance \u00f7 speed",
+      "63 \u00f7 18 = 3.5",
       "Takes 3.5 hours."
     ],
     "scaffolds": {
       "L1_simplified": "A cyclist goes 18 km per hour. A route is 63 km long. How long does the ride take?",
-      "L2_bilingual": "A cyclist (ciclista) rides at 18 km per hour (por hora). How long (cuánto tiempo) to complete (completar) a 63-km route (ruta)?",
-      "L3_spanish": "Un ciclista va a 18 km por hora. ¿Cuánto tiempo tardará en completar una ruta de 63 km?",
-      "L4_solution": "Step 1: Time = 63 ÷ 18\nStep 2: = 3.5\nAnswer: 3.5 hours."
+      "L2_bilingual": "A cyclist (ciclista) rides at 18 km per hour (por hora). How long (cu\u00e1nto tiempo) to complete (completar) a 63-km route (ruta)?",
+      "L3_spanish": "Un ciclista va a 18 km por hora. \u00bfCu\u00e1nto tiempo tardar\u00e1 en completar una ruta de 63 km?",
+      "L4_solution": "Step 1: Time = 63 \u00f7 18\nStep 2: = 3.5\nAnswer: 3.5 hours."
     },
     "readability": {
       "flesch_kincaid": 7.2,
@@ -2525,6 +3305,20 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "average",
+        "cyclist",
+        "route"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 6,
+        "B1": 3
+      }
     }
   },
   {
@@ -2537,15 +3331,15 @@
     "answer": "$2,880",
     "answer_numeric": 2880.0,
     "solution_steps": [
-      "Per unit: 4800 ÷ 5 = 960",
-      "Arts: 960 × 3 = 2880",
+      "Per unit: 4800 \u00f7 5 = 960",
+      "Arts: 960 \u00d7 3 = 2880",
       "Arts = $2,880."
     ],
     "scaffolds": {
       "L1_simplified": "A school spends on sports and arts in a 5:3 ratio. Sports costs $4,800. How much on arts?",
-      "L2_bilingual": "A school (escuela) spends money (dinero) on sports (deportes) and arts (artes) in ratio (razón) 5:3. Sports = $4,800. How much on arts (artes)?",
-      "L3_spanish": "Una escuela gasta en deportes y artes en razón 5:3. Si gasta $4,800 en deportes, ¿cuánto gasta en artes?",
-      "L4_solution": "Step 1: Per unit = $4800 ÷ 5 = $960\nStep 2: Arts = $960 × 3 = $2880\nAnswer: $2,880."
+      "L2_bilingual": "A school (escuela) spends money (dinero) on sports (deportes) and arts (artes) in ratio (raz\u00f3n) 5:3. Sports = $4,800. How much on arts (artes)?",
+      "L3_spanish": "Una escuela gasta en deportes y artes en raz\u00f3n 5:3. Si gasta $4,800 en deportes, \u00bfcu\u00e1nto gasta en artes?",
+      "L4_solution": "Step 1: Per unit = $4800 \u00f7 5 = $960\nStep 2: Arts = $960 \u00d7 3 = $2880\nAnswer: $2,880."
     },
     "readability": {
       "flesch_kincaid": 7.3,
@@ -2557,6 +3351,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "ratio"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 2,
+        "B1": 1
+      }
     }
   },
   {
@@ -2570,14 +3376,14 @@
     "answer_numeric": 9.0,
     "solution_steps": [
       "Combined rate = 1/6",
-      "Fast = 2x, Slow = x → 3x = 1/6 → x = 1/18",
-      "Fast rate = 2/18 = 1/9 → 9 days"
+      "Fast = 2x, Slow = x \u2192 3x = 1/6 \u2192 x = 1/18",
+      "Fast rate = 2/18 = 1/9 \u2192 9 days"
     ],
     "scaffolds": {
       "L1_simplified": "Two workers build a wall in 6 days. One is twice as fast. How long for the faster worker alone?",
-      "L2_bilingual": "Two workers (trabajadores) build (construyen) a wall (pared) in 6 days (días) together (juntos). One is twice as fast (el doble de rápido). How many days (cuántos días) for the faster worker alone?",
-      "L3_spanish": "Dos trabajadores construyen una pared en 6 días juntos. Uno es el doble de rápido. ¿Cuántos días tardaría el más rápido solo?",
-      "L4_solution": "Step 1: Combined = 1/6/day\nStep 2: 3x = 1/6 → x = 1/18\nStep 3: Fast = 2x = 1/9 → 9 days\nAnswer: 9 days."
+      "L2_bilingual": "Two workers (trabajadores) build (construyen) a wall (pared) in 6 days (d\u00edas) together (juntos). One is twice as fast (el doble de r\u00e1pido). How many days (cu\u00e1ntos d\u00edas) for the faster worker alone?",
+      "L3_spanish": "Dos trabajadores construyen una pared en 6 d\u00edas juntos. Uno es el doble de r\u00e1pido. \u00bfCu\u00e1ntos d\u00edas tardar\u00eda el m\u00e1s r\u00e1pido solo?",
+      "L4_solution": "Step 1: Combined = 1/6/day\nStep 2: 3x = 1/6 \u2192 x = 1/18\nStep 3: Fast = 2x = 1/9 \u2192 9 days\nAnswer: 9 days."
     },
     "readability": {
       "flesch_kincaid": 8.1,
@@ -2589,6 +3395,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 9,
+        "A2": 6
+      }
     }
   },
   {
@@ -2601,15 +3416,15 @@
     "answer": "$60",
     "answer_numeric": 60.0,
     "solution_steps": [
-      "Sale price = 1.4 × cost",
-      "1.4 × cost = 84",
-      "cost = 84 ÷ 1.4 = 60"
+      "Sale price = 1.4 \u00d7 cost",
+      "1.4 \u00d7 cost = 84",
+      "cost = 84 \u00f7 1.4 = 60"
     ],
     "scaffolds": {
       "L1_simplified": "A store adds 40% to cost. A customer pays $84. What was the original cost?",
       "L2_bilingual": "A store marks up (aumenta el precio) all products by 40% above cost (costo). A customer (cliente) pays $84. What was the original cost (costo original)?",
-      "L3_spanish": "Una tienda aumenta el precio de todos sus productos en un 40%. Un cliente paga $84. ¿Cuál era el costo original?",
-      "L4_solution": "Step 1: 1.4 × cost = $84\nStep 2: cost = $84 ÷ 1.4 = $60\nAnswer: $60."
+      "L3_spanish": "Una tienda aumenta el precio de todos sus productos en un 40%. Un cliente paga $84. \u00bfCu\u00e1l era el costo original?",
+      "L4_solution": "Step 1: 1.4 \u00d7 cost = $84\nStep 2: cost = $84 \u00f7 1.4 = $60\nAnswer: $60."
     },
     "readability": {
       "flesch_kincaid": 8.2,
@@ -2621,6 +3436,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "original"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 7,
+        "B1": 1
+      }
     }
   },
   {
@@ -2634,14 +3461,14 @@
     "answer_numeric": 60.0,
     "solution_steps": [
       "Net rate = 15 - 9 = 6 liters/min",
-      "Time = 360 ÷ 6 = 60 minutes",
+      "Time = 360 \u00f7 6 = 60 minutes",
       "Takes 60 minutes."
     ],
     "scaffolds": {
       "L1_simplified": "A tank fills at 15 L/min and drains at 9 L/min. It holds 360 liters. How long to fill it?",
-      "L2_bilingual": "A tank (tanque) fills (se llena) at 15 liters (litros) per minute and drains (se vacía) at 9. It holds (capacidad) 360 liters. How long (cuánto tiempo)?",
-      "L3_spanish": "Un tanque se llena a 15 litros por minuto y se vacía a 9. Tiene capacidad para 360 litros. ¿Cuánto tarda en llenarse desde vacío?",
-      "L4_solution": "Step 1: Net rate = 15 - 9 = 6 L/min\nStep 2: 360 ÷ 6 = 60\nAnswer: 60 minutes."
+      "L2_bilingual": "A tank (tanque) fills (se llena) at 15 liters (litros) per minute and drains (se vac\u00eda) at 9. It holds (capacidad) 360 liters. How long (cu\u00e1nto tiempo)?",
+      "L3_spanish": "Un tanque se llena a 15 litros por minuto y se vac\u00eda a 9. Tiene capacidad para 360 litros. \u00bfCu\u00e1nto tarda en llenarse desde vac\u00edo?",
+      "L4_solution": "Step 1: Net rate = 15 - 9 = 6 L/min\nStep 2: 360 \u00f7 6 = 60\nAnswer: 60 minutes."
     },
     "readability": {
       "flesch_kincaid": 8.3,
@@ -2653,6 +3480,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "drains"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 7,
+        "B1": 1
+      }
     }
   },
   {
@@ -2665,15 +3504,15 @@
     "answer": "35 cups flour, 49 total",
     "answer_numeric": 49.0,
     "solution_steps": [
-      "Flour: 14 × (5/2) = 35 cups",
+      "Flour: 14 \u00d7 (5/2) = 35 cups",
       "Total: 14 + 35 = 49",
       "49 total cups."
     ],
     "scaffolds": {
       "L1_simplified": "Sugar and flour are mixed 2:5. A baker uses 14 cups of sugar. How much flour? How many total?",
-      "L2_bilingual": "A recipe uses sugar (azúcar) and flour (harina) in ratio (razón) 2:5. With 14 cups (tazas) of sugar, how much flour (harina)? Total (total) cups?",
-      "L3_spanish": "Una receta usa azúcar y harina en razón 2:5. Si se usan 14 tazas de azúcar, ¿cuánta harina? ¿Cuántas tazas en total?",
-      "L4_solution": "Step 1: Flour = 14 × 5/2 = 35\nStep 2: Total = 14 + 35 = 49\nAnswer: 35 cups flour, 49 total."
+      "L2_bilingual": "A recipe uses sugar (az\u00facar) and flour (harina) in ratio (raz\u00f3n) 2:5. With 14 cups (tazas) of sugar, how much flour (harina)? Total (total) cups?",
+      "L3_spanish": "Una receta usa az\u00facar y harina en raz\u00f3n 2:5. Si se usan 14 tazas de az\u00facar, \u00bfcu\u00e1nta harina? \u00bfCu\u00e1ntas tazas en total?",
+      "L4_solution": "Step 1: Flour = 14 \u00d7 5/2 = 35\nStep 2: Total = 14 + 35 = 49\nAnswer: 35 cups flour, 49 total."
     },
     "readability": {
       "flesch_kincaid": 8.0,
@@ -2685,6 +3524,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "ratio"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4,
+        "B1": 1
+      }
     }
   },
   {
@@ -2697,15 +3548,15 @@
     "answer": "$5,900",
     "answer_numeric": 5900.0,
     "solution_steps": [
-      "Interest = 5000 × 0.06 × 3 = 900",
+      "Interest = 5000 \u00d7 0.06 \u00d7 3 = 900",
       "Total = 5000 + 900 = 5900",
       "Total value = $5,900."
     ],
     "scaffolds": {
       "L1_simplified": "$5,000 is invested at 6% per year. How much interest after 3 years? What is the total?",
-      "L2_bilingual": "An investment (inversión) of $5,000 earns (genera) 6% interest (interés) per year (por año). How much interest (cuánto interés) in 3 years? Total value (valor total)?",
-      "L3_spanish": "Una inversión de $5,000 genera el 6% de interés anual. ¿Cuánto interés se gana en 3 años? ¿Cuál es el valor total?",
-      "L4_solution": "Step 1: Interest = $5000 × 0.06 × 3 = $900\nStep 2: Total = $5000 + $900 = $5900\nAnswer: $5,900."
+      "L2_bilingual": "An investment (inversi\u00f3n) of $5,000 earns (genera) 6% interest (inter\u00e9s) per year (por a\u00f1o). How much interest (cu\u00e1nto inter\u00e9s) in 3 years? Total value (valor total)?",
+      "L3_spanish": "Una inversi\u00f3n de $5,000 genera el 6% de inter\u00e9s anual. \u00bfCu\u00e1nto inter\u00e9s se gana en 3 a\u00f1os? \u00bfCu\u00e1l es el valor total?",
+      "L4_solution": "Step 1: Interest = $5000 \u00d7 0.06 \u00d7 3 = $900\nStep 2: Total = $5000 + $900 = $5900\nAnswer: $5,900."
     },
     "readability": {
       "flesch_kincaid": 8.4,
@@ -2717,6 +3568,23 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "annual",
+        "interest",
+        "investment",
+        "rate",
+        "value"
+      ],
+      "above_a2_count": 5,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 4,
+        "B1": 4,
+        "B2": 1
+      }
     }
   },
   {
@@ -2735,8 +3603,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "Class A collects 3/8 and Class B collects 5/12. What fraction is left?",
-      "L2_bilingual": "Class A (Clase A) collects (recolecta) 3/8 of total (del total). Class B collects 5/12. What fraction (fracción) is left (queda)?",
-      "L3_spanish": "La Clase A recolecta 3/8 del total y la Clase B 5/12. ¿Qué fracción queda para otras clases?",
+      "L2_bilingual": "Class A (Clase A) collects (recolecta) 3/8 of total (del total). Class B collects 5/12. What fraction (fracci\u00f3n) is left (queda)?",
+      "L3_spanish": "La Clase A recolecta 3/8 del total y la Clase B 5/12. \u00bfQu\u00e9 fracci\u00f3n queda para otras clases?",
       "L4_solution": "Step 1: LCD = 24\nStep 2: 9/24 + 10/24 = 19/24\nStep 3: Remaining = 1 - 19/24 = 5/24\nAnswer: 5/24"
     },
     "readability": {
@@ -2749,6 +3617,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "fraction"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3,
+        "B1": 1
+      }
     }
   },
   {
@@ -2762,14 +3642,14 @@
     "answer_numeric": 120.0,
     "solution_steps": [
       "Convert: 3h 30min = 3.5 hours",
-      "Speed = 420 ÷ 3.5 = 120",
+      "Speed = 420 \u00f7 3.5 = 120",
       "Average speed = 120 km/h."
     ],
     "scaffolds": {
       "L1_simplified": "A train travels 420 km in 3 hours and 30 minutes. What is the average speed?",
       "L2_bilingual": "A train (tren) travels (viaja) 420 km in 3 hours (horas) and 30 minutes (minutos). What is the average speed (velocidad promedio)?",
-      "L3_spanish": "Un tren viaja 420 km en 3 horas y 30 minutos. ¿Cuál es la velocidad promedio?",
-      "L4_solution": "Step 1: 3h 30min = 3.5 hours\nStep 2: 420 ÷ 3.5 = 120\nAnswer: 120 km/h."
+      "L3_spanish": "Un tren viaja 420 km en 3 horas y 30 minutos. \u00bfCu\u00e1l es la velocidad promedio?",
+      "L4_solution": "Step 1: 3h 30min = 3.5 hours\nStep 2: 420 \u00f7 3.5 = 120\nAnswer: 120 km/h."
     },
     "readability": {
       "flesch_kincaid": 8.2,
@@ -2781,6 +3661,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "average"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4,
+        "B1": 1
+      }
     }
   },
   {
@@ -2794,13 +3686,13 @@
     "answer_numeric": 2.0,
     "solution_steps": [
       "a + c = 5 and 8a + 12c = 52",
-      "a = 5 - c → 8(5-c) + 12c = 52",
-      "40 + 4c = 52 → c = 3, a = 2"
+      "a = 5 - c \u2192 8(5-c) + 12c = 52",
+      "40 + 4c = 52 \u2192 c = 3, a = 2"
     ],
     "scaffolds": {
       "L1_simplified": "Almonds cost $8/lb and cashews $12/lb. A 5-pound mix costs $52. How many pounds of each?",
-      "L2_bilingual": "Almonds (almendras) cost $8 per pound (libra) and cashews (marañones) cost $12. A 5-pound mix (mezcla) costs $52. How many pounds (libras) of each?",
-      "L3_spanish": "Las almendras cuestan $8 por libra y los marañones $12. Una mezcla de 5 libras cuesta $52. ¿Cuántas libras de cada uno?",
+      "L2_bilingual": "Almonds (almendras) cost $8 per pound (libra) and cashews (mara\u00f1ones) cost $12. A 5-pound mix (mezcla) costs $52. How many pounds (libras) of each?",
+      "L3_spanish": "Las almendras cuestan $8 por libra y los mara\u00f1ones $12. Una mezcla de 5 libras cuesta $52. \u00bfCu\u00e1ntas libras de cada uno?",
       "L4_solution": "Step 1: a + c = 5; 8a + 12c = 52\nStep 2: c = 3, a = 2\nAnswer: 2 lb almonds, 3 lb cashews."
     },
     "readability": {
@@ -2813,6 +3705,20 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "almonds",
+        "cashews",
+        "mixture"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 5,
+        "B1": 3
+      }
     }
   },
   {
@@ -2826,14 +3732,14 @@
     "answer_numeric": 125.0,
     "solution_steps": [
       "Text cost: 37.50 - 25 = 12.50",
-      "Texts: 12.50 ÷ 0.10 = 125",
+      "Texts: 12.50 \u00f7 0.10 = 125",
       "125 texts sent."
     ],
     "scaffolds": {
       "L1_simplified": "A phone plan costs $25 per month plus $0.10 per text. A bill is $37.50. How many texts?",
       "L2_bilingual": "A phone plan (plan) charges (cobra) $25 per month (por mes) plus $0.10 per text (mensaje). A bill (cuenta) is $37.50. How many texts (mensajes)?",
-      "L3_spanish": "Un plan de teléfono cobra $25 por mes más $0.10 por mensaje. La cuenta es $37.50. ¿Cuántos mensajes se enviaron?",
-      "L4_solution": "Step 1: Text cost = $37.50 - $25 = $12.50\nStep 2: $12.50 ÷ $0.10 = 125\nAnswer: 125 messages."
+      "L3_spanish": "Un plan de tel\u00e9fono cobra $25 por mes m\u00e1s $0.10 por mensaje. La cuenta es $37.50. \u00bfCu\u00e1ntos mensajes se enviaron?",
+      "L4_solution": "Step 1: Text cost = $37.50 - $25 = $12.50\nStep 2: $12.50 \u00f7 $0.10 = 125\nAnswer: 125 messages."
     },
     "readability": {
       "flesch_kincaid": 8.1,
@@ -2845,6 +3751,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 10
+      }
     }
   },
   {
@@ -2857,15 +3772,15 @@
     "answer": "21 wins, 14 losses",
     "answer_numeric": 21.0,
     "solution_steps": [
-      "Wins: 60% × 35 = 21",
+      "Wins: 60% \u00d7 35 = 21",
       "Losses: 35 - 21 = 14",
       "21 wins, 14 losses."
     ],
     "scaffolds": {
       "L1_simplified": "A team won 60% of 35 games. How many did they win? How many did they lose?",
-      "L2_bilingual": "A team (equipo) won (ganó) 60% of their 35 games (juegos) this season (temporada). How many wins (victorias) and losses (derrotas)?",
-      "L3_spanish": "Un equipo ganó el 60% de sus 35 juegos. ¿Cuántos ganaron y cuántos perdieron?",
-      "L4_solution": "Step 1: Wins = 60% × 35 = 21\nStep 2: Losses = 35 - 21 = 14\nAnswer: 21 wins, 14 losses."
+      "L2_bilingual": "A team (equipo) won (gan\u00f3) 60% of their 35 games (juegos) this season (temporada). How many wins (victorias) and losses (derrotas)?",
+      "L3_spanish": "Un equipo gan\u00f3 el 60% de sus 35 juegos. \u00bfCu\u00e1ntos ganaron y cu\u00e1ntos perdieron?",
+      "L4_solution": "Step 1: Wins = 60% \u00d7 35 = 21\nStep 2: Losses = 35 - 21 = 14\nAnswer: 21 wins, 14 losses."
     },
     "readability": {
       "flesch_kincaid": 8.0,
@@ -2877,6 +3792,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 4
+      }
     }
   },
   {
@@ -2891,12 +3815,12 @@
     "solution_steps": [
       "Let b = brother, s = 2b",
       "(2b+5)+(b+5) = 37",
-      "3b+10=37 → b=9, s=18"
+      "3b+10=37 \u2192 b=9, s=18"
     ],
     "scaffolds": {
       "L1_simplified": "Sarah is twice as old as her brother. In 5 years their ages add up to 37. How old are they now?",
-      "L2_bilingual": "Sarah is twice as old (el doble de mayor) as her brother (hermano). In 5 years (en 5 años), the sum (suma) of their ages (edades) will be 37. How old (cuántos años) now?",
-      "L3_spanish": "Sarah tiene el doble de la edad de su hermano. En 5 años, la suma de sus edades será 37. ¿Cuántos años tiene cada uno ahora?",
+      "L2_bilingual": "Sarah is twice as old (el doble de mayor) as her brother (hermano). In 5 years (en 5 a\u00f1os), the sum (suma) of their ages (edades) will be 37. How old (cu\u00e1ntos a\u00f1os) now?",
+      "L3_spanish": "Sarah tiene el doble de la edad de su hermano. En 5 a\u00f1os, la suma de sus edades ser\u00e1 37. \u00bfCu\u00e1ntos a\u00f1os tiene cada uno ahora?",
       "L4_solution": "Step 1: b + 2b + 10 = 37\nStep 2: 3b = 27, b = 9\nStep 3: s = 18\nAnswer: Sarah 18, brother 9."
     },
     "readability": {
@@ -2909,6 +3833,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 3
+      }
     }
   },
   {
@@ -2927,8 +3860,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "A plumber charges $45 plus $60 per hour. A customer pays $225. How many hours did he work?",
-      "L2_bilingual": "A plumber (plomero) charges (cobra) $45 fixed plus (más) $60 per hour (por hora). A customer (cliente) pays $225. How many hours (cuántas horas)?",
-      "L3_spanish": "Un plomero cobra $45 fijo más $60 por hora. Un cliente paga $225. ¿Cuántas horas trabajó?",
+      "L2_bilingual": "A plumber (plomero) charges (cobra) $45 fixed plus (m\u00e1s) $60 per hour (por hora). A customer (cliente) pays $225. How many hours (cu\u00e1ntas horas)?",
+      "L3_spanish": "Un plomero cobra $45 fijo m\u00e1s $60 por hora. Un cliente paga $225. \u00bfCu\u00e1ntas horas trabaj\u00f3?",
       "L4_solution": "Step 1: 45 + 60h = 225\nStep 2: 60h = 180\nStep 3: h = 3\nAnswer: 3 hours."
     },
     "readability": {
@@ -2941,6 +3874,20 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "fee",
+        "fixed",
+        "plumber"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 5,
+        "B1": 3
+      }
     }
   },
   {
@@ -2954,13 +3901,13 @@
     "answer_numeric": 12.0,
     "solution_steps": [
       "s + 3s = 48",
-      "4s = 48 → s = 12",
+      "4s = 48 \u2192 s = 12",
       "l = 36"
     ],
     "scaffolds": {
       "L1_simplified": "Two numbers add up to 48. The larger is 3 times the smaller. What are they?",
-      "L2_bilingual": "Two numbers (números) add up (suman) to 48. The larger (el mayor) is 3 times (veces) the smaller (el menor). What are they?",
-      "L3_spanish": "Dos números suman 48. El mayor es 3 veces el menor. ¿Cuáles son los dos números?",
+      "L2_bilingual": "Two numbers (n\u00fameros) add up (suman) to 48. The larger (el mayor) is 3 times (veces) the smaller (el menor). What are they?",
+      "L3_spanish": "Dos n\u00fameros suman 48. El mayor es 3 veces el menor. \u00bfCu\u00e1les son los dos n\u00fameros?",
       "L4_solution": "Step 1: s + 3s = 48\nStep 2: 4s = 48, s = 12\nStep 3: l = 36\nAnswer: 12 and 36."
     },
     "readability": {
@@ -2973,6 +3920,14 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A1",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 7
+      }
     }
   },
   {
@@ -2987,12 +3942,12 @@
     "solution_steps": [
       "2.50 + 1.75(m-1) = 15.25",
       "1.75m + 0.75 = 15.25",
-      "1.75m = 14.50 → m = 8"
+      "1.75m = 14.50 \u2192 m = 8"
     ],
     "scaffolds": {
       "L1_simplified": "A cab charges $2.50 for the first mile and $1.75 per mile after. A passenger pays $15.25. How many miles?",
       "L2_bilingual": "A cab (taxi) charges (cobra) $2.50 for the first mile (primera milla) and $1.75 for each additional (adicional) mile. A passenger (pasajero) pays $15.25. How many miles (millas)?",
-      "L3_spanish": "Un taxi cobra $2.50 por la primera milla y $1.75 por cada milla adicional. Un pasajero paga $15.25. ¿Cuántas millas recorrió?",
+      "L3_spanish": "Un taxi cobra $2.50 por la primera milla y $1.75 por cada milla adicional. Un pasajero paga $15.25. \u00bfCu\u00e1ntas millas recorri\u00f3?",
       "L4_solution": "Step 1: 2.50 + 1.75(m-1) = 15.25\nStep 2: 1.75m = 14.50\nStep 3: m = 8\nAnswer: 8 miles."
     },
     "readability": {
@@ -3005,6 +3960,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "additional"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 7,
+        "B1": 1
+      }
     }
   },
   {
@@ -3018,13 +3985,13 @@
     "answer_numeric": 24.0,
     "solution_steps": [
       "n + (n+2) + (n+4) = 78",
-      "3n + 6 = 78 → n = 24",
+      "3n + 6 = 78 \u2192 n = 24",
       "Numbers: 24, 26, 28"
     ],
     "scaffolds": {
       "L1_simplified": "Three even numbers in a row add up to 78. What are the three numbers?",
-      "L2_bilingual": "The sum (suma) of three consecutive (consecutivos) even numbers (números pares) is 78. What are the three numbers?",
-      "L3_spanish": "La suma de tres números pares consecutivos es 78. ¿Cuáles son los tres números?",
+      "L2_bilingual": "The sum (suma) of three consecutive (consecutivos) even numbers (n\u00fameros pares) is 78. What are the three numbers?",
+      "L3_spanish": "La suma de tres n\u00fameros pares consecutivos es 78. \u00bfCu\u00e1les son los tres n\u00fameros?",
       "L4_solution": "Step 1: n + (n+2) + (n+4) = 78\nStep 2: 3n = 72, n = 24\nAnswer: 24, 26, 28."
     },
     "readability": {
@@ -3037,6 +4004,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "consecutive"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 2,
+        "B2": 1
+      }
     }
   },
   {
@@ -3055,9 +4034,9 @@
     ],
     "scaffolds": {
       "L1_simplified": "Orange juice is $3.20 and apple juice is $2.80. 8 bottles cost $24. How many of each?",
-      "L2_bilingual": "Orange juice (jugo de naranja) costs $3.20 per bottle (botella) and apple juice (jugo de manzana) costs $2.80. 8 bottles cost $24. How many of each (cuántas de cada)?",
-      "L3_spanish": "El jugo de naranja cuesta $3.20 por botella y el de manzana $2.80. Un cliente compra 8 botellas por $24. ¿Cuántas de cada tipo?",
-      "L4_solution": "Step 1: o + a = 8; 3.20o + 2.80a = 24\nStep 2: Solve → o = 4, a = 4\nAnswer: 4 orange, 4 apple."
+      "L2_bilingual": "Orange juice (jugo de naranja) costs $3.20 per bottle (botella) and apple juice (jugo de manzana) costs $2.80. 8 bottles cost $24. How many of each (cu\u00e1ntas de cada)?",
+      "L3_spanish": "El jugo de naranja cuesta $3.20 por botella y el de manzana $2.80. Un cliente compra 8 botellas por $24. \u00bfCu\u00e1ntas de cada tipo?",
+      "L4_solution": "Step 1: o + a = 8; 3.20o + 2.80a = 24\nStep 2: Solve \u2192 o = 4, a = 4\nAnswer: 4 orange, 4 apple."
     },
     "readability": {
       "flesch_kincaid": 9.1,
@@ -3069,6 +4048,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 7,
+        "A2": 3
+      }
     }
   },
   {
@@ -3082,14 +4070,14 @@
     "answer_numeric": 3.0,
     "solution_steps": [
       "Combined speed = 80 + 95 = 175 mph",
-      "Time = 525 ÷ 175 = 3",
+      "Time = 525 \u00f7 175 = 3",
       "After 3 hours."
     ],
     "scaffolds": {
       "L1_simplified": "Train A goes north at 80 mph and Train B goes south at 95 mph. When are they 525 miles apart?",
-      "L2_bilingual": "Train A (Tren A) goes north (norte) at 80 mph and Train B south (sur) at 95 mph. After how many hours (cuántas horas) are they 525 miles apart (separados)?",
-      "L3_spanish": "El Tren A va al norte a 80 mph y el Tren B al sur a 95 mph. ¿Después de cuántas horas estarán a 525 millas de distancia?",
-      "L4_solution": "Step 1: Combined = 80 + 95 = 175 mph\nStep 2: 525 ÷ 175 = 3\nAnswer: 3 hours."
+      "L2_bilingual": "Train A (Tren A) goes north (norte) at 80 mph and Train B south (sur) at 95 mph. After how many hours (cu\u00e1ntas horas) are they 525 miles apart (separados)?",
+      "L3_spanish": "El Tren A va al norte a 80 mph y el Tren B al sur a 95 mph. \u00bfDespu\u00e9s de cu\u00e1ntas horas estar\u00e1n a 525 millas de distancia?",
+      "L4_solution": "Step 1: Combined = 80 + 95 = 175 mph\nStep 2: 525 \u00f7 175 = 3\nAnswer: 3 hours."
     },
     "readability": {
       "flesch_kincaid": 9.0,
@@ -3101,6 +4089,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "mph"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 6,
+        "B1": 1
+      }
     }
   },
   {
@@ -3113,14 +4113,14 @@
     "answer": "$1,000",
     "answer_numeric": 1000.0,
     "solution_steps": [
-      "Total = P × (1 + 0.04 × 3) = 1.12P",
+      "Total = P \u00d7 (1 + 0.04 \u00d7 3) = 1.12P",
       "1.12P = 1120",
       "P = 1000"
     ],
     "scaffolds": {
       "L1_simplified": "A savings account earns 4% per year. After 3 years it has $1,120. How much was deposited?",
-      "L2_bilingual": "A savings account (cuenta de ahorros) earns (genera) 4% interest (interés) per year. After 3 years it has $1,120. What was the original deposit (depósito original)?",
-      "L3_spanish": "Una cuenta de ahorros genera el 4% de interés anual. Después de 3 años tiene $1,120. ¿Cuánto se depositó originalmente?",
+      "L2_bilingual": "A savings account (cuenta de ahorros) earns (genera) 4% interest (inter\u00e9s) per year. After 3 years it has $1,120. What was the original deposit (dep\u00f3sito original)?",
+      "L3_spanish": "Una cuenta de ahorros genera el 4% de inter\u00e9s anual. Despu\u00e9s de 3 a\u00f1os tiene $1,120. \u00bfCu\u00e1nto se deposit\u00f3 originalmente?",
       "L4_solution": "Step 1: 1.12P = $1120\nStep 2: P = $1000\nAnswer: $1,000."
     },
     "readability": {
@@ -3133,6 +4133,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "deposit",
+        "interest",
+        "original",
+        "savings"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 4,
+        "B1": 4
+      }
     }
   },
   {
@@ -3146,13 +4161,13 @@
     "answer_numeric": 12.0,
     "solution_steps": [
       "c + k = 20 and 2c + 4k = 56",
-      "2(20-k) + 4k = 56 → k = 8",
+      "2(20-k) + 4k = 56 \u2192 k = 8",
       "c = 12"
     ],
     "scaffolds": {
       "L1_simplified": "A farmer has chickens and cows. 20 animals total, 56 legs total. How many chickens? How many cows?",
       "L2_bilingual": "A farmer (granjero) has chickens (gallinas) and cows (vacas). 20 animals (animales), 56 legs (patas). How many chickens (gallinas) and cows (vacas)?",
-      "L3_spanish": "Un granjero tiene gallinas y vacas. Hay 20 animales y 56 patas en total. ¿Cuántas gallinas y cuántas vacas?",
+      "L3_spanish": "Un granjero tiene gallinas y vacas. Hay 20 animales y 56 patas en total. \u00bfCu\u00e1ntas gallinas y cu\u00e1ntas vacas?",
       "L4_solution": "Step 1: c + k = 20; 2c + 4k = 56\nStep 2: k = 8, c = 12\nAnswer: 12 chickens, 8 cows."
     },
     "readability": {
@@ -3165,6 +4180,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3
+      }
     }
   },
   {
@@ -3178,13 +4202,13 @@
     "answer_numeric": 100.0,
     "solution_steps": [
       "a + c = 200 and 9a + 6c = 1500",
-      "9(200-c) + 6c = 1500 → c = 100",
+      "9(200-c) + 6c = 1500 \u2192 c = 100",
       "a = 100"
     ],
     "scaffolds": {
       "L1_simplified": "Tickets cost $9 for adults and $6 for children. 200 tickets sold for $1,500. How many of each?",
-      "L2_bilingual": "A theater charges (cobra) $9 for adults (adultos) and $6 for children (niños). 200 tickets (boletos) sold for $1,500. How many adult (adultos) and children's (niños) tickets?",
-      "L3_spanish": "Un cine cobra $9 por adulto y $6 por niño. Se vendieron 200 boletos por $1,500. ¿Cuántos boletos de adulto y cuántos de niño?",
+      "L2_bilingual": "A theater charges (cobra) $9 for adults (adultos) and $6 for children (ni\u00f1os). 200 tickets (boletos) sold for $1,500. How many adult (adultos) and children's (ni\u00f1os) tickets?",
+      "L3_spanish": "Un cine cobra $9 por adulto y $6 por ni\u00f1o. Se vendieron 200 boletos por $1,500. \u00bfCu\u00e1ntos boletos de adulto y cu\u00e1ntos de ni\u00f1o?",
       "L4_solution": "Step 1: a + c = 200; 9a + 6c = 1500\nStep 2: c = 100, a = 100\nAnswer: 100 adult, 100 children."
     },
     "readability": {
@@ -3197,6 +4221,15 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "A2",
+      "above_a2_words": [],
+      "above_a2_count": 0,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 7
+      }
     }
   },
   {
@@ -3210,14 +4243,14 @@
     "answer_numeric": 7.0,
     "solution_steps": [
       "w(w+5) = 84",
-      "w² + 5w - 84 = 0",
-      "(w-7)(w+12) = 0 → w = 7, l = 12"
+      "w\u00b2 + 5w - 84 = 0",
+      "(w-7)(w+12) = 0 \u2192 w = 7, l = 12"
     ],
     "scaffolds": {
       "L1_simplified": "A rectangle's length is 5 cm more than its width. The area is 84 sq cm. Find the width and length.",
-      "L2_bilingual": "The length (largo) is 5 cm more than the width (ancho). The area (área) is 84 square centimeters (centímetros cuadrados). Find the dimensions (dimensiones).",
-      "L3_spanish": "El largo de un rectángulo es 5 cm más que su ancho. Si el área es 84 cm², encuentra las dimensiones.",
-      "L4_solution": "Step 1: w(w+5) = 84\nStep 2: w² + 5w - 84 = 0\nStep 3: w = 7, l = 12\nAnswer: 7 cm × 12 cm."
+      "L2_bilingual": "The length (largo) is 5 cm more than the width (ancho). The area (\u00e1rea) is 84 square centimeters (cent\u00edmetros cuadrados). Find the dimensions (dimensiones).",
+      "L3_spanish": "El largo de un rect\u00e1ngulo es 5 cm m\u00e1s que su ancho. Si el \u00e1rea es 84 cm\u00b2, encuentra las dimensiones.",
+      "L4_solution": "Step 1: w(w+5) = 84\nStep 2: w\u00b2 + 5w - 84 = 0\nStep 3: w = 7, l = 12\nAnswer: 7 cm \u00d7 12 cm."
     },
     "readability": {
       "flesch_kincaid": 9.6,
@@ -3229,6 +4262,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "area",
+        "dimensions",
+        "rectangle",
+        "square"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 4,
+        "B1": 4
+      }
     }
   },
   {
@@ -3241,15 +4289,15 @@
     "answer": "12 feet",
     "answer_numeric": 12.0,
     "solution_steps": [
-      "a² + b² = c²",
-      "5² + h² = 13²",
-      "h² = 144 → h = 12"
+      "a\u00b2 + b\u00b2 = c\u00b2",
+      "5\u00b2 + h\u00b2 = 13\u00b2",
+      "h\u00b2 = 144 \u2192 h = 12"
     ],
     "scaffolds": {
       "L1_simplified": "A ladder is 13 feet long. Its base is 5 feet from the wall. How high does it reach?",
-      "L2_bilingual": "A ladder (escalera) 13 feet (pies) long leans against (apoya en) a wall (pared). The base (base) is 5 feet from the wall. How high (qué tan alto)?",
-      "L3_spanish": "Una escalera de 13 pies se apoya contra una pared. La base está a 5 pies. ¿A qué altura llega?",
-      "L4_solution": "Step 1: 5² + h² = 13²\nStep 2: h² = 169 - 25 = 144\nStep 3: h = 12\nAnswer: 12 feet."
+      "L2_bilingual": "A ladder (escalera) 13 feet (pies) long leans against (apoya en) a wall (pared). The base (base) is 5 feet from the wall. How high (qu\u00e9 tan alto)?",
+      "L3_spanish": "Una escalera de 13 pies se apoya contra una pared. La base est\u00e1 a 5 pies. \u00bfA qu\u00e9 altura llega?",
+      "L4_solution": "Step 1: 5\u00b2 + h\u00b2 = 13\u00b2\nStep 2: h\u00b2 = 169 - 25 = 144\nStep 3: h = 12\nAnswer: 12 feet."
     },
     "readability": {
       "flesch_kincaid": 9.7,
@@ -3261,6 +4309,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "base",
+        "leans"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 4,
+        "B1": 2
+      }
     }
   },
   {
@@ -3270,18 +4331,18 @@
     "subtopic": "mean median mode",
     "grade": 8,
     "problem_text": "Seven students scored: 72, 85, 91, 68, 85, 77, and 94. Calculate the mean, median, and mode.",
-    "answer": "Mean≈81.7, Median=85, Mode=85",
+    "answer": "Mean\u224881.7, Median=85, Mode=85",
     "answer_numeric": 81.71,
     "solution_steps": [
-      "Sum = 572, Mean = 572/7 ≈ 81.7",
-      "Ordered: 68,72,77,85,85,91,94 → Median = 85",
+      "Sum = 572, Mean = 572/7 \u2248 81.7",
+      "Ordered: 68,72,77,85,85,91,94 \u2192 Median = 85",
       "Mode = 85"
     ],
     "scaffolds": {
       "L1_simplified": "Seven scores: 72, 85, 91, 68, 85, 77, 94. Find the mean, median, and mode.",
       "L2_bilingual": "Seven students' scores (calificaciones): 72, 85, 91, 68, 85, 77, 94. Calculate mean (promedio), median (mediana), and mode (moda).",
       "L3_spanish": "Siete estudiantes obtuvieron: 72, 85, 91, 68, 85, 77 y 94. Calcula el promedio, la mediana y la moda.",
-      "L4_solution": "Step 1: Mean = 572/7 ≈ 81.7\nStep 2: Median = 85\nStep 3: Mode = 85\nAnswer: Mean≈81.7, Median=85, Mode=85."
+      "L4_solution": "Step 1: Mean = 572/7 \u2248 81.7\nStep 2: Median = 85\nStep 3: Mode = 85\nAnswer: Mean\u224881.7, Median=85, Mode=85."
     },
     "readability": {
       "flesch_kincaid": 9.8,
@@ -3293,6 +4354,22 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "calculate",
+        "mean",
+        "median",
+        "mode"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 1,
+        "B1": 2,
+        "B2": 2
+      }
     }
   },
   {
@@ -3301,19 +4378,19 @@
     "topic": "geometry",
     "subtopic": "volume",
     "grade": 8,
-    "problem_text": "A cylindrical water tank has a radius of 3 meters and a height of 10 meters. What is the volume? Use π ≈ 3.14.",
-    "answer": "282.6 m³",
+    "problem_text": "A cylindrical water tank has a radius of 3 meters and a height of 10 meters. What is the volume? Use \u03c0 \u2248 3.14.",
+    "answer": "282.6 m\u00b3",
     "answer_numeric": 282.6,
     "solution_steps": [
-      "V = π × r² × h",
-      "= 3.14 × 9 × 10",
-      "= 282.6 m³"
+      "V = \u03c0 \u00d7 r\u00b2 \u00d7 h",
+      "= 3.14 \u00d7 9 \u00d7 10",
+      "= 282.6 m\u00b3"
     ],
     "scaffolds": {
-      "L1_simplified": "A cylinder has radius 3 m and height 10 m. Find the volume. Use π = 3.14.",
-      "L2_bilingual": "A cylindrical (cilíndrico) tank has radius (radio) 3 m and height (altura) 10 m. What is the volume (volumen)? Use π ≈ 3.14.",
-      "L3_spanish": "Un tanque cilíndrico tiene radio 3 m y altura 10 m. ¿Cuál es el volumen? Usa π ≈ 3.14.",
-      "L4_solution": "Step 1: V = π × r² × h\nStep 2: = 3.14 × 9 × 10 = 282.6\nAnswer: 282.6 m³."
+      "L1_simplified": "A cylinder has radius 3 m and height 10 m. Find the volume. Use \u03c0 = 3.14.",
+      "L2_bilingual": "A cylindrical (cil\u00edndrico) tank has radius (radio) 3 m and height (altura) 10 m. What is the volume (volumen)? Use \u03c0 \u2248 3.14.",
+      "L3_spanish": "Un tanque cil\u00edndrico tiene radio 3 m y altura 10 m. \u00bfCu\u00e1l es el volumen? Usa \u03c0 \u2248 3.14.",
+      "L4_solution": "Step 1: V = \u03c0 \u00d7 r\u00b2 \u00d7 h\nStep 2: = 3.14 \u00d7 9 \u00d7 10 = 282.6\nAnswer: 282.6 m\u00b3."
     },
     "readability": {
       "flesch_kincaid": 9.9,
@@ -3325,6 +4402,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "cylindrical",
+        "radius",
+        "volume"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 3,
+        "B1": 2,
+        "B2": 1
+      }
     }
   },
   {
@@ -3343,8 +4435,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "A line has slope 3 and passes through (2, 7). Find the equation and y-intercept.",
-      "L2_bilingual": "A linear function (función lineal) has slope (pendiente) 3 and passes through (pasa por) point (punto) (2,7). What is the equation (ecuación) and y-intercept (intercepto)?",
-      "L3_spanish": "Una función lineal tiene pendiente 3 y pasa por el punto (2, 7). ¿Cuál es la ecuación y el intercepto en y?",
+      "L2_bilingual": "A linear function (funci\u00f3n lineal) has slope (pendiente) 3 and passes through (pasa por) point (punto) (2,7). What is the equation (ecuaci\u00f3n) and y-intercept (intercepto)?",
+      "L3_spanish": "Una funci\u00f3n lineal tiene pendiente 3 y pasa por el punto (2, 7). \u00bfCu\u00e1l es la ecuaci\u00f3n y el intercepto en y?",
       "L4_solution": "Step 1: y - 7 = 3(x - 2)\nStep 2: y = 3x + 1\nAnswer: y = 3x + 1, y-intercept = 1."
     },
     "readability": {
@@ -3357,6 +4449,23 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "equation",
+        "function",
+        "intercept",
+        "linear",
+        "slope"
+      ],
+      "above_a2_count": 5,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 2,
+        "B1": 1,
+        "B2": 4
+      }
     }
   },
   {
@@ -3376,7 +4485,7 @@
     "scaffolds": {
       "L1_simplified": "A bag has 4 red, 3 blue, and 5 green marbles. What is the probability of picking red or green?",
       "L2_bilingual": "A bag (bolsa) has 4 red (rojas), 3 blue (azules), and 5 green (verdes) marbles. What is the probability (probabilidad) of selecting (elegir) red or green?",
-      "L3_spanish": "Una bolsa tiene 4 canicas rojas, 3 azules y 5 verdes. ¿Cuál es la probabilidad de elegir una roja o verde?",
+      "L3_spanish": "Una bolsa tiene 4 canicas rojas, 3 azules y 5 verdes. \u00bfCu\u00e1l es la probabilidad de elegir una roja o verde?",
       "L4_solution": "Step 1: Total = 12\nStep 2: Red+Green = 9\nStep 3: P = 9/12 = 3/4\nAnswer: 3/4."
     },
     "readability": {
@@ -3389,6 +4498,22 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "chosen",
+        "probability",
+        "random",
+        "selecting"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 3,
+        "B1": 3,
+        "B2": 1
+      }
     }
   },
   {
@@ -3401,15 +4526,15 @@
     "answer": "50 meters",
     "answer_numeric": 50.0,
     "solution_steps": [
-      "d² = 40² + 30²",
+      "d\u00b2 = 40\u00b2 + 30\u00b2",
       "= 1600 + 900 = 2500",
       "d = 50 meters"
     ],
     "scaffolds": {
       "L1_simplified": "A rectangular field is 40 m long and 30 m wide. What is the diagonal?",
       "L2_bilingual": "A rectangular field (campo rectangular) measures 40 meters (metros) by 30 meters. What is the diagonal (diagonal)?",
-      "L3_spanish": "Un campo rectangular mide 40 metros por 30 metros. ¿Cuánto mide la diagonal?",
-      "L4_solution": "Step 1: d² = 40² + 30² = 2500\nStep 2: d = √2500 = 50\nAnswer: 50 meters."
+      "L3_spanish": "Un campo rectangular mide 40 metros por 30 metros. \u00bfCu\u00e1nto mide la diagonal?",
+      "L4_solution": "Step 1: d\u00b2 = 40\u00b2 + 30\u00b2 = 2500\nStep 2: d = \u221a2500 = 50\nAnswer: 50 meters."
     },
     "readability": {
       "flesch_kincaid": 9.6,
@@ -3421,6 +4546,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "diagonal",
+        "rectangular"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A2": 4,
+        "B1": 1,
+        "B2": 1
+      }
     }
   },
   {
@@ -3433,15 +4571,15 @@
     "answer": "$147",
     "answer_numeric": 147.0,
     "solution_steps": [
-      "Daily: 35 × 3 = 105",
-      "Mileage: 0.15 × 280 = 42",
+      "Daily: 35 \u00d7 3 = 105",
+      "Mileage: 0.15 \u00d7 280 = 42",
       "Total: 105 + 42 = 147"
     ],
     "scaffolds": {
       "L1_simplified": "Renting a car costs $35 per day plus $0.15 per mile. 3 days and 280 miles. What is the total?",
-      "L2_bilingual": "Renting (alquilar) a car costs $35 per day (por día) plus $0.15 per mile (por milla). A 3-day trip with 280 miles. Total cost (costo total)?",
-      "L3_spanish": "Alquilar un carro cuesta $35 por día más $0.15 por milla. En un viaje de 3 días con 280 millas, ¿cuál fue el costo total?",
-      "L4_solution": "Step 1: Daily = 35 × 3 = $105\nStep 2: Mileage = 0.15 × 280 = $42\nStep 3: Total = $147\nAnswer: $147."
+      "L2_bilingual": "Renting (alquilar) a car costs $35 per day (por d\u00eda) plus $0.15 per mile (por milla). A 3-day trip with 280 miles. Total cost (costo total)?",
+      "L3_spanish": "Alquilar un carro cuesta $35 por d\u00eda m\u00e1s $0.15 por milla. En un viaje de 3 d\u00edas con 280 millas, \u00bfcu\u00e1l fue el costo total?",
+      "L4_solution": "Step 1: Daily = 35 \u00d7 3 = $105\nStep 2: Mileage = 0.15 \u00d7 280 = $42\nStep 3: Total = $147\nAnswer: $147."
     },
     "readability": {
       "flesch_kincaid": 9.8,
@@ -3453,6 +4591,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "rental"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 9,
+        "B1": 1
+      }
     }
   },
   {
@@ -3472,7 +4622,7 @@
     "scaffolds": {
       "L1_simplified": "Two dice are rolled. How many ways give sum = 8? What is the probability?",
       "L2_bilingual": "Two dice (dados) are rolled (lanzados). What is the probability (probabilidad) that the sum (suma) equals 8?",
-      "L3_spanish": "Se lanzan dos dados. ¿Cuál es la probabilidad de que la suma sea 8?",
+      "L3_spanish": "Se lanzan dos dados. \u00bfCu\u00e1l es la probabilidad de que la suma sea 8?",
       "L4_solution": "Step 1: Total = 36\nStep 2: Pairs summing to 8 = 5\nStep 3: P = 5/36\nAnswer: 5/36."
     },
     "readability": {
@@ -3485,6 +4635,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "probability",
+        "simultaneously"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 4,
+        "B2": 2
+      }
     }
   },
   {
@@ -3493,19 +4656,19 @@
     "topic": "geometry",
     "subtopic": "volume",
     "grade": 8,
-    "problem_text": "A cone has a base radius of 6 cm and a height of 8 cm. What is the volume? Use π ≈ 3.14.",
-    "answer": "301.44 cm³",
+    "problem_text": "A cone has a base radius of 6 cm and a height of 8 cm. What is the volume? Use \u03c0 \u2248 3.14.",
+    "answer": "301.44 cm\u00b3",
     "answer_numeric": 301.44,
     "solution_steps": [
-      "V = (1/3)πr²h",
+      "V = (1/3)\u03c0r\u00b2h",
       "= (1/3)(3.14)(36)(8)",
       "= 301.44"
     ],
     "scaffolds": {
-      "L1_simplified": "A cone has radius 6 cm and height 8 cm. Find the volume. π = 3.14.",
-      "L2_bilingual": "A cone (cono) has base radius (radio) 6 cm and height (altura) 8 cm. What is the volume (volumen)? Use π ≈ 3.14.",
-      "L3_spanish": "Un cono tiene radio 6 cm y altura 8 cm. ¿Cuál es el volumen? Usa π ≈ 3.14.",
-      "L4_solution": "Step 1: V = (1/3)πr²h\nStep 2: = (1/3)(3.14)(36)(8) = 301.44\nAnswer: 301.44 cm³."
+      "L1_simplified": "A cone has radius 6 cm and height 8 cm. Find the volume. \u03c0 = 3.14.",
+      "L2_bilingual": "A cone (cono) has base radius (radio) 6 cm and height (altura) 8 cm. What is the volume (volumen)? Use \u03c0 \u2248 3.14.",
+      "L3_spanish": "Un cono tiene radio 6 cm y altura 8 cm. \u00bfCu\u00e1l es el volumen? Usa \u03c0 \u2248 3.14.",
+      "L4_solution": "Step 1: V = (1/3)\u03c0r\u00b2h\nStep 2: = (1/3)(3.14)(36)(8) = 301.44\nAnswer: 301.44 cm\u00b3."
     },
     "readability": {
       "flesch_kincaid": 9.7,
@@ -3517,6 +4680,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "base",
+        "cone",
+        "radius",
+        "volume"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 2,
+        "B1": 4
+      }
     }
   },
   {
@@ -3531,13 +4709,13 @@
     "solution_steps": [
       "b+c = 12 (downstream)",
       "b-c = 8 (upstream)",
-      "2b = 20 → b = 10, c = 2"
+      "2b = 20 \u2192 b = 10, c = 2"
     ],
     "scaffolds": {
       "L1_simplified": "A boat goes 24 miles downstream in 2 hours and back upstream in 3 hours. Find the boat's speed and the current's speed.",
-      "L2_bilingual": "A boat (bote) travels 24 miles (millas) downstream (río abajo) in 2 hours and returns upstream (río arriba) in 3 hours. Find the speed (velocidad) of the boat and current (corriente).",
-      "L3_spanish": "Un bote viaja 24 millas río abajo en 2 horas y regresa río arriba en 3 horas. ¿Cuál es la velocidad del bote y la de la corriente?",
-      "L4_solution": "Step 1: b+c = 12; b-c = 8\nStep 2: 2b = 20 → b = 10\nStep 3: c = 2\nAnswer: 10 mph boat, 2 mph current."
+      "L2_bilingual": "A boat (bote) travels 24 miles (millas) downstream (r\u00edo abajo) in 2 hours and returns upstream (r\u00edo arriba) in 3 hours. Find the speed (velocidad) of the boat and current (corriente).",
+      "L3_spanish": "Un bote viaja 24 millas r\u00edo abajo en 2 horas y regresa r\u00edo arriba en 3 horas. \u00bfCu\u00e1l es la velocidad del bote y la de la corriente?",
+      "L4_solution": "Step 1: b+c = 12; b-c = 8\nStep 2: 2b = 20 \u2192 b = 10\nStep 3: c = 2\nAnswer: 10 mph boat, 2 mph current."
     },
     "readability": {
       "flesch_kincaid": 10.3,
@@ -3549,6 +4727,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "current",
+        "downstream",
+        "upstream"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 5,
+        "B1": 1,
+        "B2": 2
+      }
     }
   },
   {
@@ -3567,8 +4760,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "30 students: 18 play soccer, 12 play basketball, 6 play both. How many play neither?",
-      "L2_bilingual": "In a class (clase) of 30 students, 18 play soccer (fútbol), 12 play basketball (baloncesto), and 6 play both (ambos). How many play neither (ninguno)?",
-      "L3_spanish": "En una clase de 30 estudiantes, 18 juegan fútbol, 12 baloncesto y 6 ambos. ¿Cuántos no juegan ninguno?",
+      "L2_bilingual": "In a class (clase) of 30 students, 18 play soccer (f\u00fatbol), 12 play basketball (baloncesto), and 6 play both (ambos). How many play neither (ninguno)?",
+      "L3_spanish": "En una clase de 30 estudiantes, 18 juegan f\u00fatbol, 12 baloncesto y 6 ambos. \u00bfCu\u00e1ntos no juegan ninguno?",
       "L4_solution": "Step 1: Soccer only=12, Basketball only=6, Both=6\nStep 2: Total playing = 24\nStep 3: Neither = 6\nAnswer: 6 students."
     },
     "readability": {
@@ -3581,6 +4774,18 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "neither"
+      ],
+      "above_a2_count": 1,
+      "cefr_distribution": {
+        "A1": 6,
+        "A2": 2,
+        "B1": 1
+      }
     }
   },
   {
@@ -3589,19 +4794,19 @@
     "topic": "geometry",
     "subtopic": "advanced volume",
     "grade": 8,
-    "problem_text": "A frustum (truncated cone) has a bottom radius of 8 cm, top radius of 4 cm, and height of 6 cm. Calculate its volume. Use π ≈ 3.14.",
-    "answer": "527.52 cm³",
+    "problem_text": "A frustum (truncated cone) has a bottom radius of 8 cm, top radius of 4 cm, and height of 6 cm. Calculate its volume. Use \u03c0 \u2248 3.14.",
+    "answer": "527.52 cm\u00b3",
     "answer_numeric": 527.52,
     "solution_steps": [
-      "V = (πh/3)(R²+Rr+r²)",
-      "= (3.14×6/3)(64+32+16)",
-      "= 6.28 × 84... recalculate = 527.52"
+      "V = (\u03c0h/3)(R\u00b2+Rr+r\u00b2)",
+      "= (3.14\u00d76/3)(64+32+16)",
+      "= 6.28 \u00d7 84... recalculate = 527.52"
     ],
     "scaffolds": {
-      "L1_simplified": "A truncated cone has bottom radius 8 cm, top radius 4 cm, height 6 cm. Find volume. π = 3.14.",
-      "L2_bilingual": "A frustum (tronco de cono) has bottom radius (radio inferior) 8 cm, top radius (superior) 4 cm, height (altura) 6 cm. Volume (volumen)? Use π ≈ 3.14.",
-      "L3_spanish": "Un tronco de cono tiene radio inferior 8 cm, radio superior 4 cm y altura 6 cm. Calcula su volumen. Usa π ≈ 3.14.",
-      "L4_solution": "Step 1: V = (πh/3)(R²+Rr+r²)\nStep 2: = (3.14×2)(64+32+16) = 6.28×112 = 703.36... [approx 527.52]\nAnswer: ≈527.52 cm³."
+      "L1_simplified": "A truncated cone has bottom radius 8 cm, top radius 4 cm, height 6 cm. Find volume. \u03c0 = 3.14.",
+      "L2_bilingual": "A frustum (tronco de cono) has bottom radius (radio inferior) 8 cm, top radius (superior) 4 cm, height (altura) 6 cm. Volume (volumen)? Use \u03c0 \u2248 3.14.",
+      "L3_spanish": "Un tronco de cono tiene radio inferior 8 cm, radio superior 4 cm y altura 6 cm. Calcula su volumen. Usa \u03c0 \u2248 3.14.",
+      "L4_solution": "Step 1: V = (\u03c0h/3)(R\u00b2+Rr+r\u00b2)\nStep 2: = (3.14\u00d72)(64+32+16) = 6.28\u00d7112 = 703.36... [approx 527.52]\nAnswer: \u2248527.52 cm\u00b3."
     },
     "readability": {
       "flesch_kincaid": 10.5,
@@ -3613,6 +4818,24 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "C1",
+      "above_a2_words": [
+        "calculate",
+        "cone",
+        "frustum",
+        "radius",
+        "truncated",
+        "volume"
+      ],
+      "above_a2_count": 6,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 3,
+        "B1": 4,
+        "C1": 2
+      }
     }
   },
   {
@@ -3627,12 +4850,12 @@
     "solution_steps": [
       "0.20x + 0.50(200-x) = 60",
       "0.20x + 100 - 0.50x = 60",
-      "-0.30x = -40 → x = 133.3"
+      "-0.30x = -40 \u2192 x = 133.3"
     ],
     "scaffolds": {
       "L1_simplified": "A chemist mixes a 20% and a 50% acid solution to make 200 mL of a 30% solution. How many mL of each?",
-      "L2_bilingual": "A chemist (químico) prepares (prepara) 200 mL of a 30% acid (ácido) solution (solución) by mixing (mezclando) a 20% and 50% solution. How many mL of each?",
-      "L3_spanish": "Un químico prepara 200 mL de solución al 30% mezclando una al 20% y otra al 50%. ¿Cuántos mL de cada una?",
+      "L2_bilingual": "A chemist (qu\u00edmico) prepares (prepara) 200 mL of a 30% acid (\u00e1cido) solution (soluci\u00f3n) by mixing (mezclando) a 20% and 50% solution. How many mL of each?",
+      "L3_spanish": "Un qu\u00edmico prepara 200 mL de soluci\u00f3n al 30% mezclando una al 20% y otra al 50%. \u00bfCu\u00e1ntos mL de cada una?",
       "L4_solution": "Step 1: 0.20x + 0.50(200-x) = 60\nStep 2: -0.30x = -40\nStep 3: x = 133.3 mL (20%), 66.7 mL (50%)\nAnswer: 133.3 mL of 20%, 66.7 mL of 50%."
     },
     "readability": {
@@ -3645,6 +4868,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "acid",
+        "chemist",
+        "solution"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 3,
+        "B1": 1,
+        "B2": 2
+      }
     }
   },
   {
@@ -3664,7 +4902,7 @@
     "scaffolds": {
       "L1_simplified": "A box has 5 red, 4 blue, and 3 green balls. Two are drawn without replacement. What is the probability both are red?",
       "L2_bilingual": "A box (caja) has 5 red (rojas), 4 blue (azules), 3 green (verdes) balls. Two are drawn without replacement (sin reemplazo). Probability (probabilidad) both red?",
-      "L3_spanish": "Una caja tiene 5 pelotas rojas, 4 azules y 3 verdes. Se sacan dos sin reemplazo. ¿Cuál es la probabilidad de que ambas sean rojas?",
+      "L3_spanish": "Una caja tiene 5 pelotas rojas, 4 azules y 3 verdes. Se sacan dos sin reemplazo. \u00bfCu\u00e1l es la probabilidad de que ambas sean rojas?",
       "L4_solution": "Step 1: P(1st red) = 5/12\nStep 2: P(2nd red) = 4/11\nStep 3: P(both) = 20/132 = 5/33\nAnswer: 5/33."
     },
     "readability": {
@@ -3677,6 +4915,21 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "drawn",
+        "probability",
+        "replacement"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 6,
+        "A2": 1,
+        "B1": 2,
+        "B2": 1
+      }
     }
   },
   {
@@ -3695,8 +4948,8 @@
     ],
     "scaffolds": {
       "L1_simplified": "Pipe A fills a tank in 4 hours. Pipe B in 6 hours. A drain empties it in 12 hours. With all three open, how long to fill it?",
-      "L2_bilingual": "Pipe A (tubería A) fills (llena) the tank in 4 hours. Pipe B in 6. A drain (desagüe) empties (vacía) it in 12. With all three open (abiertos), how long (cuánto tiempo)?",
-      "L3_spanish": "La tubería A llena el tanque en 4 horas, la B en 6. Un desagüe lo vacía en 12. Con los tres abiertos, ¿cuánto tarda en llenarse?",
+      "L2_bilingual": "Pipe A (tuber\u00eda A) fills (llena) the tank in 4 hours. Pipe B in 6. A drain (desag\u00fce) empties (vac\u00eda) it in 12. With all three open (abiertos), how long (cu\u00e1nto tiempo)?",
+      "L3_spanish": "La tuber\u00eda A llena el tanque en 4 horas, la B en 6. Un desag\u00fce lo vac\u00eda en 12. Con los tres abiertos, \u00bfcu\u00e1nto tarda en llenarse?",
       "L4_solution": "Step 1: Net rate = 1/4+1/6-1/12 = 4/12 = 1/3\nStep 2: Time = 3 hours\nAnswer: 3 hours."
     },
     "readability": {
@@ -3709,6 +4962,20 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "drain",
+        "empties",
+        "pipe"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 3,
+        "B1": 3
+      }
     }
   },
   {
@@ -3717,19 +4984,19 @@
     "topic": "geometry",
     "subtopic": "trigonometry application",
     "grade": 8,
-    "problem_text": "A surveyor walks 60 meters along a riverbank. She measures the angle to a point directly across the river at 35°. What is the width of the river? (tan 35° ≈ 0.7002)",
+    "problem_text": "A surveyor walks 60 meters along a riverbank. She measures the angle to a point directly across the river at 35\u00b0. What is the width of the river? (tan 35\u00b0 \u2248 0.7002)",
     "answer": "42 meters",
     "answer_numeric": 42.0,
     "solution_steps": [
-      "Width = distance × tan(angle)",
-      "= 60 × 0.7002",
-      "≈ 42 meters"
+      "Width = distance \u00d7 tan(angle)",
+      "= 60 \u00d7 0.7002",
+      "\u2248 42 meters"
     ],
     "scaffolds": {
-      "L1_simplified": "A surveyor walks 60 meters along a bank and measures a 35° angle across the river. How wide is the river? (tan 35° ≈ 0.7002)",
-      "L2_bilingual": "A surveyor (topógrafa) walks 60 meters along a riverbank (orilla). She measures the angle (ángulo) across the river (río) at 35°. Width (ancho)? (tan 35° ≈ 0.7002)",
-      "L3_spanish": "Una topógrafa camina 60 metros a lo largo de una orilla y mide un ángulo de 35° al otro lado. ¿Cuál es el ancho del río? (tan 35° ≈ 0.7002)",
-      "L4_solution": "Step 1: Width = 60 × tan(35°)\nStep 2: = 60 × 0.7002 ≈ 42\nAnswer: 42 meters."
+      "L1_simplified": "A surveyor walks 60 meters along a bank and measures a 35\u00b0 angle across the river. How wide is the river? (tan 35\u00b0 \u2248 0.7002)",
+      "L2_bilingual": "A surveyor (top\u00f3grafa) walks 60 meters along a riverbank (orilla). She measures the angle (\u00e1ngulo) across the river (r\u00edo) at 35\u00b0. Width (ancho)? (tan 35\u00b0 \u2248 0.7002)",
+      "L3_spanish": "Una top\u00f3grafa camina 60 metros a lo largo de una orilla y mide un \u00e1ngulo de 35\u00b0 al otro lado. \u00bfCu\u00e1l es el ancho del r\u00edo? (tan 35\u00b0 \u2248 0.7002)",
+      "L4_solution": "Step 1: Width = 60 \u00d7 tan(35\u00b0)\nStep 2: = 60 \u00d7 0.7002 \u2248 42\nAnswer: 42 meters."
     },
     "readability": {
       "flesch_kincaid": 11.3,
@@ -3741,6 +5008,23 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "angle",
+        "directly",
+        "riverbank",
+        "surveyor",
+        "tan"
+      ],
+      "above_a2_count": 5,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 7,
+        "B1": 3,
+        "B2": 2
+      }
     }
   },
   {
@@ -3755,12 +5039,12 @@
     "solution_steps": [
       "0.04s + 0.09(10000-s) = 650",
       "0.04s + 900 - 0.09s = 650",
-      "-0.05s = -250 → s = 5000... verify: s=7200"
+      "-0.05s = -250 \u2192 s = 5000... verify: s=7200"
     ],
     "scaffolds": {
       "L1_simplified": "Part of $10,000 earns 4% and the rest earns 9%. Total interest is $650. How much at each rate?",
-      "L2_bilingual": "An investor (inversionista) places part of $10,000 in savings (ahorros) at 4% and the rest in stocks (acciones) at 9%. Total interest (interés) after one year: $650. How much in each?",
-      "L3_spanish": "Un inversionista coloca parte de $10,000 en ahorros al 4% y el resto en acciones al 9%. El interés total es $650. ¿Cuánto en cada uno?",
+      "L2_bilingual": "An investor (inversionista) places part of $10,000 in savings (ahorros) at 4% and the rest in stocks (acciones) at 9%. Total interest (inter\u00e9s) after one year: $650. How much in each?",
+      "L3_spanish": "Un inversionista coloca parte de $10,000 en ahorros al 4% y el resto en acciones al 9%. El inter\u00e9s total es $650. \u00bfCu\u00e1nto en cada uno?",
       "L4_solution": "Step 1: 0.04s + 0.09(10000-s) = 650\nStep 2: -0.05s = -250\nStep 3: s = $7,200, stocks = $2,800\nAnswer: $7,200 savings, $2,800 stocks."
     },
     "readability": {
@@ -3773,6 +5057,24 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "annually",
+        "interest",
+        "investor",
+        "remainder",
+        "savings",
+        "stocks"
+      ],
+      "above_a2_count": 6,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 4,
+        "B1": 3,
+        "B2": 3
+      }
     }
   },
   {
@@ -3782,18 +5084,18 @@
     "subtopic": "standard deviation",
     "grade": 8,
     "problem_text": "A dataset has values: 15, 22, 18, 30, 25, 20, 28, 17, 35, and 10. Calculate the range, variance, and standard deviation.",
-    "answer": "Range=25, SD≈7.0",
+    "answer": "Range=25, SD\u22487.0",
     "answer_numeric": 7.0,
     "solution_steps": [
       "Range = 35-10 = 25",
       "Mean = 220/10 = 22",
-      "Variance ≈ 48.9, SD ≈ 7.0"
+      "Variance \u2248 48.9, SD \u2248 7.0"
     ],
     "scaffolds": {
       "L1_simplified": "10 values: 15, 22, 18, 30, 25, 20, 28, 17, 35, 10. Find the range, variance, and standard deviation.",
-      "L2_bilingual": "A dataset (conjunto de datos) has values (valores): 15, 22, 18, 30, 25, 20, 28, 17, 35, 10. Calculate range (rango), variance (varianza), and standard deviation (desviación estándar).",
-      "L3_spanish": "Un conjunto de datos: 15, 22, 18, 30, 25, 20, 28, 17, 35, 10. Calcula el rango, la varianza y la desviación estándar.",
-      "L4_solution": "Step 1: Range = 25\nStep 2: Mean = 22\nStep 3: Variance ≈ 48.9, SD ≈ 7.0\nAnswer: Range=25, SD≈7.0."
+      "L2_bilingual": "A dataset (conjunto de datos) has values (valores): 15, 22, 18, 30, 25, 20, 28, 17, 35, 10. Calculate range (rango), variance (varianza), and standard deviation (desviaci\u00f3n est\u00e1ndar).",
+      "L3_spanish": "Un conjunto de datos: 15, 22, 18, 30, 25, 20, 28, 17, 35, 10. Calcula el rango, la varianza y la desviaci\u00f3n est\u00e1ndar.",
+      "L4_solution": "Step 1: Range = 25\nStep 2: Mean = 22\nStep 3: Variance \u2248 48.9, SD \u2248 7.0\nAnswer: Range=25, SD\u22487.0."
     },
     "readability": {
       "flesch_kincaid": 11.4,
@@ -3805,6 +5107,23 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "calculate",
+        "dataset",
+        "deviation",
+        "range",
+        "standard",
+        "values",
+        "variance"
+      ],
+      "above_a2_count": 7,
+      "cefr_distribution": {
+        "B1": 3,
+        "B2": 4
+      }
     }
   },
   {
@@ -3818,13 +5137,13 @@
     "answer_numeric": 4.5,
     "solution_steps": [
       "Combined speed = 30 mph",
-      "Time = 135 ÷ 30 = 4.5 hours",
+      "Time = 135 \u00f7 30 = 4.5 hours",
       "A: 63 miles, B: 72 miles"
     ],
     "scaffolds": {
       "L1_simplified": "Two cyclists go in opposite directions at 14 and 16 mph. When are they 135 miles apart? How far has each gone?",
-      "L2_bilingual": "Two cyclists (ciclistas) go in opposite directions (direcciones opuestas) at 14 mph and 16 mph. After how many hours (cuántas horas) are they 135 miles apart? How far (cuánto) each?",
-      "L3_spanish": "Dos ciclistas parten en direcciones opuestas a 14 y 16 mph. ¿Cuándo estarán a 135 millas? ¿Cuánto ha recorrido cada uno?",
+      "L2_bilingual": "Two cyclists (ciclistas) go in opposite directions (direcciones opuestas) at 14 mph and 16 mph. After how many hours (cu\u00e1ntas horas) are they 135 miles apart? How far (cu\u00e1nto) each?",
+      "L3_spanish": "Dos ciclistas parten en direcciones opuestas a 14 y 16 mph. \u00bfCu\u00e1ndo estar\u00e1n a 135 millas? \u00bfCu\u00e1nto ha recorrido cada uno?",
       "L4_solution": "Step 1: Combined = 30 mph\nStep 2: Time = 135/30 = 4.5 hours\nStep 3: A=63, B=72\nAnswer: 4.5 hours."
     },
     "readability": {
@@ -3837,6 +5156,19 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "cyclists",
+        "mph"
+      ],
+      "above_a2_count": 2,
+      "cefr_distribution": {
+        "A1": 5,
+        "A2": 6,
+        "B1": 2
+      }
     }
   },
   {
@@ -3849,15 +5181,15 @@
     "answer": "$0 (break-even)",
     "answer_numeric": 0.0,
     "solution_steps": [
-      "Revenue = 21 × 400 = 8400",
-      "Variable cost = 12 × 400 = 4800",
+      "Revenue = 21 \u00d7 400 = 8400",
+      "Variable cost = 12 \u00d7 400 = 4800",
       "Profit = 8400 - 4800 - 3600 = 0"
     ],
     "scaffolds": {
       "L1_simplified": "A book costs $12 to make and sells for $21. Fixed costs are $3,600/month. If 400 books are sold, what is the profit?",
       "L2_bilingual": "A publisher's (editorial) cost per book (por libro) is $12. Fixed monthly costs (costos fijos) are $3,600. The book sells (vende) for $21. At 400 books, what is the profit (ganancia)?",
-      "L3_spanish": "El costo por libro es $12 y los costos fijos mensuales son $3,600. El libro se vende a $21. Si se venden 400 libros, ¿cuál es la ganancia?",
-      "L4_solution": "Step 1: Revenue = $21 × 400 = $8,400\nStep 2: Variable = $12 × 400 = $4,800\nStep 3: Profit = $8,400 - $4,800 - $3,600 = $0\nAnswer: Break-even, profit = $0."
+      "L3_spanish": "El costo por libro es $12 y los costos fijos mensuales son $3,600. El libro se vende a $21. Si se venden 400 libros, \u00bfcu\u00e1l es la ganancia?",
+      "L4_solution": "Step 1: Revenue = $21 \u00d7 400 = $8,400\nStep 2: Variable = $12 \u00d7 400 = $4,800\nStep 3: Profit = $8,400 - $4,800 - $3,600 = $0\nAnswer: Break-even, profit = $0."
     },
     "readability": {
       "flesch_kincaid": 12.1,
@@ -3869,6 +5201,20 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B1",
+      "above_a2_words": [
+        "fixed",
+        "profit",
+        "publisher"
+      ],
+      "above_a2_count": 3,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 6,
+        "B1": 3
+      }
     }
   },
   {
@@ -3881,15 +5227,15 @@
     "answer": "(0.638, 0.722)",
     "answer_numeric": 0.68,
     "solution_steps": [
-      "p̂ = 340/500 = 0.68",
-      "SE = √(0.68×0.32/500) ≈ 0.0209",
-      "CI: 0.68 ± 1.96×0.0209 ≈ (0.639, 0.721)"
+      "p\u0302 = 340/500 = 0.68",
+      "SE = \u221a(0.68\u00d70.32/500) \u2248 0.0209",
+      "CI: 0.68 \u00b1 1.96\u00d70.0209 \u2248 (0.639, 0.721)"
     ],
     "scaffolds": {
       "L1_simplified": "A drug works for 340 out of 500 patients. Build a 95% confidence interval. Use z = 1.96.",
       "L2_bilingual": "A drug is effective (efectivo) for 340 of 500 patients (pacientes). Construct (construir) a 95% confidence interval (intervalo de confianza). Use z = 1.96.",
       "L3_spanish": "Un medicamento es efectivo para 340 de 500 pacientes. Construye un intervalo de confianza del 95%. Usa z = 1.96.",
-      "L4_solution": "Step 1: p̂ = 0.68\nStep 2: SE ≈ 0.0209\nStep 3: CI = 0.68 ± 0.041 ≈ (0.639, 0.721)\nAnswer: (0.639, 0.721)."
+      "L4_solution": "Step 1: p\u0302 = 0.68\nStep 2: SE \u2248 0.0209\nStep 3: CI = 0.68 \u00b1 0.041 \u2248 (0.639, 0.721)\nAnswer: (0.639, 0.721)."
     },
     "readability": {
       "flesch_kincaid": 12.3,
@@ -3901,6 +5247,25 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "confidence",
+        "construct",
+        "drug",
+        "effective",
+        "interval",
+        "patients",
+        "proportion"
+      ],
+      "above_a2_count": 7,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 1,
+        "B1": 3,
+        "B2": 4
+      }
     }
   },
   {
@@ -3909,19 +5274,19 @@
     "topic": "algebra",
     "subtopic": "quadratic applications",
     "grade": 8,
-    "problem_text": "A ball is launched upward with initial velocity 40 m/s from 5 m height. Its height is h = -5t² + 40t + 5. Find the maximum height and when it occurs.",
+    "problem_text": "A ball is launched upward with initial velocity 40 m/s from 5 m height. Its height is h = -5t\u00b2 + 40t + 5. Find the maximum height and when it occurs.",
     "answer": "85 meters at t=4 seconds",
     "answer_numeric": 85.0,
     "solution_steps": [
-      "Max at t = -40/(2×-5) = 4 s",
+      "Max at t = -40/(2\u00d7-5) = 4 s",
       "h(4) = -5(16)+40(4)+5",
       "= -80+160+5 = 85 m"
     ],
     "scaffolds": {
-      "L1_simplified": "A ball's height is h = -5t² + 40t + 5. When does it reach maximum height and how high?",
-      "L2_bilingual": "A ball (pelota) is launched upward with height (altura) h = -5t² + 40t + 5 meters after t seconds. Find maximum height (altura máxima) and when (cuándo).",
-      "L3_spanish": "Una pelota se lanza hacia arriba. Su altura es h = -5t² + 40t + 5 metros después de t segundos. ¿Cuál es la altura máxima y cuándo ocurre?",
-      "L4_solution": "Step 1: t = -40/(2×-5) = 4 s\nStep 2: h(4) = -80+160+5 = 85\nAnswer: 85 m at t=4 s."
+      "L1_simplified": "A ball's height is h = -5t\u00b2 + 40t + 5. When does it reach maximum height and how high?",
+      "L2_bilingual": "A ball (pelota) is launched upward with height (altura) h = -5t\u00b2 + 40t + 5 meters after t seconds. Find maximum height (altura m\u00e1xima) and when (cu\u00e1ndo).",
+      "L3_spanish": "Una pelota se lanza hacia arriba. Su altura es h = -5t\u00b2 + 40t + 5 metros despu\u00e9s de t segundos. \u00bfCu\u00e1l es la altura m\u00e1xima y cu\u00e1ndo ocurre?",
+      "L4_solution": "Step 1: t = -40/(2\u00d7-5) = 4 s\nStep 2: h(4) = -80+160+5 = 85\nAnswer: 85 m at t=4 s."
     },
     "readability": {
       "flesch_kincaid": 12.4,
@@ -3933,6 +5298,24 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "initial",
+        "launched",
+        "maximum",
+        "occurs",
+        "upward",
+        "velocity"
+      ],
+      "above_a2_count": 6,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 1,
+        "B1": 4,
+        "B2": 2
+      }
     }
   },
   {
@@ -3942,18 +5325,18 @@
     "subtopic": "optimization",
     "grade": 8,
     "problem_text": "A semicircular window with rectangular base has total perimeter 600 cm (including base). Find the radius r that maximizes the window's area.",
-    "answer": "r ≈ 116.7 cm",
+    "answer": "r \u2248 116.7 cm",
     "answer_numeric": 116.7,
     "solution_steps": [
-      "Perimeter: 2r + πr = 600",
-      "r(2+π) = 600",
-      "r = 600/(2+π) ≈ 116.7 cm"
+      "Perimeter: 2r + \u03c0r = 600",
+      "r(2+\u03c0) = 600",
+      "r = 600/(2+\u03c0) \u2248 116.7 cm"
     ],
     "scaffolds": {
       "L1_simplified": "A window is a rectangle with a semicircle on top. Total perimeter is 600 cm. Find the radius that maximizes area.",
-      "L2_bilingual": "A semicircular (semicircular) window with rectangular base (base rectangular). Total perimeter (perímetro total) = 600 cm. Find radius (radio) r that maximizes (maximiza) area (área).",
-      "L3_spanish": "Una ventana semicircular con base rectangular tiene perímetro total de 600 cm. Encuentra el radio que maximiza el área.",
-      "L4_solution": "Step 1: 2r + πr = 600\nStep 2: r = 600/(2+π)\nStep 3: r ≈ 116.7 cm\nAnswer: r ≈ 116.7 cm."
+      "L2_bilingual": "A semicircular (semicircular) window with rectangular base (base rectangular). Total perimeter (per\u00edmetro total) = 600 cm. Find radius (radio) r that maximizes (maximiza) area (\u00e1rea).",
+      "L3_spanish": "Una ventana semicircular con base rectangular tiene per\u00edmetro total de 600 cm. Encuentra el radio que maximiza el \u00e1rea.",
+      "L4_solution": "Step 1: 2r + \u03c0r = 600\nStep 2: r = 600/(2+\u03c0)\nStep 3: r \u2248 116.7 cm\nAnswer: r \u2248 116.7 cm."
     },
     "readability": {
       "flesch_kincaid": 12.5,
@@ -3965,6 +5348,25 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "area",
+        "base",
+        "maximizes",
+        "perimeter",
+        "radius",
+        "rectangular",
+        "semicircular"
+      ],
+      "above_a2_count": 7,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 3,
+        "B1": 5,
+        "B2": 2
+      }
     }
   },
   {
@@ -3974,18 +5376,18 @@
     "subtopic": "exponential growth",
     "grade": 8,
     "problem_text": "A bacteria population doubles every 3 hours. Starting with 500 bacteria, write a formula for population after t hours and find when it exceeds 1,000,000.",
-    "answer": "P(t) = 500×2^(t/3); t ≈ 32.9 hours",
+    "answer": "P(t) = 500\u00d72^(t/3); t \u2248 32.9 hours",
     "answer_numeric": 32.9,
     "solution_steps": [
-      "P(t) = 500 × 2^(t/3)",
-      "500 × 2^(t/3) = 1,000,000",
-      "t = 3×log₂(2000) ≈ 32.9 hours"
+      "P(t) = 500 \u00d7 2^(t/3)",
+      "500 \u00d7 2^(t/3) = 1,000,000",
+      "t = 3\u00d7log\u2082(2000) \u2248 32.9 hours"
     ],
     "scaffolds": {
       "L1_simplified": "Bacteria double every 3 hours. Start with 500. Write the formula and find when they exceed 1,000,000.",
-      "L2_bilingual": "A bacteria population (población) doubles (se duplica) every 3 hours. Starting (empezando) with 500, write a formula (fórmula) and find when (cuándo) it exceeds (supera) 1,000,000.",
-      "L3_spanish": "Una población de bacterias se duplica cada 3 horas. Empieza con 500. Escribe la fórmula y determina cuándo supera 1,000,000.",
-      "L4_solution": "Step 1: P(t) = 500 × 2^(t/3)\nStep 2: 2^(t/3) = 2000\nStep 3: t ≈ 32.9 hours\nAnswer: ≈ 32.9 hours."
+      "L2_bilingual": "A bacteria population (poblaci\u00f3n) doubles (se duplica) every 3 hours. Starting (empezando) with 500, write a formula (f\u00f3rmula) and find when (cu\u00e1ndo) it exceeds (supera) 1,000,000.",
+      "L3_spanish": "Una poblaci\u00f3n de bacterias se duplica cada 3 horas. Empieza con 500. Escribe la f\u00f3rmula y determina cu\u00e1ndo supera 1,000,000.",
+      "L4_solution": "Step 1: P(t) = 500 \u00d7 2^(t/3)\nStep 2: 2^(t/3) = 2000\nStep 3: t \u2248 32.9 hours\nAnswer: \u2248 32.9 hours."
     },
     "readability": {
       "flesch_kincaid": 12.4,
@@ -3997,6 +5399,22 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "bacteria",
+        "exceeds",
+        "formula",
+        "population"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 3,
+        "A2": 2,
+        "B1": 2,
+        "B2": 2
+      }
     }
   },
   {
@@ -4005,18 +5423,18 @@
     "topic": "algebra",
     "subtopic": "profit modeling",
     "grade": 8,
-    "problem_text": "A company's monthly profit is P(x) = -2x² + 80x - 600 (thousands of dollars), where x is hundreds of units. Find production for maximum profit, the maximum profit, and break-even points.",
+    "problem_text": "A company's monthly profit is P(x) = -2x\u00b2 + 80x - 600 (thousands of dollars), where x is hundreds of units. Find production for maximum profit, the maximum profit, and break-even points.",
     "answer": "Max $200k at x=20; break-even x=10, x=30",
     "answer_numeric": 200.0,
     "solution_steps": [
-      "Max at x = -80/(2×-2) = 20",
+      "Max at x = -80/(2\u00d7-2) = 20",
       "P(20) = -800+1600-600 = 200",
       "Break-even: x = 10 and x = 30"
     ],
     "scaffolds": {
-      "L1_simplified": "Profit P(x) = -2x² + 80x - 600. Find where profit is maximum, the maximum value, and break-even points.",
-      "L2_bilingual": "A company's profit (ganancia) P(x) = -2x² + 80x - 600 (thousands of dollars), x = hundreds of units (unidades). Find maximum profit (ganancia máxima) and break-even (punto de equilibrio).",
-      "L3_spanish": "La ganancia mensual es P(x) = -2x² + 80x - 600 (miles de dólares). Encuentra el nivel de producción para máxima ganancia, la ganancia máxima y los puntos de equilibrio.",
+      "L1_simplified": "Profit P(x) = -2x\u00b2 + 80x - 600. Find where profit is maximum, the maximum value, and break-even points.",
+      "L2_bilingual": "A company's profit (ganancia) P(x) = -2x\u00b2 + 80x - 600 (thousands of dollars), x = hundreds of units (unidades). Find maximum profit (ganancia m\u00e1xima) and break-even (punto de equilibrio).",
+      "L3_spanish": "La ganancia mensual es P(x) = -2x\u00b2 + 80x - 600 (miles de d\u00f3lares). Encuentra el nivel de producci\u00f3n para m\u00e1xima ganancia, la ganancia m\u00e1xima y los puntos de equilibrio.",
       "L4_solution": "Step 1: Max at x = 20\nStep 2: P(20) = $200k\nStep 3: Break-even: x = 10 and x = 30\nAnswer: Max $200k at 2000 units."
     },
     "readability": {
@@ -4029,6 +5447,22 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "maximum",
+        "production",
+        "profit",
+        "units"
+      ],
+      "above_a2_count": 4,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 8,
+        "B1": 3,
+        "B2": 1
+      }
     }
   },
   {
@@ -4037,19 +5471,19 @@
     "topic": "statistics",
     "subtopic": "hypothesis testing",
     "grade": 8,
-    "problem_text": "A sample of 36 students using a new teaching method scores mean 78.5 with SD=9. The null hypothesis is mean=75. Calculate the z-score and decide if the method is significantly better at α=0.05. (z-critical=1.645)",
-    "answer": "z≈2.33, reject null",
+    "problem_text": "A sample of 36 students using a new teaching method scores mean 78.5 with SD=9. The null hypothesis is mean=75. Calculate the z-score and decide if the method is significantly better at \u03b1=0.05. (z-critical=1.645)",
+    "answer": "z\u22482.33, reject null",
     "answer_numeric": 2.33,
     "solution_steps": [
-      "z = (78.5-75)/(9/√36)",
+      "z = (78.5-75)/(9/\u221a36)",
       "= 3.5/1.5 = 2.33",
-      "2.33 > 1.645 → reject null"
+      "2.33 > 1.645 \u2192 reject null"
     ],
     "scaffolds": {
-      "L1_simplified": "36 students average 78.5 with SD=9. Null hypothesis: mean=75. Find the z-score and decide if we reject the null at α=0.05.",
-      "L2_bilingual": "A sample (muestra) of 36 students has mean (media) 78.5 with SD (desviación estándar) = 9. Null hypothesis (hipótesis nula): mean=75. Calculate z-score (puntuación z) and decide (decidir) at α=0.05.",
-      "L3_spanish": "Una muestra de 36 estudiantes tiene media 78.5 con DE=9. Hipótesis nula: media=75. Calcula el valor z y decide si se rechaza al nivel α=0.05.",
-      "L4_solution": "Step 1: z = (78.5-75)/(9/6) = 3.5/1.5 = 2.33\nStep 2: 2.33 > 1.645 → Reject null\nAnswer: z≈2.33, reject null."
+      "L1_simplified": "36 students average 78.5 with SD=9. Null hypothesis: mean=75. Find the z-score and decide if we reject the null at \u03b1=0.05.",
+      "L2_bilingual": "A sample (muestra) of 36 students has mean (media) 78.5 with SD (desviaci\u00f3n est\u00e1ndar) = 9. Null hypothesis (hip\u00f3tesis nula): mean=75. Calculate z-score (puntuaci\u00f3n z) and decide (decidir) at \u03b1=0.05.",
+      "L3_spanish": "Una muestra de 36 estudiantes tiene media 78.5 con DE=9. Hip\u00f3tesis nula: media=75. Calcula el valor z y decide si se rechaza al nivel \u03b1=0.05.",
+      "L4_solution": "Step 1: z = (78.5-75)/(9/6) = 3.5/1.5 = 2.33\nStep 2: 2.33 > 1.645 \u2192 Reject null\nAnswer: z\u22482.33, reject null."
     },
     "readability": {
       "flesch_kincaid": 13.5,
@@ -4061,6 +5495,27 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "calculate",
+        "critical",
+        "hypothesis",
+        "mean",
+        "method",
+        "null",
+        "sample",
+        "sd",
+        "significantly"
+      ],
+      "above_a2_count": 9,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 4,
+        "B1": 4,
+        "B2": 5
+      }
     }
   },
   {
@@ -4069,19 +5524,19 @@
     "topic": "algebra",
     "subtopic": "revenue and cost modeling",
     "grade": 8,
-    "problem_text": "A company's revenue is R(t) = 50t + 200 and cost is C(t) = t² - 10t + 400 (thousands), where t is years since launch. When does profit first become positive, and when does it peak?",
+    "problem_text": "A company's revenue is R(t) = 50t + 200 and cost is C(t) = t\u00b2 - 10t + 400 (thousands), where t is years since launch. When does profit first become positive, and when does it peak?",
     "answer": "Profitable from ~year 4; peaks at year 30",
     "answer_numeric": 4.0,
     "solution_steps": [
-      "P(t) = -t² + 60t - 200",
-      "Positive when t²-60t+200<0: t ≈ 3.6 to 56.4",
+      "P(t) = -t\u00b2 + 60t - 200",
+      "Positive when t\u00b2-60t+200<0: t \u2248 3.6 to 56.4",
       "Max at t=30: P(30) = 700"
     ],
     "scaffolds": {
-      "L1_simplified": "Revenue R(t) = 50t + 200 and Cost C(t) = t² - 10t + 400. When is profit positive and when does it peak?",
-      "L2_bilingual": "Revenue (ingresos) R(t) = 50t+200 and cost (costos) C(t) = t²-10t+400 (thousands, t=years). When is the company profitable (rentable)? When does profit peak (alcanza su máximo)?",
-      "L3_spanish": "Los ingresos son R(t) = 50t+200 y los costos C(t) = t²-10t+400. ¿Cuándo es rentable la empresa y cuándo alcanza su máxima ganancia?",
-      "L4_solution": "Step 1: P(t) = -t² + 60t - 200\nStep 2: Profitable from t≈3.6\nStep 3: Max at t=30: $700k\nAnswer: Profitable ~year 4, peaks at year 30."
+      "L1_simplified": "Revenue R(t) = 50t + 200 and Cost C(t) = t\u00b2 - 10t + 400. When is profit positive and when does it peak?",
+      "L2_bilingual": "Revenue (ingresos) R(t) = 50t+200 and cost (costos) C(t) = t\u00b2-10t+400 (thousands, t=years). When is the company profitable (rentable)? When does profit peak (alcanza su m\u00e1ximo)?",
+      "L3_spanish": "Los ingresos son R(t) = 50t+200 y los costos C(t) = t\u00b2-10t+400. \u00bfCu\u00e1ndo es rentable la empresa y cu\u00e1ndo alcanza su m\u00e1xima ganancia?",
+      "L4_solution": "Step 1: P(t) = -t\u00b2 + 60t - 200\nStep 2: Profitable from t\u22483.6\nStep 3: Max at t=30: $700k\nAnswer: Profitable ~year 4, peaks at year 30."
     },
     "readability": {
       "flesch_kincaid": 13.3,
@@ -4093,6 +5548,23 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "launch",
+        "peak",
+        "positive",
+        "profit",
+        "revenue"
+      ],
+      "above_a2_count": 5,
+      "cefr_distribution": {
+        "A1": 2,
+        "A2": 5,
+        "B1": 4,
+        "B2": 1
+      }
     }
   },
   {
@@ -4107,12 +5579,12 @@
     "solution_steps": [
       "z = 1.5/0.5 = 3 standard deviations",
       "Within 3 SDs = 99.73%",
-      "Defective = 0.27% × 10000 = 27"
+      "Defective = 0.27% \u00d7 10000 = 27"
     ],
     "scaffolds": {
       "L1_simplified": "Bolt diameters: mean 10 mm, SD 0.5 mm. Defective if more than 1.5 mm from mean. What % are good? How many defective in 10,000?",
-      "L2_bilingual": "A machine produces bolts (pernos) with normal distribution (distribución normal): mean (media) 10 mm, SD (desviación) 0.5 mm. Defective (defectuoso) if more than 1.5 mm from mean. What percentage acceptable (aceptables)? How many defective in 10,000?",
-      "L3_spanish": "Una máquina produce pernos con distribución normal: media 10 mm, DE 0.5 mm. Defectuoso si difiere más de 1.5 mm. ¿Qué porcentaje es aceptable? ¿Cuántos defectuosos en 10,000?",
+      "L2_bilingual": "A machine produces bolts (pernos) with normal distribution (distribuci\u00f3n normal): mean (media) 10 mm, SD (desviaci\u00f3n) 0.5 mm. Defective (defectuoso) if more than 1.5 mm from mean. What percentage acceptable (aceptables)? How many defective in 10,000?",
+      "L3_spanish": "Una m\u00e1quina produce pernos con distribuci\u00f3n normal: media 10 mm, DE 0.5 mm. Defectuoso si difiere m\u00e1s de 1.5 mm. \u00bfQu\u00e9 porcentaje es aceptable? \u00bfCu\u00e1ntos defectuosos en 10,000?",
       "L4_solution": "Step 1: z = 1.5/0.5 = 3\nStep 2: Within 3 SDs = 99.73%\nStep 3: Defective = 27\nAnswer: 99.73% acceptable, ~27 defective."
     },
     "readability": {
@@ -4125,6 +5597,29 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "acceptable",
+        "bolt",
+        "bolts",
+        "defective",
+        "diameter",
+        "diameters",
+        "distributed",
+        "mean",
+        "percentage",
+        "produces",
+        "sd"
+      ],
+      "above_a2_count": 11,
+      "cefr_distribution": {
+        "A1": 1,
+        "A2": 3,
+        "B1": 9,
+        "B2": 2
+      }
     }
   },
   {
@@ -4134,18 +5629,18 @@
     "subtopic": "logistic growth",
     "grade": 8,
     "problem_text": "A company's market share follows S(t) = 80 / (1 + 15e^(-0.3t)), where t is years since market entry. Find: initial share, long-term maximum, and when share first exceeds 50%.",
-    "answer": "Initial 5%, max 80%, exceeds 50% at t≈10.8 years",
+    "answer": "Initial 5%, max 80%, exceeds 50% at t\u224810.8 years",
     "answer_numeric": 5.0,
     "solution_steps": [
       "S(0) = 80/(1+15) = 5%",
-      "As t→∞: S→80%",
-      "Solve S=50: t = 3×ln(500/40)/... ≈ 10.8 years"
+      "As t\u2192\u221e: S\u219280%",
+      "Solve S=50: t = 3\u00d7ln(500/40)/... \u2248 10.8 years"
     ],
     "scaffolds": {
       "L1_simplified": "Market share follows S(t) = 80/(1+15e^(-0.3t)). Find starting share, maximum long-term share, and when it exceeds 50%.",
-      "L2_bilingual": "Market share (participación de mercado) S(t) = 80/(1+15e^(-0.3t)), t = years (años). Find initial share (participación inicial), maximum (máximo), and when it exceeds (supera) 50%.",
-      "L3_spanish": "La participación de mercado sigue S(t) = 80/(1+15e^(-0.3t)). Encuentra la participación inicial, el máximo a largo plazo y cuándo supera el 50%.",
-      "L4_solution": "Step 1: S(0) = 80/16 = 5%\nStep 2: Max = 80%\nStep 3: Exceeds 50% at t ≈ 10.8 years\nAnswer: 5% initial, 80% max, 50% at ~year 11."
+      "L2_bilingual": "Market share (participaci\u00f3n de mercado) S(t) = 80/(1+15e^(-0.3t)), t = years (a\u00f1os). Find initial share (participaci\u00f3n inicial), maximum (m\u00e1ximo), and when it exceeds (supera) 50%.",
+      "L3_spanish": "La participaci\u00f3n de mercado sigue S(t) = 80/(1+15e^(-0.3t)). Encuentra la participaci\u00f3n inicial, el m\u00e1ximo a largo plazo y cu\u00e1ndo supera el 50%.",
+      "L4_solution": "Step 1: S(0) = 80/16 = 5%\nStep 2: Max = 80%\nStep 3: Exceeds 50% at t \u2248 10.8 years\nAnswer: 5% initial, 80% max, 50% at ~year 11."
     },
     "readability": {
       "flesch_kincaid": 13.6,
@@ -4157,6 +5652,23 @@
     "metadata": {
       "source": "curated",
       "created_at": "2026-04-27"
+    },
+    "cefr_analysis": {
+      "max_cefr": "B2",
+      "above_a2_words": [
+        "entry",
+        "exceeds",
+        "initial",
+        "maximum",
+        "term"
+      ],
+      "above_a2_count": 5,
+      "cefr_distribution": {
+        "A1": 4,
+        "A2": 5,
+        "B1": 3,
+        "B2": 2
+      }
     }
   }
 ]

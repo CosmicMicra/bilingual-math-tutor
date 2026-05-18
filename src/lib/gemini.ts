@@ -9,7 +9,9 @@ export interface BilingualProblem {
   solution: string;
 }
 
-export async function translateProblem(problemText: string): Promise<BilingualProblem> {
+export async function translateProblem(
+  problemText: string
+): Promise<BilingualProblem> {
   const response = await authFetch('/api/translate', {
     method: 'POST',
     headers: {
