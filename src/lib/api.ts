@@ -92,3 +92,60 @@ export async function selectQuestion(
   }
   return (await res.json()) as QuestionRecord;
 }
+
+/**
+ * Raw interaction record as stored in Firestore. Researcher dashboard reads
+ * these directly so the shape is intentionally loose.
+ */
+export interface InteractionRecord {
+  id: string;
+  problemId?: string;
+  userId?: string;
+  problem?: {
+    original?: string;
+    simplified?: string;
+    bilingual?: string;
+    spanish?: string;
+    answer?: string;
+    solution?: string;
+  };
+  attemptsCount?: number;
+  levelsViewedBeforeCorrect?: number[];
+  activeLevelOnCorrect?: number;
+  timeSpentPerLevel?: Record<string, number>;
+  timeToFirstAttempt?: number;
+  timeToCorrect?: number;
+  isSolved?: 'solved' | 'revealed' | 'unsolved';
+  createdAt?: number | string;
+  lds?: number;
+  mcs?: number;
+  maxHintLevel?: number;
+  diagnosticQuadrant?: string;
+  adaptiveDecision?: string;
+  nextLevel?: string;
+  questionId?: string;
+  questionTopic?: string;
+  questionLevel?: string;
+  [key: string]: unknown;
+}
+
+export async function getAllSessions(): Promise<InteractionRecord[]> {
+  const res = await authFetch('/api/sessions/all');
+  if (!res.ok) {
+    throw new Error('Failed to load sessions');
+  }
+  const data = (await res.json()) as InteractionRecord[];
+  // Server skips orderBy to avoid requiring a Firestore composite index on a
+  // collectionGroup query — sort newest-first here instead.
+  const toTs = (v: unknown): number => {
+    if (typeof v === 'number') return v;
+    if (typeof v === 'string') {
+      const t = Date.parse(v);
+      return Number.isFinite(t) ? t : 0;
+    }
+    return 0;
+  };
+  data.sort((a, b) => toTs(b.createdAt) - toTs(a.createdAt));
+  return data;
+}
+

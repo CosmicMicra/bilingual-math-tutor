@@ -684,6 +684,35 @@ Return the data in the following JSON format:
     }
   );
 
+  // Researcher endpoint: returns every interaction across all users.
+  // TODO: gate behind a researcher role claim. For now any authenticated user
+  // can call this so the dashboard is usable during development.
+  app.get(
+    '/api/sessions/all',
+    requireAuth,
+    sessionMutateLimiter,
+    async (_req, res) => {
+      try {
+        const db = getFirestore();
+        // Note: no server-side orderBy here — a collectionGroup orderBy on
+        // createdAt requires a composite index. We sort client-side instead.
+        const snapshot = await db
+          .collectionGroup('interactions')
+          .limit(5000)
+          .get();
+
+        const sessions = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        res.json(sessions);
+      } catch (error: unknown) {
+        console.error('Error in GET /api/sessions/all:', error);
+        res.status(500).json({ error: publicErrorMessage(error) });
+      }
+    }
+  );
 
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
