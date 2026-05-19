@@ -16,6 +16,9 @@ import { firebaseApp } from './lib/firebase';
 import { authFetch, getMyProfile, selectQuestion, upsertMyProfile, type QuestionRecord, type UserProfile } from './lib/api';
 
 import { calculateLDS, calculateMCS, InteractionFeatures, getDiagnosticQuadrant, adaptiveDecide, AdaptiveState } from './lib/adaptive-engine';
+import ResearcherDashboard from './components/ResearcherDashboard';
+
+type AppView = 'student' | 'researcher';
 
 const EMA_PREV_WEIGHT = 0.7;
 const EMA_SAMPLE_WEIGHT = 0.3;
@@ -94,10 +97,14 @@ const Header = ({
   user,
   profile,
   onSignOut,
+  view,
+  onChangeView,
 }: {
   user: User | null;
   profile: UserProfile | null;
   onSignOut: () => void;
+  view: AppView;
+  onChangeView: (v: AppView) => void;
 }) => (
   <header className="border-b border-[#E6E2D3] bg-white sticky top-0 z-50">
     <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
@@ -113,6 +120,30 @@ const Header = ({
         </div>
       </div>
       <div className="flex items-center gap-6">
+        {user && (
+          <div className="flex rounded-lg border border-[#E6E2D3] overflow-hidden">
+            <button
+              onClick={() => onChangeView('student')}
+              className={`px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider ${
+                view === 'student'
+                  ? 'bg-[#8B9D83] text-white'
+                  : 'bg-white text-[#5A534A] hover:bg-[#F3F1E9]'
+              }`}
+            >
+              Student
+            </button>
+            <button
+              onClick={() => onChangeView('researcher')}
+              className={`px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider ${
+                view === 'researcher'
+                  ? 'bg-[#8B9D83] text-white'
+                  : 'bg-white text-[#5A534A] hover:bg-[#F3F1E9]'
+              }`}
+            >
+              Researcher
+            </button>
+          </div>
+        )}
         <div className="text-right hidden sm:block">
           <p className="text-[10px] uppercase tracking-widest opacity-60 font-bold text-[#433E37]">Student Progress</p>
           <p className="text-sm font-medium italic text-[#5A534A]">
@@ -306,6 +337,15 @@ export default function App() {
     streakWrongCount: 0
   });
   const [sessionMetrics, setSessionMetrics] = React.useState<SessionMetricsState>(INITIAL_SESSION_METRICS);
+  const [view, setView] = React.useState<AppView>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('view') === 'researcher' || params.get('researcher') === '1') {
+        return 'researcher';
+      }
+    }
+    return 'student';
+  });
 
   const applyMetricSample = React.useCallback((lds: number, mcs: number) => {
     setSessionMetrics((s) => ({
@@ -891,7 +931,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-[#433E37] font-sans selection:bg-[#8B9D83]/20">
-      <Header user={currentUser} profile={profile} onSignOut={handleSignOut} />
+      <Header
+        user={currentUser}
+        profile={profile}
+        onSignOut={handleSignOut}
+        view={view}
+        onChangeView={setView}
+      />
       {!firebaseApp && (
         <div
           className="bg-amber-50 border-b border-amber-200 text-amber-900 text-center text-sm py-3 px-4"
@@ -920,7 +966,10 @@ export default function App() {
           Preparing your profile...
         </main>
       )}
-      {firebaseApp && currentUser && authReady && (
+      {firebaseApp && currentUser && authReady && view === 'researcher' && (
+        <ResearcherDashboard />
+      )}
+      {firebaseApp && currentUser && authReady && view === 'student' && (
       <main className="max-w-7xl mx-auto px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 h-auto lg:h-[calc(100vh-104px)] overflow-y-auto lg:overflow-hidden">
         
         {/* Left Column: Interactive Workspace */}
